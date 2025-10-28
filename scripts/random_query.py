@@ -124,7 +124,7 @@ for _ in range(500):
         sql = t_string.format_map(params)
         sql_queries.append(sql)
     except KeyError as e:
-        print(f"템플릿 포맷 오류 발생: {e} | 템플릿: {t_string}")
+        print(f"Template Error: {e} | Template: {t_string}")
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
