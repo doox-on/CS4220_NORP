@@ -1,9 +1,5 @@
-CS 4220 Jungwoo 
-NORP
-
-from pathlib import Path
-
-readme_content = """# NORP Data Integration & NL2SQL Pipeline
+## CS 4220 Jungwoo Moon
+## Project: NORP
 
 This project implements a complete pipeline for generating **SQL–JSON–NL triplets** from a demographic dataset.  
 It uses automated SQL generation, LLM-based interpretation (via Groq API), and dataset merging for NL2SQL model training.
@@ -148,32 +144,3 @@ Each line in `merged_dataset.jsonl` contains one structured triplet:
 ```
 
 ---
-
-## 6. Notes & Troubleshooting
-
-- Make sure your `.env` file is **never committed** (add `.env` to `.gitignore`).
-- You can test your Groq API key by running:
-  ```bash
-  python -c "from groq import Groq; print(Groq(api_key='your_key'))"
-  ```
-- If you see `Invalid JSON` errors during SQL-to-JSON generation, they will be automatically skipped in `make_triplets.py`.
-
----
-
-## 👩‍💻 Authors
-**Georgia Tech CS4220 / NORP Data Integration Team**  
-> Project Lead: *Jungwoo Moon*  
-> Dataset: *Demographic Race Data (2015–2019)*  
-> Model: *Groq LLaMA 3.1–8B-Instant*  
-> Repository: [CS4220_NORP](https://github.com/doox-on/CS4220_NORP)
-
----
-
-## 🧾 License
-This project is distributed under the **MIT License**.
-"""
-
-# Write to README.md
-readme_path = Path("README.md")
-readme_path.write_text(readme_content, encoding="utf-8")
-readme_path
