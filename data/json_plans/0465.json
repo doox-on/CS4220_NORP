@@ -1,0 +1,28 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "not_hispanic_or_latino",
+    "aggregation_type": "MAX"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Group By",
+          "details": {
+            "group_by_columns": [
+              "year"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

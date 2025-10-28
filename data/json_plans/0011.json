@@ -1,0 +1,21 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "AVG(hispanic_or_latino_total)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "filter_condition": "year = 2019"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "AVG(hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "year = 2015"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "MAX(one_race)"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30079'"
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "target": "one_race",
+            "function": "MAX"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

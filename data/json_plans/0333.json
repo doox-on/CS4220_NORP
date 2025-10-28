@@ -1,0 +1,14 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "MAX(hispanic_or_latino_total)"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table_name": "demographics"
+      }
+    }
+  ]
+}

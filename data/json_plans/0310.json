@@ -1,0 +1,22 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_type": "AVG",
+    "target": "one_race"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "year = 2018"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

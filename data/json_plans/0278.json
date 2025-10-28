@@ -1,0 +1,25 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Distinct",
+          "details": {
+            "column": "year"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "MAX(not_hispanic_or_latino)",
+    "group_by": "year"
+  },
+  "children": [
+    {
+      "operation": "GroupBy",
+      "details": {
+        "group_by": "year"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projection": "year"
+          },
+          "children": []
+        },
+        {
+          "operation": "Aggregation",
+          "details": {
+            "aggregation_target": "MAX(not_hispanic_or_latino)"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "operation": "Sort",
+      "details": {
+        "sort_order": "ASC",
+        "sort_target": "agg_val"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projection": "agg_val"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

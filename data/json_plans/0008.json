@@ -1,0 +1,28 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "race_total_population",
+    "aggregation_type": "SUM"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "group_by_columns": [
+              "year"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

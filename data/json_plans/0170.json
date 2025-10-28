@@ -1,0 +1,35 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "groupBy": [
+      "year"
+    ],
+    "aggregation": [
+      {
+        "column": "hispanic_or_latino",
+        "aggregationType": "MIN"
+      }
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year",
+          "hispanic_or_latino"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "aggregationType": "MIN",
+            "column": "hispanic_or_latino"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "one_race < 5070 AND year = 2018"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

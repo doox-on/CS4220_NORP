@@ -1,0 +1,33 @@
+{
+  "operation": "Sort",
+  "details": {
+    "sort_key": "hispanic_or_latino_total",
+    "sort_order": "DESC"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "limit": 20
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "hispanic_or_latino_total"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

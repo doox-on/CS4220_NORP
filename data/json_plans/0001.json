@@ -1,0 +1,17 @@
+{
+  "operation": "Scan",
+  "details": "Table: demographics",
+  "children": [
+    {
+      "operation": "Projection",
+      "details": "Columns: [year]",
+      "children": [
+        {
+          "operation": "Distinct",
+          "details": "Column: year",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

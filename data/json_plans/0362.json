@@ -1,0 +1,21 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "MIN(one_race)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30034'"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

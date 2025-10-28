@@ -1,0 +1,1500 @@
+SELECT DISTINCT year FROM demographics;
+→ What years are included in the demographic data?
+
+SELECT zipcode, race_total_population FROM demographics ORDER BY race_total_population ASC LIMIT 1;
+→ What is the US zipcode with the smallest total population of different racial groups?
+
+SELECT zipcode, one_race FROM demographics ORDER BY one_race DESC LIMIT 20;
+→ What are the 20 ZIP codes with the highest population of people of one race, listed from the largest to the smallest?
+
+SELECT AVG(one_race) FROM demographics WHERE year = 2015;
+→ What was the average population of people of one race in the US in 2015?
+
+SELECT zipcode, SUM(race_total_population) FROM demographics GROUP BY zipcode;
+→ What is the total population in each ZIP code area?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 9876;
+→ What are the zip codes where the total Hispanic or Latino population exceeds 9,876?
+
+SELECT zipcode, SUM(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 5;
+→ What are the top 5 US zipcodes by total population, listed in order from highest to lowest?
+
+SELECT year, SUM(race_total_population) FROM demographics GROUP BY year;
+→ What is the total population by year, aggregated across all zip codes?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics;
+→ What is the average total Hispanic or Latino population across all zipcodes?
+
+SELECT year, AVG(not_hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average population of people who are not Hispanic or Latino for each year?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE year = 2019;
+→ What is the average total Hispanic or Latino population in the United States for the year 2019?
+
+SELECT year, SUM(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the total population of each year, listed in order from lowest to highest?
+
+SELECT native_hawaiian_and_other_pacific_islander FROM demographics WHERE zipcode = 'ZCTA5 30072' AND year = 2017;
+→ What is the population of Native Hawaiians and Other Pacific Islanders living in the specific area associated with the ZIP code 'ZCTA5 30072' in the year 2017?
+
+SELECT MIN(hispanic_or_latino) FROM demographics WHERE year = 2017;
+→ What was the smallest Hispanic or Latino population in 2017?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique calendar years are represented in the demographic data?
+
+SELECT zipcode, SUM(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 20;
+→ What are the 20 US zip codes with the largest total populations based on demographic data?
+
+SELECT zipcode FROM demographics WHERE race_total_population < 9032 AND year = 2015;
+→ What are the zip codes in 2015 where the total population is less than 9,032?
+
+SELECT MAX(race_total_population) FROM demographics WHERE year = 2016;
+→ What was the highest total population in the demographic data for the year 2016?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 4158 AND year = 2018;
+→ What US zip codes in the year 2018 had a non-Hispanic or Latino population of less than 4,158?
+
+SELECT hispanic_or_latino_total FROM demographics WHERE zipcode = 'ZCTA5 30083' AND year = 2017;
+→ What is the total Hispanic or Latino population in the area with ZIP code ZCTA5 30083, specifically for the year 2017?
+
+SELECT native_hawaiian_and_other_pacific_islander FROM demographics WHERE zipcode = 'ZCTA5 30118' AND year = 2016;
+→ What is the population of Native Hawaiian and Other Pacific Islander in the area with the zip code 30118 in the year 2016?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE zipcode = 'ZCTA5 30132';
+→ What is the average total Hispanic or Latino population in the area with the ZIP code 'ZCTA5 30132'?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 6961 AND year = 2017;
+→ What is the total number of zip codes in 2017 where the total Hispanic or Latino population is more than 6,961?
+
+SELECT year, SUM(race_total_population) FROM demographics GROUP BY year;
+→ What is the total population for each year in the dataset?
+
+SELECT SUM(not_hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30094';
+→ What is the total number of people who are not Hispanic or Latino living in ZIP code 30094?
+
+SELECT MIN(hispanic_or_latino) FROM demographics WHERE year = 2017;
+→ What was the lowest percentage of Hispanic or Latino people in the US in the year 2017?
+
+SELECT year, MAX(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the year with the highest number of people who are not Hispanic or Latino?
+
+SELECT year, AVG(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average Hispanic or Latino population per year across the US zipcodes?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino > 206;
+→ What US zip codes have a population of people who are not Hispanic or Latino greater than 206,000?
+
+SELECT zipcode, AVG(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 1;
+→ What is the ZIP code with the highest average percentage of people who are not Hispanic or Latino?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 1709 AND year = 2016;
+→ What US zip codes had a non-Hispanic or Latino population of less than 1709 people in the year 2016?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics WHERE year = 2016 ORDER BY hispanic_or_latino_total DESC LIMIT 1;
+→ What is the US zipcode with the highest total Hispanic or Latino population in the year 2016?
+
+SELECT year, AVG(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What is the average total Hispanic or Latino population in the US for each year?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 2010 AND year = 2019;
+→ How many people lived in a total of more than 2010 Hispanic or Latino communities in the year 2019?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 9579 AND year = 2019;
+→ What are the zip codes where the total Hispanic or Latino population is less than 9,579 in the year 2019?
+
+SELECT zipcode FROM demographics WHERE one_race < 5070 AND year = 2018;
+→ What are the zipcodes in 2018 where the population of one racial group is less than 5,070?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 5588;
+→ What are the zipcodes where the total Hispanic or Latino population is more than 5,588?
+
+SELECT AVG(race_total_population) FROM demographics WHERE year = 2015;
+→ What is the average total population for racial data in the year 2015?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics ORDER BY hispanic_or_latino_total ASC LIMIT 20;
+→ What are the 20 US zipcodes with the smallest total Hispanic or Latino populations?
+
+SELECT SUM(one_race) FROM demographics WHERE zipcode = 'ZCTA5 30104';
+→ What is the total population of one race in the area with the ZIP code ZCTA5 30104?
+
+SELECT zipcode, SUM(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What is the total Hispanic or Latino population by each US zipcode?
+
+SELECT year, SUM(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the total Hispanic or Latino population for each year?
+
+SELECT MIN(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30148';
+→ What is the total smallest population in the demographics data for the specific ZIP code of 30148?
+
+SELECT zipcode, hispanic_or_latino FROM demographics ORDER BY hispanic_or_latino DESC LIMIT 5;
+→ What are the 5 ZIP codes with the highest total Hispanic or Latino populations?
+
+SELECT zipcode, AVG(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What is the average total Hispanic or Latino population for each US zipcode?
+
+SELECT COUNT(*) FROM demographics WHERE not_hispanic_or_latino > 1410 AND year = 2019;
+→ What is the number of US zipcodes with a non-Hispanic or Latino population greater than 1,410 in the year 2019?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2019 ORDER BY one_race ASC LIMIT 5;
+→ What are the top 5 US zip codes with the lowest percentage of people of one race from the demographic data in 2019?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics ORDER BY hispanic_or_latino_total DESC LIMIT 5;
+→ What are the top 5 US zipcodes with the largest Hispanic or Latino populations?
+
+SELECT year, SUM(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the total population by year, in ascending order, showing the year for each time the total population reaches a new minimum value?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 3068 AND year = 2017;
+→ What is the total count of ZIP codes in the year 2017 where the population of one race is more than 3,068?
+
+SELECT zipcode, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 10;
+→ What are the top 10 zip codes with the lowest total Hispanic or Latino populations?
+
+SELECT year, MIN(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What is the minimum total Hispanic or Latino population for each calendar year?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 1063;
+→ What ZIP codes have more than 1,063 Hispanic or Latino residents?
+
+SELECT zipcode, AVG(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 5;
+→ What are the 5 US zipcodes with the smallest average total population across all racial groups?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 1803 AND year = 2019;
+→ What is the total count of US zipcodes in 2019 where the population of one specific racial group exceeds 1803?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics;
+→ What is the average total Hispanic or Latino population across all zip codes?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique calendar years are recorded in the demographic data?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2017 ORDER BY not_hispanic_or_latino DESC LIMIT 5;
+→ What are the 5 US zipcodes with the highest population of people who are not Hispanic or Latino, based on data from 2017?
+
+SELECT zipcode, SUM(hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the total Hispanic or Latino population in each ZIP code?
+
+SELECT zipcode, race_total_population FROM demographics WHERE year = 2015 ORDER BY race_total_population DESC LIMIT 5;
+→ What are the 5 US zipcodes with the highest total population by racial data in the year 2015, listed in order from highest to lowest?
+
+SELECT MIN(one_race) FROM demographics;
+→ What is the smallest population of people of one race?
+
+SELECT zipcode, MAX(race_total_population) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the largest total population across all racial groups?
+
+SELECT zipcode, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 20;
+→ What are the 20 US zipcodes with the lowest total Hispanic or Latino population?
+
+SELECT hispanic_or_latino FROM demographics WHERE zipcode = 'ZCTA5 30040' AND year = 2018;
+→ What is the total Hispanic or Latino population in 2018 in the area with the ZIP code ZCTA5 30040?
+
+SELECT year FROM demographics WHERE zipcode = 'ZCTA5 30120' AND year = 2018;
+→ What is the year of the data for the specific area with the ZIP code 30120 in the year 2018?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE zipcode = 'ZCTA5 30087';
+→ What is the average total population of Hispanic or Latino individuals in the area with the ZIP code 30087?
+
+SELECT zipcode, MIN(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the lowest total Hispanic or Latino population?
+
+SELECT zipcode, MAX(not_hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the highest population that is not Hispanic or Latino?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 9344;
+→ What US zipcodes have a total Hispanic or Latino population of more than 9,344?
+
+SELECT AVG(hispanic_or_latino) FROM demographics;
+→ What is the average percentage of people who identify as Hispanic or Latino across all US zipcodes?
+
+SELECT AVG(hispanic_or_latino) FROM demographics;
+→ What is the average Hispanic or Latino population across all zip codes?
+
+SELECT zipcode, MAX(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 1;
+→ What is the US zipcode with the smallest total population in terms of racial data?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2019 ORDER BY one_race DESC LIMIT 20;
+→ What are the 20 ZIP codes with the highest one-race population in 2019, listed in order from highest to lowest?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique calendar years are represented in the demographic data?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2018 ORDER BY one_race ASC LIMIT 5;
+→ What are the five US zipcodes with the smallest populations made up of people of one racial background, specifically in the year 2018?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino > 4974;
+→ What zip codes have a non-Hispanic or Latino population of more than 4974 people?
+
+SELECT black FROM demographics WHERE zipcode = 'ZCTA5 30149' AND year = 2015;
+→ What is the population of Black or African Americans in the year 2015 for the area with ZIP code 30149?
+
+SELECT MAX(not_hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30105';
+→ What is the largest population of people who are not Hispanic or Latino in the area with the ZIP code ZCTA5 30105?
+
+SELECT zipcode, race_total_population FROM demographics ORDER BY race_total_population ASC LIMIT 1;
+→ What is the US zipcode with the smallest total population for racial data?
+
+SELECT year FROM demographics WHERE zipcode = 'ZCTA5 30103' AND year = 2015;
+→ What years did the US Census record data for the area with the ZIP code ZCTA5 30103?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 2846 AND year = 2018;
+→ What is the total number of zipcodes in 2018 where the population of one specific racial group is more than 2,846?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 142 AND year = 2016;
+→ What is the total number of zip codes in 2016 where the total Hispanic or Latino population is more than 142?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 4208 AND year = 2017;
+→ What is the total number of US zip codes in the year 2017 where the population of one race is more than 4208?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 7141;
+→ What zip codes have a Hispanic or Latino population greater than 7,141?
+
+SELECT zipcode, MIN(hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 1;
+→ What is the US zipcode with the smallest percentage of Hispanic or Latino population?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics ORDER BY hispanic_or_latino_total DESC LIMIT 20;
+→ What are the 20 US zip codes with the largest total Hispanic or Latino populations?
+
+SELECT year, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the smallest total Hispanic or Latino population for each year, listed in descending order?
+
+SELECT year, MIN(one_race) FROM demographics GROUP BY year;
+→ What is the earliest year when one-race population was recorded, broken down by year?
+
+SELECT zipcode, MIN(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 1;
+→ What is the zip code with the smallest population of only one racial group?
+
+SELECT year, MIN(race_total_population) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year with the smallest total population for racial data in the demographics, listed in order from largest to smallest?
+
+SELECT zipcode, hispanic_or_latino FROM demographics WHERE year = 2015 ORDER BY hispanic_or_latino DESC LIMIT 10;
+→ What are the 10 US zipcodes with the highest Hispanic or Latino population in 2015?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years in the demographic data?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 4902 AND year = 2018;
+→ What are the zip codes where the population of people who are not Hispanic or Latino is less than 4902, specifically looking at data from the year 2018?
+
+SELECT year, AVG(race_total_population) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the average total population across all racial groups for each year, listed in order from smallest to largest average population?
+
+SELECT year, MAX(one_race) FROM demographics GROUP BY year;
+→ What is the year with the highest total population of people of one race?
+
+SELECT zipcode, AVG(hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 5;
+→ What are the 5 US zip codes with the highest average Hispanic or Latino population?
+
+SELECT SUM(one_race) FROM demographics;
+→ What is the total population of people who identify with one race?
+
+SELECT year, AVG(race_total_population) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the average total population by year, listed in order from smallest to largest?
+
+SELECT zipcode, MIN(race_total_population) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the smallest total population of people identified by race?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 3922;
+→ What are the US zip codes where the total population for racial data exceeds 3,922?
+
+SELECT year, AVG(one_race) FROM demographics GROUP BY year;
+→ What is the average population of people who identify with one racial category for each year?
+
+SELECT zipcode, SUM(one_race) FROM demographics GROUP BY zipcode;
+→ What is the total population by ZIP code?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics;
+→ What is the average total Hispanic or Latino population across all zipcodes?
+
+SELECT year, MAX(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What year had the highest total population of people identifying as one particular race across all US zipcodes?
+
+SELECT SUM(hispanic_or_latino_total) FROM demographics;
+→ What is the total Hispanic or Latino population across all zip codes?
+
+SELECT zipcode, race_total_population FROM demographics WHERE year = 2017 ORDER BY race_total_population ASC LIMIT 10;
+→ What are the top 10 US zipcodes with the smallest total population by racial data in the year 2017?
+
+SELECT zipcode, SUM(not_hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the total population of people who are not Hispanic or Latino for each US ZIP code?
+
+SELECT year, MAX(hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What was the year with the highest total Hispanic or Latino population, and what is that total population value?
+
+SELECT two_or_more_races FROM demographics WHERE zipcode = 'ZCTA5 30024' AND year = 2015;
+→ What is the population of people who identify with two or more racial groups in 2015 for the area with the zip code 30024?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 4382;
+→ What US zip codes have a total Hispanic or Latino population exceeding 4,382?
+
+SELECT year, MIN(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What is the year with the lowest total Hispanic or Latino population across all zipcodes?
+
+SELECT SUM(one_race) FROM demographics;
+→ What is the total population with a single racial identity across all zip codes?
+
+SELECT AVG(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30114';
+→ What is the average total population for all racial groups in the area with the ZIP code 30114?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years in the demographic data?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique years are recorded in the demographic data?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years of data in the demographics database?
+
+SELECT year, MAX(not_hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the year in which the maximum number of people who are not of Hispanic or Latino origin lived, according to the demographic data?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years present in the demographic data?
+
+SELECT AVG(one_race) FROM demographics;
+→ What is the average population that is of one racial background across all US zipcodes?
+
+SELECT MAX(race_total_population) FROM demographics;
+→ What is the maximum total population for racial data across all zipcodes?
+
+SELECT zipcode, MIN(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 5;
+→ What are the 5 zip codes with the smallest total populations for racial data?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years present in the demographic data?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2016 ORDER BY one_race ASC LIMIT 20;
+→ What are the 20 US zip codes with the lowest one-race populations in the year 2016?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the different years of data available in the demographic records?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino > 7398;
+→ What zip codes have a population of people who are not Hispanic or Latino that exceeds 7,398?
+
+SELECT MIN(one_race) FROM demographics WHERE year = 2016;
+→ What is the minimum population of people who identify as being of one race in the year 2016?
+
+SELECT COUNT(*) FROM demographics WHERE not_hispanic_or_latino > 2512 AND year = 2016;
+→ What is the total number of zipcodes where the population of people not of Hispanic or Latino origin exceeded 2,512 in 2016?
+
+SELECT MIN(hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30092';
+→ What is the smallest Hispanic or Latino population in the 30092 area?
+
+SELECT MAX(hispanic_or_latino) FROM demographics WHERE year = 2017;
+→ What was the largest Hispanic or Latino population in the United States in the year 2017?
+
+SELECT COUNT(*) FROM demographics WHERE race_total_population > 9669 AND year = 2017;
+→ What is the total number of zipcodes in the year 2017 where the total population is greater than 9,669?
+
+SELECT DISTINCT year FROM demographics;
+→ What years are represented in the demographic data?
+
+SELECT COUNT(*) FROM demographics WHERE not_hispanic_or_latino > 933 AND year = 2019;
+→ What is the total number of areas in 2019 where the population that is not Hispanic or Latino exceeds 933?
+
+SELECT MAX(hispanic_or_latino) FROM demographics WHERE year = 2016;
+→ What is the highest total Hispanic or Latino population in the United States in the year 2016?
+
+SELECT zipcode, MIN(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 5;
+→ What are the 5 US zipcodes with the smallest populations of people of one race, in order from largest to smallest?
+
+SELECT year, SUM(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year-by-year ranking of the total population that is not Hispanic or Latino, in descending order?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total < 8237 AND year = 2018;
+→ What US zipcodes in 2018 have a total Hispanic or Latino population of less than 8,237 people?
+
+SELECT year, MIN(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What is the smallest total Hispanic or Latino population in each year, based on the demographic data?
+
+SELECT zipcode, hispanic_or_latino FROM demographics WHERE year = 2019 ORDER BY hispanic_or_latino DESC LIMIT 1;
+→ What is the ZIP code with the highest Hispanic or Latino population in 2019?
+
+SELECT year, MIN(race_total_population) FROM demographics GROUP BY year;
+→ What is the year in which the total population of each racial group was the smallest?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics ORDER BY not_hispanic_or_latino ASC LIMIT 20;
+→ What are the 20 US zipcodes with the smallest percentage of non-Hispanic or Latino residents, listed in order from smallest to largest?
+
+SELECT zipcode, MAX(hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 20;
+→ What are the 20 US zipcodes with the highest percentage of Hispanic or Latino residents?
+
+SELECT year, AVG(race_total_population) FROM demographics GROUP BY year;
+→ What is the average total population for each year, considering all racial groups?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years recorded in the demographic data?
+
+SELECT zipcode, hispanic_or_latino FROM demographics ORDER BY hispanic_or_latino DESC LIMIT 5;
+→ What are the top 5 US zipcodes with the highest Hispanic or Latino population?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2019 ORDER BY not_hispanic_or_latino DESC LIMIT 1;
+→ What is the ZIP code with the highest non-Hispanic or Latino population in the year 2019?
+
+SELECT MAX(race_total_population) FROM demographics;
+→ What is the largest total population for which racial data is available?
+
+SELECT year, AVG(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the average total Hispanic or Latino population across all US zip codes each year, listed in descending order from the highest average?
+
+SELECT year, AVG(race_total_population) FROM demographics GROUP BY year;
+→ What is the average total population for each year?
+
+SELECT year, SUM(race_total_population) FROM demographics GROUP BY year;
+→ What is the total population for each year?
+
+SELECT year, MAX(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the year with the highest total Hispanic or Latino population?
+
+SELECT SUM(hispanic_or_latino) FROM demographics WHERE year = 2019;
+→ What is the total Hispanic or Latino population in the United States in the year 2019?
+
+SELECT zipcode, AVG(not_hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the average population of individuals who are not Hispanic or Latino in each US zipcode?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2015 ORDER BY not_hispanic_or_latino ASC LIMIT 20;
+→ What are the 20 US zipcodes with the lowest percentage of non-Hispanic or Latino population in the year 2015?
+
+SELECT SUM(not_hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30072';
+→ What is the total population of individuals who are not Hispanic or Latino in the area with the ZIP code 30072?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics ORDER BY not_hispanic_or_latino DESC LIMIT 5;
+→ What are the 5 US zipcodes with the highest population of people who are not Hispanic or Latino?
+
+SELECT zipcode, MAX(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 1;
+→ What is the US zipcode with the smallest percentage of non-Hispanic or non-Latino residents?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 3292 AND year = 2017;
+→ What is the total number of zipcodes in 2017 where the population of one race is greater than 3292?
+
+SELECT year, MAX(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the year with the highest number of Hispanic or Latino individuals in the data?
+
+SELECT id FROM demographics WHERE zipcode = 'ZCTA5 30094' AND year = 2017;
+→ What is the unique identifier for the demographics data collected in 2017 for the area with the ZIP code 30094?
+
+SELECT zipcode, AVG(one_race) FROM demographics GROUP BY zipcode;
+→ What is the average population of one race per ZIP code?
+
+SELECT two_or_more_races FROM demographics WHERE zipcode = 'ZCTA5 30170' AND year = 2018;
+→ What is the population of people who identify with two or more races in the area with ZIP code 30170 in 2018?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 9047;
+→ What are the US zip codes where the total population for racial data exceeds 9,047?
+
+SELECT COUNT(*) FROM demographics WHERE race_total_population > 8192 AND year = 2015;
+→ What is the total number of zipcodes in the United States in the year 2015 where the total population is greater than 8,192?
+
+SELECT MIN(hispanic_or_latino_total) FROM demographics;
+→ What is the smallest total Hispanic or Latino population in the demographics data?
+
+SELECT zipcode, MAX(not_hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the largest population of individuals who are not Hispanic or Latino?
+
+SELECT year, MAX(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the year in which the maximum population of people of one race was recorded?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years of data available in the demographics database?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total < 8765 AND year = 2019;
+→ What are the US zip codes that had a total Hispanic or Latino population less than 8,765 in the year 2019?
+
+SELECT year, AVG(race_total_population) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the average total population for each year, listed in descending order from the year with the highest average population?
+
+SELECT year, MIN(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the minimum percentage of the population that is Hispanic or Latino for each year?
+
+SELECT year, AVG(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average Hispanic or Latino population across all zipcodes for each year?
+
+SELECT year, SUM(one_race) FROM demographics GROUP BY year;
+→ What is the total population of people of a single race for each year?
+
+SELECT year, SUM(race_total_population) FROM demographics GROUP BY year;
+→ What is the total population in each year?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years in the demographic data?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 8656 AND year = 2015;
+→ What US zip codes in the year 2015 had a total Hispanic or Latino population less than 8,656?
+
+SELECT year, MAX(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the year with the highest total Hispanic or Latino population?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics WHERE year = 2015 ORDER BY hispanic_or_latino_total DESC LIMIT 1;
+→ What is the ZIP code with the largest total Hispanic or Latino population in the year 2015?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino > 8069 AND year = 2019;
+→ What is the total number of US zipcodes in 2019 where the total Hispanic or Latino population exceeds 8,069?
+
+SELECT MIN(not_hispanic_or_latino) FROM demographics;
+→ What is the smallest number of people who are not Hispanic or Latino?
+
+SELECT MIN(hispanic_or_latino_total) FROM demographics;
+→ What is the smallest total Hispanic or Latino population found in the data?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics ORDER BY not_hispanic_or_latino DESC LIMIT 20;
+→ What are the zip codes with the largest populations of people who are not Hispanic or Latino, and list the top 20?
+
+SELECT zipcode, AVG(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 20;
+→ What are the 20 US zip codes with the highest average total population of all races, listed in descending order?
+
+SELECT zipcode FROM demographics WHERE race_total_population < 4394 AND year = 2018;
+→ What are the zip codes where the total population for racial data is less than 4,394 in the year 2018?
+
+SELECT zipcode FROM demographics WHERE one_race < 3408 AND year = 2017;
+→ What zip codes had a total population of one race of less than 3,408 in 2017?
+
+SELECT zipcode, AVG(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 10;
+→ What are the top 10 US zipcodes with the average percentage of non-Hispanic or Latino population, listed from lowest to highest?
+
+SELECT MIN(hispanic_or_latino_total) FROM demographics;
+→ What is the smallest total Hispanic or Latino population recorded in the demographics data?
+
+SELECT AVG(not_hispanic_or_latino) FROM demographics WHERE year = 2017;
+→ What is the average population that is not Hispanic or Latino across all zip codes in the year 2017?
+
+SELECT SUM(one_race) FROM demographics WHERE zipcode = 'ZCTA5 30060';
+→ What is the total population in the 30060 ZIP code that identifies with only one racial group?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years in the demographic data?
+
+SELECT SUM(race_total_population) FROM demographics;
+→ What is the total population for all demographic data by US zipcode and year?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino > 9172;
+→ What are the US zip codes where the population of individuals who are not Hispanic or Latino is more than 9,172?
+
+SELECT race_total_population FROM demographics WHERE zipcode = 'ZCTA5 30052' AND year = 2018;
+→ What is the total population for racial data in the year 2018 for the ZIP code 30052?
+
+SELECT one_race FROM demographics WHERE zipcode = 'ZCTA5 30082' AND year = 2019;
+→ What is the population of people of one race in the year 2019, specifically in the area of ZIP code 30082?
+
+SELECT MAX(one_race) FROM demographics;
+→ What is the maximum population of individuals with a single racial identity?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years present in the demographic data?
+
+SELECT zipcode FROM demographics WHERE zipcode = 'ZCTA5 30024' AND year = 2019;
+→ What is the ZIP code area for the data collected in the year 2019?
+
+SELECT SUM(race_total_population) FROM demographics WHERE year = 2019;
+→ What is the total population for all racial groups in the year 2019?
+
+SELECT zipcode, SUM(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What is the total number of Hispanic or Latino people in each US zipcode?
+
+SELECT year, AVG(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average Hispanic or Latino population by year?
+
+SELECT AVG(not_hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30022';
+→ What is the average population of individuals who are not Hispanic or Latino in the area with the ZIP code 30022?
+
+SELECT MAX(race_total_population) FROM demographics;
+→ What is the highest total population among all racial groups recorded in the demographics data?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 3990;
+→ What zip codes have a total population of more than 3,990 people?
+
+SELECT year, MIN(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the earliest year for which we have data on the Hispanic or Latino population?
+
+SELECT race_total_population FROM demographics WHERE zipcode = 'ZCTA5 30134' AND year = 2019;
+→ What is the total population of a specific racial group in the area with the ZIP code 30134 for the year 2019?
+
+SELECT zipcode FROM demographics WHERE one_race > 101;
+→ What are the ZIP codes where the population of one racial group is greater than 101?
+
+SELECT zipcode FROM demographics WHERE one_race > 6811;
+→ What are the zip codes where the population of one specific race is greater than 6811 individuals?
+
+SELECT MAX(hispanic_or_latino_total) FROM demographics WHERE year = 2017;
+→ What is the highest total Hispanic or Latino population in 2017?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics ORDER BY hispanic_or_latino_total ASC LIMIT 1;
+→ What is the US zipcode with the smallest total Hispanic or Latino population?
+
+SELECT year, AVG(race_total_population) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the average total population for racial data in each year, listed in order from lowest to highest?
+
+SELECT SUM(race_total_population) FROM demographics;
+→ What is the total population across all zip codes?
+
+SELECT MIN(hispanic_or_latino) FROM demographics;
+→ What is the year with the smallest Hispanic or Latino population?
+
+SELECT zipcode, AVG(not_hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the average percentage of people who are not Hispanic or Latino in each ZIP code?
+
+SELECT zipcode, MAX(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the highest total Hispanic or Latino population?
+
+SELECT zipcode, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 5;
+→ What are the 5 US zipcodes with the lowest total Hispanic or Latino populations?
+
+SELECT year, MAX(race_total_population) FROM demographics GROUP BY year;
+→ What is the year with the highest total population for each year?
+
+SELECT zipcode, one_race FROM demographics ORDER BY one_race DESC LIMIT 10;
+→ What are the 10 US zipcodes with the highest population of people of one race, listed from largest to smallest?
+
+SELECT zipcode, MIN(hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the minimum percentage of Hispanic or Latino population in each US zipcode?
+
+SELECT zipcode FROM demographics WHERE race_total_population < 1497 AND year = 2016;
+→ What are the ZIP codes in the year 2016 where the total population is less than 1,497?
+
+SELECT AVG(not_hispanic_or_latino) FROM demographics WHERE year = 2018;
+→ What is the average population of people who are not Hispanic or Latino in the year 2018?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 6570 AND year = 2015;
+→ What is the total number of US zipcodes in 2015 that have a total Hispanic or Latino population greater than 6,570?
+
+SELECT year, SUM(not_hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the total population of individuals who are not Hispanic or Latino by calendar year?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the different years for which we have demographic data?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 6901;
+→ What are all the zipcodes where the total Hispanic or Latino population exceeds 6,901?
+
+SELECT zipcode, SUM(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 5;
+→ What are the top 5 US zip codes with the highest total Hispanic or Latino populations?
+
+SELECT year, MIN(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year for which the minimum percentage of the population is not Hispanic or Latino, and what is that minimum percentage?
+
+SELECT zipcode FROM demographics WHERE one_race < 1593 AND year = 2019;
+→ What are the ZIP codes in 2019 where the total population identifying with one race is less than 1,593?
+
+SELECT year, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the minimum total number of Hispanic or Latino people across the US for each year, listed in order from the smallest to the largest number?
+
+SELECT MAX(not_hispanic_or_latino) FROM demographics;
+→ What is the maximum population of individuals who are not Hispanic or Latino?
+
+SELECT MIN(not_hispanic_or_latino) FROM demographics WHERE year = 2016;
+→ What is the smallest number of people who are not Hispanic or Latino in the US, based on data from the year 2016?
+
+SELECT zipcode, hispanic_or_latino FROM demographics ORDER BY hispanic_or_latino ASC LIMIT 5;
+→ What are the first 5 zip codes in the data, arranged from smallest to largest in terms of the total Hispanic or Latino population?
+
+SELECT zipcode, AVG(one_race) FROM demographics GROUP BY zipcode;
+→ What is the average population of a single racial group for each ZIP code?
+
+SELECT black FROM demographics WHERE zipcode = 'ZCTA5 30008' AND year = 2017;
+→ What is the population of people who are Black or African American in the year 2017 for the zip code 30008?
+
+SELECT AVG(race_total_population) FROM demographics WHERE year = 2019;
+→ What is the average total population in the demographics for the year 2019?
+
+SELECT zipcode, MIN(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 10;
+→ What are the 10 US zipcodes with the smallest populations of people who are not Hispanic or Latino?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics ORDER BY not_hispanic_or_latino ASC LIMIT 5;
+→ What are the 5 zipcodes with the smallest percentage of people who are not Hispanic or Latino?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 1786 AND year = 2018;
+→ What are the US zipcodes where the Hispanic or Latino population is less than 1,786 in the year 2018?
+
+SELECT AVG(not_hispanic_or_latino) FROM demographics WHERE year = 2018;
+→ What is the average population of people who are not Hispanic or Latino in the entire US in 2018?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 9907;
+→ What are the zipcodes with a total Hispanic or Latino population greater than 9,907?
+
+SELECT zipcode, AVG(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 20;
+→ What are the 20 US zipcodes with the highest average population of one racial group?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino > 9072 AND year = 2017;
+→ What is the total count of US zipcodes in 2017 that have a Hispanic or Latino population greater than 9,072?
+
+SELECT AVG(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30153';
+→ What is the average total population of all racial groups in the area with the ZIP code 30153?
+
+SELECT year, SUM(one_race) FROM demographics GROUP BY year;
+→ What is the total population for each year, based on people who identify with one racial category?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics WHERE year = 2017 ORDER BY hispanic_or_latino_total ASC LIMIT 1;
+→ What is the ZIP code with the smallest total Hispanic or Latino population in the year 2017?
+
+SELECT COUNT(*) FROM demographics WHERE not_hispanic_or_latino > 6427 AND year = 2017;
+→ What is the total number of zip codes in 2017 where the population that is not Hispanic or Latino is more than 6,427?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique years are recorded in the demographic data?
+
+SELECT zipcode, one_race FROM demographics ORDER BY one_race ASC LIMIT 1;
+→ What is the ZIP code with the smallest population of people with a single racial identity?
+
+SELECT zipcode FROM demographics WHERE one_race > 8143;
+→ What are the zip codes where the population of one racial group is greater than 8143?
+
+SELECT race_total_population FROM demographics WHERE zipcode = 'ZCTA5 30127' AND year = 2016;
+→ What is the total population for the given racial data in the zipcode 30127 for the year 2016?
+
+SELECT zipcode FROM demographics WHERE race_total_population < 1959 AND year = 2019;
+→ What are the ZIP codes where the total population is less than 1,959 in the year 2019?
+
+SELECT COUNT(*) FROM demographics WHERE race_total_population > 8404 AND year = 2019;
+→ What is the total number of US zip codes where the total population is greater than 8,404 in the year 2019?
+
+SELECT zipcode, MAX(race_total_population) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the largest total population based on racial data?
+
+SELECT zipcode FROM demographics WHERE one_race > 8056;
+→ What US zipcodes have a population of one race that exceeds 8,056?
+
+SELECT zipcode, MAX(race_total_population) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the highest total population based on racial data?
+
+SELECT zipcode, hispanic_or_latino FROM demographics ORDER BY hispanic_or_latino ASC LIMIT 1;
+→ What is the ZIP code with the smallest Hispanic or Latino population?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the different calendar years that the demographic data covers?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years represented in the demographic data?
+
+SELECT zipcode, hispanic_or_latino FROM demographics ORDER BY hispanic_or_latino ASC LIMIT 1;
+→ What is the ZIP code of the area with the smallest total Hispanic or Latino population?
+
+SELECT COUNT(*) FROM demographics WHERE race_total_population > 9739 AND year = 2019;
+→ What is the total number of zip codes in 2019 that have a total population of more than 9739?
+
+SELECT zipcode, MIN(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 1;
+→ What is the US ZIP code with the smallest total population for racial data?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 8524;
+→ What are the ZIP codes where the total Hispanic or Latino population is greater than 8,524?
+
+SELECT AVG(race_total_population) FROM demographics;
+→ What is the average total population across all racial groups?
+
+SELECT native_hawaiian_and_other_pacific_islander FROM demographics WHERE zipcode = 'ZCTA5 30164' AND year = 2018;
+→ What is the population of Native Hawaiians and Other Pacific Islanders in the area with the ZIP code 30164 in the year 2018?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years present in the demographic data?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total < 5570 AND year = 2018;
+→ What US zip codes in the year 2018 had less than 5,570 total Hispanic or Latino populations?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2017 ORDER BY one_race DESC LIMIT 1;
+→ What is the US zipcode with the highest population of people who identify with a single racial group in 2017?
+
+SELECT year, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the minimum total Hispanic or Latino population for each year, listed in order from smallest to largest?
+
+SELECT zipcode, AVG(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 10;
+→ What are the 10 US zipcodes with the lowest average total population by racial data, listed in order from lowest to highest?
+
+SELECT SUM(hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30080';
+→ What is the total Hispanic or Latino population in the area with the ZIP code ZCTA5 30080?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 8032 AND year = 2018;
+→ What are the US zipcodes where the total Hispanic or Latino population in 2018 is less than 8,032?
+
+SELECT zipcode FROM demographics WHERE zipcode = 'ZCTA5 30019' AND year = 2018;
+→ What is the zipcode in the 2018 data that corresponds to the area with the zip code 'ZCTA5 30019'?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique years are present in the demographic data?
+
+SELECT not_hispanic_or_latino FROM demographics WHERE zipcode = 'ZCTA5 30147' AND year = 2015;
+→ What is the population of people who are not Hispanic or Latino in the ZCTA5 with the zip code 30147 in the year 2015?
+
+SELECT MIN(hispanic_or_latino_total) FROM demographics WHERE zipcode = 'ZCTA5 30035';
+→ What is the smallest total Hispanic or Latino population in the year that data is available for the ZIP code 30035?
+
+SELECT MIN(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30087';
+→ What is the smallest total population for racial data in the area with ZIP code ZCTA5 30087?
+
+SELECT year, SUM(not_hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the total non-Hispanic or Latino population for each year?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2016 ORDER BY not_hispanic_or_latino DESC LIMIT 10;
+→ What are the top 10 US zip codes in 2016 by the population of non-Hispanic or Latino residents, listed in order from largest to smallest?
+
+SELECT MIN(not_hispanic_or_latino) FROM demographics;
+→ What is the smallest population of people who are not Hispanic or Latino across all the zipcodes?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years present in the demographic data?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 2499;
+→ What are all the ZIP codes where the total population is more than 2,499?
+
+SELECT zipcode, SUM(race_total_population) FROM demographics GROUP BY zipcode;
+→ What is the total population for each US zipcode?
+
+SELECT zipcode, one_race FROM demographics ORDER BY one_race DESC LIMIT 5;
+→ What are the 5 zipcodes with the highest populations consisting of people of one race?
+
+SELECT AVG(hispanic_or_latino) FROM demographics WHERE year = 2016;
+→ What is the average Hispanic or Latino population in the United States for the year 2016?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 1072;
+→ What zip codes have a total population of a racial group that is greater than 1,072?
+
+SELECT AVG(one_race) FROM demographics WHERE year = 2018;
+→ What is the average population of individuals who identify with a single racial group in the year 2018?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 7365;
+→ What are the US zipcodes with a Hispanic or Latino population greater than 7,365?
+
+SELECT zipcode, SUM(hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the total Hispanic or Latino population for each US zipcode?
+
+SELECT year, MAX(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the year with the highest total Hispanic or Latino population across all zipcodes?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 7493;
+→ What are the zip codes with a total Hispanic or Latino population greater than 7,493?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique years are recorded in the demographic data?
+
+SELECT year, MAX(one_race) FROM demographics GROUP BY year;
+→ What year saw the highest total population of people who identify with only one racial category?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 2323;
+→ What are the zipcodes where the total Hispanic or Latino population exceeds 2323?
+
+SELECT zipcode, AVG(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 1;
+→ What is the US zipcode with the highest average total Hispanic or Latino population across all years?
+
+SELECT COUNT(*) FROM demographics WHERE race_total_population > 5079 AND year = 2015;
+→ What is the total count of zipcodes in the year 2015 where the total population is greater than 5,079?
+
+SELECT zipcode, hispanic_or_latino FROM demographics ORDER BY hispanic_or_latino DESC LIMIT 1;
+→ What is the ZIP code with the highest total Hispanic or Latino population?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 1692;
+→ What are the US zipcodes where the total Hispanic or Latino population is more than 1,692?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino > 1295;
+→ What are the ZIP codes where the population of people who are not Hispanic or Latino is more than 1295?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 5597;
+→ What US zipcodes have a total Hispanic or Latino population of more than 5,597?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique calendar years are represented in the demographic data?
+
+SELECT zipcode FROM demographics WHERE one_race < 2571 AND year = 2017;
+→ What zip codes in 2017 had a population of a single race that was less than 2,571?
+
+SELECT MIN(not_hispanic_or_latino) FROM demographics;
+→ What is the smallest number of people who are not Hispanic or Latino in the data?
+
+SELECT zipcode FROM demographics WHERE one_race < 5097 AND year = 2018;
+→ What are the zipcodes where, in 2018, the population of a single racial group is less than 5,097?
+
+SELECT year, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year with the smallest total Hispanic or Latino population across all zipcodes?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2016 ORDER BY not_hispanic_or_latino DESC LIMIT 1;
+→ What is the ZIP code with the highest population of people who are not Hispanic or Latino in 2016?
+
+SELECT zipcode, race_total_population FROM demographics WHERE year = 2018 ORDER BY race_total_population ASC LIMIT 20;
+→ What are the 20 US zipcodes with the lowest total population by racial groups in 2018?
+
+SELECT AVG(hispanic_or_latino) FROM demographics WHERE year = 2019;
+→ What is the average Hispanic or Latino population across all zipcodes in the year 2019?
+
+SELECT AVG(race_total_population) FROM demographics;
+→ What is the average total population for racial data across all zip codes?
+
+SELECT year, MAX(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the maximum total Hispanic or Latino population in each year?
+
+SELECT white FROM demographics WHERE zipcode = 'ZCTA5 30045' AND year = 2018;
+→ What is the number of people who identify as White in the 30045 area in 2018?
+
+SELECT zipcode, MIN(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 5;
+→ What are the 5 zipcodes with the smallest populations consisting of people of one race, and what are those population sizes?
+
+SELECT AVG(one_race) FROM demographics WHERE year = 2018;
+→ What is the average population of individuals with one race in the year 2018?
+
+SELECT white FROM demographics WHERE zipcode = 'ZCTA5 30113' AND year = 2018;
+→ What is the population of people who are white in the Zip code area 30113 for the year 2018?
+
+SELECT year, AVG(not_hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average population of non-Hispanic or Latino individuals across different years?
+
+SELECT zipcode FROM demographics WHERE race_total_population < 5572 AND year = 2015;
+→ What US zipcodes in 2015 had a total population of less than 5,572 people?
+
+SELECT AVG(hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30102';
+→ What is the average Hispanic or Latino population in the 30102 ZIP code area?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE zipcode = 'ZCTA5 30137';
+→ What is the average total Hispanic or Latino population in the area with the ZIP code 30137?
+
+SELECT MAX(race_total_population) FROM demographics WHERE year = 2017;
+→ What was the highest total population recorded in the demographics data for the year 2017?
+
+SELECT zipcode, AVG(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 10;
+→ What are the top 10 US zip codes with the average total Hispanic or Latino population?
+
+SELECT zipcode, MIN(race_total_population) FROM demographics GROUP BY zipcode;
+→ What are the zipcodes with the smallest total population for racial data?
+
+SELECT SUM(one_race) FROM demographics WHERE year = 2019;
+→ What was the total population of people who only identify with one specific racial group in the year 2019?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique calendar years are represented in the demographic data?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 5056 AND year = 2017;
+→ What is the total count of US zipcodes in 2017 where the total Hispanic or Latino population is more than 5,056?
+
+SELECT hispanic_or_latino_total FROM demographics WHERE zipcode = 'ZCTA5 30134' AND year = 2017;
+→ What is the total Hispanic or Latino population in the area with ZIP code 30134 for the year 2017?
+
+SELECT year, SUM(one_race) FROM demographics GROUP BY year;
+→ What is the total population of people with one racial identity each year?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics ORDER BY not_hispanic_or_latino DESC LIMIT 10;
+→ What are the 10 US zip codes with the highest percentage of non-Hispanic or Latino residents?
+
+SELECT AVG(hispanic_or_latino) FROM demographics WHERE year = 2015;
+→ What was the average Hispanic or Latino population in the year 2015?
+
+SELECT year, MAX(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year with the largest population of people who identify with one race, and what is that population for each year in descending order?
+
+SELECT year, SUM(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the total population of people who identify as a single race, for each year, listed in order from largest to smallest?
+
+SELECT zipcode, AVG(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What is the average total Hispanic or Latino population for each US zipcode?
+
+SELECT year, SUM(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the total Hispanic or Latino population by year?
+
+SELECT year, MIN(race_total_population) FROM demographics GROUP BY year;
+→ What year had the smallest total population across all racial groups?
+
+SELECT year, MIN(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the smallest percentage of the population that is not Hispanic or Latino for each year, listed in order from smallest to largest?
+
+SELECT MAX(one_race) FROM demographics WHERE zipcode = 'ZCTA5 30079';
+→ What is the maximum population of one race in the area corresponding to the ZIP code 30079?
+
+SELECT MAX(hispanic_or_latino_total) FROM demographics;
+→ What is the highest total Hispanic or Latino population across all US zipcodes?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2016 ORDER BY not_hispanic_or_latino ASC LIMIT 10;
+→ What are the top 10 US zipcodes with the highest number of people who are not Hispanic or Latino in the year 2016?
+
+SELECT year, MAX(hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the year with the highest total Hispanic or Latino population across all zip codes?
+
+SELECT zipcode, SUM(hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the total Hispanic or Latino population in each US zipcode?
+
+SELECT one_race FROM demographics WHERE zipcode = 'ZCTA5 30113' AND year = 2015;
+→ What is the population of one race living in the area with the ZIP code 30113 in the year 2015?
+
+SELECT zipcode, AVG(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 1;
+→ What is the average total population of different racial groups for each US zipcode, listed in order from the smallest average to the largest, and what is the zipcode with the smallest average?
+
+SELECT zipcode, race_total_population FROM demographics WHERE year = 2016 ORDER BY race_total_population DESC LIMIT 5;
+→ What are the 5 US zipcodes with the highest total population based on racial data in the year 2016, listed in order from highest to lowest population?
+
+SELECT year, MAX(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year with the highest total population of individuals who identify with a single racial category, and what is that total population?
+
+SELECT year, MAX(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the year with the highest total Hispanic or Latino population?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 6178 AND year = 2018;
+→ What is the total number of zip codes in 2018 where the total Hispanic or Latino population is greater than 6,178?
+
+SELECT zipcode, race_total_population FROM demographics ORDER BY race_total_population ASC LIMIT 20;
+→ What are the 20 zipcodes with the smallest total racial population in the demographics data?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 9215;
+→ What US zipcodes have a total Hispanic or Latino population of more than 9,215 people?
+
+SELECT SUM(hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30064';
+→ What is the total Hispanic or Latino population in the area with the ZIP code 30064?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 2704 AND year = 2017;
+→ What is the total number of zip codes in 2017 where the population of one racial group is more than 2704?
+
+SELECT zipcode, SUM(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What's the total Hispanic or Latino population for each US zipcode?
+
+SELECT SUM(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30115';
+→ What is the total population of the area with the ZIP code 30115?
+
+SELECT year, SUM(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the total non-Hispanic or Latino population by year, listed in descending order?
+
+SELECT SUM(race_total_population) FROM demographics;
+→ What is the total population across all racial groups?
+
+SELECT zipcode, SUM(race_total_population) FROM demographics GROUP BY zipcode;
+→ What is the total population for each US zipcode, based on the most recent demographic data available?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 2038 AND year = 2018;
+→ What are the zipcodes in the United States for the year 2018 where the population of individuals who are not Hispanic or Latino is less than 2038 people?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 724 AND year = 2016;
+→ What is the total number of US zipcodes in 2016 where the total Hispanic or Latino population is greater than 724?
+
+SELECT year, AVG(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the average number of non-Hispanic or Latino people in the US by year, listed in order from highest to lowest?
+
+SELECT zipcode, AVG(one_race) FROM demographics GROUP BY zipcode;
+→ What is the average population of people who identify as a single race, organized by US zipcode?
+
+SELECT zipcode, hispanic_or_latino FROM demographics WHERE year = 2015 ORDER BY hispanic_or_latino ASC LIMIT 20;
+→ What are the 20 zipcodes with the least Hispanic or Latino population in the year 2015?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years in the dataset?
+
+SELECT zipcode, AVG(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 20;
+→ What are the 20 US zipcodes with the highest average total population for racial data?
+
+SELECT MAX(hispanic_or_latino) FROM demographics;
+→ What is the highest total Hispanic or Latino population in any given year?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 1308;
+→ What US zipcodes have a total population of at least 1308 people across racial groups?
+
+SELECT year, AVG(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the average total Hispanic or Latino population for each year, listed in order from the highest average population to the lowest?
+
+SELECT MIN(one_race) FROM demographics WHERE zipcode = 'ZCTA5 30034';
+→ What is the smallest population of people who identify as one race in the area with the ZIP code 30034?
+
+SELECT year, AVG(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average percentage of the Hispanic or Latino population across the United States in each year?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 4897 AND year = 2015;
+→ What is the total number of US zipcodes in 2015 where the population of one specific racial group is more than 4,897?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 6095 AND year = 2017;
+→ What US zip codes had fewer than 6,095 Hispanic or Latino residents in 2017?
+
+SELECT year, SUM(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What is the total Hispanic or Latino population by calendar year?
+
+SELECT zipcode, race_total_population FROM demographics ORDER BY race_total_population DESC LIMIT 10;
+→ What are the 10 zip codes with the highest total population across different racial groups?
+
+SELECT year, SUM(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the total number of people who are Hispanic or Latino for each year, in descending order, from the most to the least?
+
+SELECT MIN(one_race) FROM demographics WHERE year = 2015;
+→ What is the smallest population of people who identify with a single race in the year 2015?
+
+SELECT AVG(hispanic_or_latino_total) FROM demographics;
+→ What is the average total Hispanic or Latino population across all US zipcodes?
+
+SELECT SUM(race_total_population) FROM demographics;
+→ What is the total population across all zip codes?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 9191 AND year = 2017;
+→ What is the total number of zipcodes in 2017 where the population of one specific race is greater than 9,191?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino > 6168;
+→ What US zipcodes have a population of non-Hispanic or Latino residents greater than 6,168?
+
+SELECT MAX(not_hispanic_or_latino) FROM demographics WHERE year = 2018;
+→ What is the largest population of people who are not Hispanic or Latino in the year 2018?
+
+SELECT zipcode, hispanic_or_latino FROM demographics WHERE year = 2016 ORDER BY hispanic_or_latino ASC LIMIT 20;
+→ What are the top 20 US zip codes with the highest Hispanic or Latino population in 2016?
+
+SELECT zipcode, AVG(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 10;
+→ What are the top 10 US zipcodes with the highest average population of individuals who identify with a single racial group?
+
+SELECT SUM(race_total_population) FROM demographics WHERE year = 2019;
+→ What is the total population in the US for the year 2019?
+
+SELECT AVG(race_total_population) FROM demographics WHERE year = 2015;
+→ What is the average total population for racial data across all US zipcodes in 2015?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 8669 AND year = 2016;
+→ How many areas in the US had a total Hispanic or Latino population greater than 8,669 in 2016?
+
+SELECT SUM(race_total_population) FROM demographics;
+→ What is the total population across all demographics?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics ORDER BY hispanic_or_latino_total DESC LIMIT 20;
+→ What are the 20 US zipcodes with the highest total Hispanic or Latino populations, listed in order from highest to lowest?
+
+SELECT zipcode FROM demographics WHERE race_total_population < 1913 AND year = 2018;
+→ What are the US zipcodes where the total population in 2018 was less than 1,913?
+
+SELECT year, MAX(hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year with the highest total Hispanic or Latino population, and what is that total for each year, listed in descending order?
+
+SELECT year, MAX(hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the year with the highest Hispanic or Latino population in each year, listed in descending order of the Hispanic or Latino population count?
+
+SELECT year, MIN(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What year had the smallest percentage of people reporting a single racial category, and what was that percentage in that year?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 619 AND year = 2019;
+→ What are the US zipcodes where, in 2019, the population that is not Hispanic or Latino is less than 619?
+
+SELECT SUM(hispanic_or_latino_total) FROM demographics WHERE year = 2018;
+→ What is the total Hispanic or Latino population for all zipcodes in the year 2018?
+
+SELECT zipcode, SUM(one_race) FROM demographics GROUP BY zipcode;
+→ What are the total one-race populations for each US zipcode?
+
+SELECT AVG(not_hispanic_or_latino) FROM demographics;
+→ What is the average number of people who are not Hispanic or Latino across all zip codes?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 9842 AND year = 2017;
+→ What is the total number of US zipcodes in 2017 where the population of one specific racial group is more than 9,842?
+
+SELECT year, AVG(hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average Hispanic or Latino population by calendar year?
+
+SELECT zipcode FROM demographics WHERE one_race > 9508;
+→ What US zip codes have a total population where at least 9508 people identify with one racial group?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 3711 AND year = 2018;
+→ What is the total number of US zipcodes in 2018 that had a total Hispanic or Latino population exceeding 3,711?
+
+SELECT year, MAX(hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the year with the highest total Hispanic or Latino population among all years?
+
+SELECT MAX(hispanic_or_latino_total) FROM demographics;
+→ What is the highest total Hispanic or Latino population recorded in the demographics data?
+
+SELECT MIN(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30028';
+→ What is the smallest total population for racial data in the area with the ZIP code 30028?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years in the demographic data?
+
+SELECT zipcode FROM demographics WHERE race_total_population < 4456 AND year = 2016;
+→ What are the US zipcodes with a total population that is less than 4,456 people, specifically looking at data from the year 2016?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino > 4253;
+→ What are the zip codes where the total Hispanic or Latino population is more than 4253?
+
+SELECT zipcode, MAX(one_race) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode where a single racial group makes up the highest percentage of the population?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2019 ORDER BY one_race DESC LIMIT 1;
+→ What is the US zipcode with the highest population of people of one race in the year 2019?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 4982 AND year = 2018;
+→ What are the US zipcodes where the total Hispanic or Latino population in 2018 was less than 4,982?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 5497;
+→ What are the zipcodes where the total Hispanic or Latino population is greater than 5,497?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics ORDER BY not_hispanic_or_latino DESC LIMIT 20;
+→ What are the 20 zipcodes with the largest population of people who are not Hispanic or Latino, listed in order from largest to smallest?
+
+SELECT zipcode, SUM(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 1;
+→ What is the US zipcode with the highest total population of people identifying with only one racial category?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 1397;
+→ What are the US zipcodes where the total population is more than 1,397?
+
+SELECT year, AVG(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the average number of people in a single racial group per year, listed in descending order from the highest average?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 1267 AND year = 2016;
+→ What US zipcodes in the year 2016 have a total Hispanic or Latino population of less than 1,267?
+
+SELECT MIN(hispanic_or_latino) FROM demographics;
+→ What is the smallest Hispanic or Latino population recorded in the demographics data?
+
+SELECT SUM(not_hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30022';
+→ What is the total population of individuals who are not Hispanic or Latino in the ZCTA5 30022 area?
+
+SELECT MAX(not_hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30121';
+→ What is the largest population of individuals who are not Hispanic or Latino in the area of zip code 30121?
+
+SELECT zipcode FROM demographics WHERE one_race < 7813 AND year = 2018;
+→ What are the zipcodes in the year 2018 where the population of one race is less than 7,813?
+
+SELECT year, MIN(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What is the minimum total Hispanic or Latino population in each year?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2019 ORDER BY one_race ASC LIMIT 1;
+→ What is the ZIP code with the smallest population of people of one race in the year 2019?
+
+SELECT year, AVG(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What is the average total Hispanic or Latino population across the United States for each year?
+
+SELECT MIN(hispanic_or_latino_total) FROM demographics WHERE year = 2018;
+→ What was the smallest total Hispanic or Latino population in the year 2018?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2017 ORDER BY not_hispanic_or_latino ASC LIMIT 20;
+→ What are the 20 zipcodes with the smallest populations that are not Hispanic or Latino, specifically looking at data from the year 2017?
+
+SELECT AVG(one_race) FROM demographics WHERE year = 2015;
+→ What is the average population of people identified as a single racial group in the year 2015?
+
+SELECT MAX(one_race) FROM demographics WHERE year = 2015;
+→ What was the highest number of people in a single racial group in the United States in the year 2015?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 523;
+→ Which zipcodes have a total population of a specific racial group greater than 523?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino_total > 3098 AND year = 2018;
+→ How many total Hispanic or Latino individuals lived in a US zipcode in 2018, considering only areas with a Hispanic or Latino population greater than 3098?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 1282 AND year = 2019;
+→ What are the zip codes in 2019 where the population of people who are not Hispanic or Latino is less than 1,282?
+
+SELECT some_other_race FROM demographics WHERE zipcode = 'ZCTA5 30101' AND year = 2019;
+→ What is the population of individuals who identify as some other race in the year 2019, specifically in the area with the ZIP code 30101?
+
+SELECT COUNT(*) FROM demographics WHERE one_race > 7476 AND year = 2019;
+→ What is the total count of US zip codes in 2019 where the population of one specific racial group is greater than 7,476?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics ORDER BY not_hispanic_or_latino DESC LIMIT 1;
+→ What is the US zipcode with the highest percentage of individuals who do not identify as Hispanic or Latino?
+
+SELECT year, AVG(race_total_population) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the average total population for each year, listed in ascending order?
+
+SELECT COUNT(*) FROM demographics WHERE race_total_population > 6628 AND year = 2015;
+→ What is the total number of US zipcodes in the year 2015 that have a total population of more than 6628 people?
+
+SELECT zipcode FROM demographics WHERE one_race < 7876 AND year = 2018;
+→ What are the US zip codes for which, in the year 2018, the population of one single racial group was less than 7,876?
+
+SELECT SUM(one_race) FROM demographics WHERE zipcode = 'ZCTA5 30113';
+→ What is the total population of people who identify as a single race living in the area with ZIP code 30113?
+
+SELECT MIN(hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30083';
+→ What is the minimum Hispanic or Latino population in the area with the ZIP code ZCTA5 30083?
+
+SELECT MIN(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30011';
+→ What is the smallest total population of any racial group in the area with the ZIP code of ZCTA5 30011?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total < 3622 AND year = 2018;
+→ What are the zipcodes where the total Hispanic or Latino population is less than 3,622 in the year 2018?
+
+SELECT zipcode, MAX(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 10;
+→ What are the 10 US zip codes with the highest total population based on racial data?
+
+SELECT zipcode, SUM(hispanic_or_latino_total) FROM demographics GROUP BY zipcode;
+→ What is the total Hispanic or Latino population for each US zipcode?
+
+SELECT zipcode, race_total_population FROM demographics ORDER BY race_total_population ASC LIMIT 20;
+→ What are the 20 US zipcodes with the smallest total racial populations?
+
+SELECT zipcode, MAX(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 1;
+→ What is the US zipcode with the highest percentage of the population identifying with only one racial group?
+
+SELECT MAX(hispanic_or_latino) FROM demographics WHERE year = 2016;
+→ What was the largest Hispanic or Latino population in the US in the year 2016?
+
+SELECT zipcode, MAX(not_hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the largest population of people who are not Hispanic or Latino?
+
+SELECT year, SUM(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val ASC;
+→ What is the total population of people of one race for each year, listed in ascending order from the smallest total to the largest?
+
+SELECT AVG(not_hispanic_or_latino) FROM demographics;
+→ What is the average percentage of the population that is not Hispanic or Latino across all US zip codes?
+
+SELECT AVG(hispanic_or_latino) FROM demographics;
+→ What is the average percentage of Hispanic or Latino population across all zip codes?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino < 9475 AND year = 2018;
+→ What are the US zip codes with a Hispanic or Latino population less than 9,475 in the year 2018?
+
+SELECT year FROM demographics WHERE zipcode = 'ZCTA5 30094' AND year = 2017;
+→ What is the year associated with demographic data for the zipcode ZCTA5 30094 in 2017?
+
+SELECT white FROM demographics WHERE zipcode = 'ZCTA5 30035' AND year = 2018;
+→ What is the population of people who are white in the area of ZCTA5 30035 for the year 2018?
+
+SELECT zipcode FROM demographics WHERE one_race < 4424 AND year = 2015;
+→ What are the ZIP codes where the population of one race in 2015 was less than 4,424?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years in the demographic data?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics ORDER BY hispanic_or_latino_total DESC LIMIT 20;
+→ What are the 20 US zip codes with the largest total Hispanic or Latino populations?
+
+SELECT zipcode, MIN(hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the US zipcode with the smallest Hispanic or Latino population?
+
+SELECT AVG(hispanic_or_latino) FROM demographics;
+→ What is the average Hispanic or Latino population across all zip codes?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique calendar years that appear in the demographic data?
+
+SELECT MAX(race_total_population) FROM demographics WHERE year = 2018;
+→ What was the highest total population in the US in 2018?
+
+SELECT AVG(one_race) FROM demographics WHERE year = 2019;
+→ What is the average population of one race in the year 2019?
+
+SELECT AVG(race_total_population) FROM demographics;
+→ What is the average total population across all racial groups in the data?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 1641 AND year = 2017;
+→ What are the US zip codes in the year 2017 where the population that is not Hispanic or Latino is less than 1641?
+
+SELECT zipcode, AVG(one_race) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 5;
+→ What are the top 5 US zipcodes with the highest average population of one race?
+
+SELECT MAX(not_hispanic_or_latino) FROM demographics WHERE year = 2016;
+→ What was the highest percentage of people in the US who are not Hispanic or Latino in the year 2016?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 8801;
+→ What are the US ZIP codes where the total population of a certain racial group exceeds 8801?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino > 9155 AND year = 2016;
+→ What is the total number of ZIP codes in 2016 where the total Hispanic or Latino population is greater than 9,155?
+
+SELECT MIN(hispanic_or_latino) FROM demographics WHERE zipcode = 'ZCTA5 30011';
+→ What is the smallest Hispanic or Latino population in the area with ZIP code ZCTA5 30011?
+
+SELECT SUM(one_race) FROM demographics WHERE year = 2016;
+→ What is the total population of people who identify with only one racial group in the year 2016?
+
+SELECT MIN(race_total_population) FROM demographics WHERE zipcode = 'ZCTA5 30005';
+→ What is the smallest total population for racial data in the area with ZIP code 30005?
+
+SELECT MIN(one_race) FROM demographics WHERE year = 2018;
+→ What is the smallest population of a single racial group in the US in 2018?
+
+SELECT zipcode, MAX(one_race) FROM demographics GROUP BY zipcode;
+→ What are the zip codes where the population of one race is the highest?
+
+SELECT zipcode, one_race FROM demographics ORDER BY one_race DESC LIMIT 1;
+→ What is the US zipcode with the highest population of people who identify with only one race?
+
+SELECT year, MAX(not_hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the year with the highest number of people who are not Hispanic or Latino?
+
+SELECT zipcode, race_total_population FROM demographics WHERE year = 2016 ORDER BY race_total_population DESC LIMIT 1;
+→ What is the US zipcode with the highest total population based on racial data in the year 2016?
+
+SELECT zipcode, MAX(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 5;
+→ What are the five zip codes with the highest percentage of people who are not Hispanic or Latino?
+
+SELECT zipcode, MIN(hispanic_or_latino_total) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 10;
+→ What are the 10 US zipcodes with the smallest total Hispanic or Latino populations?
+
+SELECT race_total_population FROM demographics WHERE zipcode = 'ZCTA5 30168' AND year = 2018;
+→ What is the total population for racial data in the year 2018 for the specific area with ZIP code 30168?
+
+SELECT AVG(not_hispanic_or_latino) FROM demographics;
+→ What is the average size of the population that is not Hispanic or Latino across all zipcodes?
+
+SELECT asian FROM demographics WHERE zipcode = 'ZCTA5 30070' AND year = 2015;
+→ What is the Asian population in the area with ZIP code 30070 for the year 2015?
+
+SELECT DISTINCT year FROM demographics;
+→ What are all the different years represented in the demographic data?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 1227 AND year = 2017;
+→ What US zipcodes have a population of less than 1,227 people who are not Hispanic or Latino, based on data from 2017?
+
+SELECT zipcode FROM demographics WHERE one_race < 9973 AND year = 2019;
+→ What are the zipcodes where the population of one racial group is less than 9,973 in the year 2019?
+
+SELECT MAX(one_race) FROM demographics WHERE zipcode = 'ZCTA5 30045';
+→ What is the highest population of people who identify with only one race in the area with the zip code ZCTA5 30045?
+
+SELECT zipcode, MIN(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val DESC LIMIT 1;
+→ What is the US zipcode with the smallest population of people who are not Hispanic or Latino?
+
+SELECT DISTINCT year FROM demographics;
+→ What unique calendar years are represented in the demographic data?
+
+SELECT year, SUM(not_hispanic_or_latino) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the total population of individuals who are not Hispanic or Latino for each year, listed from the year with the largest non-Hispanic population to the year with the smallest?
+
+SELECT year, AVG(one_race) AS agg_val FROM demographics GROUP BY year ORDER BY agg_val DESC;
+→ What is the average of the population of a single racial group for each year of the data, listed in descending order of this average?
+
+SELECT year, AVG(not_hispanic_or_latino) FROM demographics GROUP BY year;
+→ What is the average population of people who are not Hispanic or Latino for each year?
+
+SELECT zipcode, AVG(race_total_population) AS agg_val FROM demographics GROUP BY zipcode ORDER BY agg_val ASC LIMIT 5;
+→ What are the 5 US zipcodes with the lowest average total population of different racial groups?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics ORDER BY hispanic_or_latino_total ASC LIMIT 1;
+→ What is the US zipcode with the smallest total Hispanic or Latino population?
+
+SELECT zipcode FROM demographics WHERE race_total_population > 8095;
+→ What are the US zipcodes with populations of one or more races that exceed 8,095 people?
+
+SELECT year, MAX(hispanic_or_latino_total) FROM demographics GROUP BY year;
+→ What year had the highest total Hispanic or Latino population?
+
+SELECT zipcode, SUM(hispanic_or_latino) FROM demographics GROUP BY zipcode;
+→ What is the total Hispanic or Latino population for each US zipcode?
+
+SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino > 9170 AND year = 2015;
+→ What is the total count of US zipcodes with a Hispanic or Latino population above 9,170 in the year 2015?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics WHERE year = 2018 ORDER BY hispanic_or_latino_total ASC LIMIT 10;
+→ What are the 10 US zipcodes with the lowest total Hispanic or Latino population in 2018?
+
+SELECT zipcode, one_race FROM demographics WHERE year = 2016 ORDER BY one_race ASC LIMIT 10;
+→ What are the 10 US zipcodes with the smallest populations of people who identify with a single race, based on data from 2016?
+
+SELECT zipcode, race_total_population FROM demographics WHERE year = 2015 ORDER BY race_total_population ASC LIMIT 5;
+→ What are the 5 US zipcodes with the smallest total population for racial data in the year 2015?
+
+SELECT zipcode, hispanic_or_latino_total FROM demographics WHERE year = 2016 ORDER BY hispanic_or_latino_total ASC LIMIT 10;
+→ What are the top 10 zipcodes with the highest total Hispanic or Latino population in 2016?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total < 5047 AND year = 2015;
+→ What are the zipcodes in the year 2015 where the total Hispanic or Latino population is less than 5,047?
+
+SELECT SUM(not_hispanic_or_latino) FROM demographics WHERE year = 2017;
+→ What is the total population in the United States in 2017 that identifies as not Hispanic or Latino?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total > 7271;
+→ What zipcodes have a total Hispanic or Latino population greater than 7,271?
+
+SELECT zipcode, race_total_population FROM demographics ORDER BY race_total_population ASC LIMIT 20;
+→ What are the 20 zipcodes with the smallest total population of racial data?
+
+SELECT zipcode, race_total_population FROM demographics ORDER BY race_total_population DESC LIMIT 20;
+→ What are the 20 US zip codes with the largest total racial population?
+
+SELECT DISTINCT year FROM demographics;
+→ What are the unique years present in the demographic data?
+
+SELECT zipcode FROM demographics WHERE not_hispanic_or_latino < 3761 AND year = 2015;
+→ What US zipcodes in 2015 have a population of non-Hispanic or Latino residents less than 3,761?
+
+SELECT two_or_more_races FROM demographics WHERE zipcode = 'ZCTA5 30143' AND year = 2018;
+→ What is the population of people who identify as two or more races in the year 2018 for the specific area with the ZIP code 30143?
+
+SELECT zipcode FROM demographics WHERE hispanic_or_latino_total < 9427 AND year = 2018;
+→ What are the zip codes in the year 2018 where the total Hispanic or Latino population is less than 9,427?
+
+SELECT zipcode, not_hispanic_or_latino FROM demographics WHERE year = 2018 ORDER BY not_hispanic_or_latino ASC LIMIT 10;
+→ What are the zipcodes with the smallest percentage of people who are not Hispanic or Latino in the year 2018?
+

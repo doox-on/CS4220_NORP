@@ -1,0 +1,48 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "count": 1
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "target": "AVG(hispanic_or_latino_total)",
+            "group_by": "zipcode"
+          },
+          "children": [
+            {
+              "operation": "Projection",
+              "details": {
+                "columns": [
+                  "zipcode"
+                ]
+              },
+              "children": [
+                {
+                  "operation": "Group By",
+                  "details": {
+                    "group_by": "zipcode"
+                  },
+                  "children": [
+                    {
+                      "operation": "Table Scan",
+                      "details": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

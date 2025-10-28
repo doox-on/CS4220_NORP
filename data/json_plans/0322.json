@@ -1,0 +1,22 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "hispanic_or_latino_total"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30134' AND year = 2017"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {
+            "table": "demographics"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "native_hawaiian_and_other_pacific_islander"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30118' AND year = 2016"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {
+            "table": "demographics"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

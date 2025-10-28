@@ -1,0 +1,35 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "one_race",
+    "aggregation_type": "MIN"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year",
+          "one_race"
+        ]
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "group_by": [
+              "year"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

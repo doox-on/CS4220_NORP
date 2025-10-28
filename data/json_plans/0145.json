@@ -1,0 +1,40 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 1
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "order": "DESC",
+        "target": "not_hispanic_or_latino"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "not_hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Filter",
+              "details": {
+                "condition": "year = 2019"
+              },
+              "children": [
+                {
+                  "operation": "TableScan",
+                  "details": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

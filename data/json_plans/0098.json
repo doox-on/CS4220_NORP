@@ -1,0 +1,46 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "ASC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "projection": [
+          "year",
+          "agg_val"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Group",
+          "details": {
+            "group_by": [
+              "year"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Aggregate",
+              "details": {
+                "aggregation": {
+                  "year": "year",
+                  "agg_val": "AVG(race_total_population)"
+                }
+              },
+              "children": [
+                {
+                  "operation": "TableScan",
+                  "details": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

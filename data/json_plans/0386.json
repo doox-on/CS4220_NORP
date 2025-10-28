@@ -1,0 +1,23 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "zipcode"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "not_hispanic_or_latino < 619 AND year = 2019"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

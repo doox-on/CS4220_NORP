@@ -1,0 +1,44 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 5
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "column": "agg_val",
+        "order": "ASC"
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "group_by": "zipcode"
+          },
+          "children": [
+            {
+              "operation": "Aggregate",
+              "details": {
+                "aggregation": "AVG",
+                "target": "race_total_population"
+              },
+              "children": [
+                {
+                  "operation": "Projection",
+                  "details": {
+                    "projection": [
+                      "zipcode",
+                      "race_total_population"
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

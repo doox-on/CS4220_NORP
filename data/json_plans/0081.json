@@ -1,0 +1,46 @@
+{
+  "operation": "TableScan",
+  "details": {
+    "table": "demographics",
+    "conditions": [
+      {
+        "column": "one_race",
+        "operator": ">",
+        "value": 2846
+      },
+      {
+        "column": "year",
+        "operator": "=",
+        "value": 2018
+      }
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "conditions": [
+          {
+            "column": "one_race",
+            "operator": ">",
+            "value": 2846
+          },
+          {
+            "column": "year",
+            "operator": "=",
+            "value": 2018
+          }
+        ]
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "target": "COUNT(*)"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

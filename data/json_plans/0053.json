@@ -1,0 +1,13 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "hispanic_or_latino > 1063"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": null,
+      "children": []
+    }
+  ]
+}

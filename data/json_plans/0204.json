@@ -1,0 +1,24 @@
+{
+  "operation": "TableAccess",
+  "details": {
+    "table_name": "demographics"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30134' AND year = 2019"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "race_total_population"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

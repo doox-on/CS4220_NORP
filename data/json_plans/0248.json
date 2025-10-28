@@ -1,0 +1,25 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "race_total_population"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30127' AND year = 2016"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {
+            "table": "demographics"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

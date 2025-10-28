@@ -1,0 +1,22 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "COUNT(*)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "hispanic_or_latino > 8069 AND year = 2019"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {
+            "table": "demographics"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "group_by_columns": [
+      "year"
+    ],
+    "aggregation": {
+      "operation": "Average",
+      "details": {
+        "target_column": "one_race"
+      }
+    }
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "projection_columns": [
+          "year",
+          "one_race"
+        ]
+      },
+      "children": []
+    }
+  ]
+}

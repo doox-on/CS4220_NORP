@@ -1,0 +1,15 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "hispanic_or_latino > 7365"
+  },
+  "children": [
+    {
+      "operation": "Table Scan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 5
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "order": "ASC",
+        "column": "one_race"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "one_race"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Filter",
+              "details": {
+                "condition": "year = 2018"
+              },
+              "children": [
+                {
+                  "operation": "TableScan",
+                  "details": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

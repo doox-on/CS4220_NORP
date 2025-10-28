@@ -1,0 +1,32 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "AVG(race_total_population)"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Aggregate",
+      "details": {
+        "function": "AVG",
+        "target": "race_total_population"
+      },
+      "children": [
+        {
+          "operation": "Filter",
+          "details": {
+            "condition": "zipcode = 'ZCTA5 30153'"
+          },
+          "children": [
+            {
+              "operation": "Table Scan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

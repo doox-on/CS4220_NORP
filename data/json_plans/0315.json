@@ -1,0 +1,30 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "AVG(hispanic_or_latino_total)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30137'"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": null,
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "target": "hispanic_or_latino_total",
+                "function": "AVG"
+              },
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

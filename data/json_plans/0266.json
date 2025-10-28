@@ -1,0 +1,33 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "ASC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "GroupBy",
+      "details": {
+        "target": "year"
+      },
+      "children": [
+        {
+          "operation": "Aggregate",
+          "details": {
+            "target": "hispanic_or_latino_total",
+            "function": "MIN"
+          },
+          "children": [
+            {
+              "operation": "Projection",
+              "details": {
+                "target": "year"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

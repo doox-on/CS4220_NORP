@@ -1,0 +1,15 @@
+{
+  "operation": "Filter",
+  "details": {
+    "filter_condition": "one_race < 1593 AND year = 2019"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table_name": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

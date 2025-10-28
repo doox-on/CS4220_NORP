@@ -1,0 +1,15 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "hispanic_or_latino_total < 3622 AND year = 2018"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

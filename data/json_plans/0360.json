@@ -1,0 +1,15 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "race_total_population > 1308"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

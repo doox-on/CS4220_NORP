@@ -1,0 +1,16 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "group_by": "year"
+  },
+  "children": [
+    {
+      "operation": "Aggregation",
+      "details": {
+        "aggregation_type": "MAX",
+        "target": "hispanic_or_latino"
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "MAX(not_hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "filter_condition": "year = 2018"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

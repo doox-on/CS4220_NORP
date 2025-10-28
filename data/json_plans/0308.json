@@ -1,0 +1,17 @@
+{
+  "operation": "Filter",
+  "details": "year = 2018 AND zipcode = 'ZCTA5 30045'",
+  "children": [
+    {
+      "operation": "Filter",
+      "details": "zipcode = 'ZCTA5 30045'",
+      "children": [
+        {
+          "operation": "Projection",
+          "details": "SELECT white",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

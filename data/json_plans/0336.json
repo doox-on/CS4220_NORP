@@ -1,0 +1,44 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "hispanic_or_latino",
+    "group_by": [
+      "zipcode"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode"
+        ]
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "operation": "GroupBy",
+      "details": {
+        "group_by": [
+          "zipcode"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "aggregation_target": "hispanic_or_latino",
+            "aggregation_type": "SUM"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

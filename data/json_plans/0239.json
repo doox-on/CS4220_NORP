@@ -1,0 +1,61 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "group_by": [
+      "zipcode"
+    ],
+    "aggregation": {
+      "avg": {
+        "column": "one_race",
+        "alias": "agg_val"
+      }
+    }
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode",
+          "one_race"
+        ]
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "group_by": [
+              "zipcode"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Filter",
+              "details": {
+                "condition": "zipcode IS NOT NULL"
+              },
+              "children": [
+                {
+                  "operation": "Sort",
+                  "details": {
+                    "order": "DESC",
+                    "column": "agg_val"
+                  },
+                  "children": [
+                    {
+                      "operation": "Limit",
+                      "details": {
+                        "limit": 20
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

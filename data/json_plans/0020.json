@@ -1,0 +1,25 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "hispanic_or_latino_total"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30083' AND year = 2017"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {
+            "table": "demographics"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "target": "one_race"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "target": [
+          "zipcode",
+          "one_race"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Limit",
+          "details": {
+            "count": 10
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

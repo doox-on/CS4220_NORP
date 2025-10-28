@@ -1,0 +1,45 @@
+{
+  "operation": "Scan",
+  "details": {
+    "table": "demographics",
+    "columns": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Filter",
+          "details": {
+            "condition": "row is not null"
+          },
+          "children": [
+            {
+              "operation": "Sort",
+              "details": {
+                "order": "asc",
+                "columns": [
+                  "year"
+                ]
+              },
+              "children": [
+                {
+                  "operation": "Distinct",
+                  "details": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

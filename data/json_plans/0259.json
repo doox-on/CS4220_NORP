@@ -1,0 +1,44 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 1
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "order": "DESC",
+        "target": "agg_val"
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "aggregation_type": "MIN",
+            "target": "race_total_population",
+            "alias": "agg_val"
+          },
+          "children": [
+            {
+              "operation": "GroupBy",
+              "details": {
+                "group_by": "zipcode"
+              },
+              "children": [
+                {
+                  "operation": "Projection",
+                  "details": {
+                    "projection": [
+                      "zipcode"
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

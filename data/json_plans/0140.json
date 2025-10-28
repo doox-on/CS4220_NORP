@@ -1,0 +1,33 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "zipcode",
+      "not_hispanic_or_latino"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "column": "not_hispanic_or_latino",
+        "direction": "ASC"
+      },
+      "children": [
+        {
+          "operation": "Limit",
+          "details": {
+            "value": 20
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

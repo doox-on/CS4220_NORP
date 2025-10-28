@@ -1,0 +1,25 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "race_total_population < 1913 AND year = 2018"
+  },
+  "children": [
+    {
+      "operation": "Table Scan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

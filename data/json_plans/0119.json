@@ -1,0 +1,15 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "target": "AVG(one_race)"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

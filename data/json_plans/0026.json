@@ -1,0 +1,21 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "MIN(hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "year = 2017"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

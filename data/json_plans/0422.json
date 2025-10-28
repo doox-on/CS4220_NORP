@@ -1,0 +1,25 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "not_hispanic_or_latino < 1282 AND year = 2019"
+  },
+  "children": [
+    {
+      "operation": "Table Scan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

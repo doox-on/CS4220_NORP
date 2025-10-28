@@ -1,0 +1,42 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "race_total_population",
+    "aggregation_type": "MAX"
+  },
+  "children": [
+    {
+      "operation": "Grouping",
+      "details": {
+        "group_by": "zipcode"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projection_columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        },
+        {
+          "operation": "Sort",
+          "details": {
+            "sort_column": "agg_val",
+            "sort_order": "ASC"
+          },
+          "children": [
+            {
+              "operation": "Limit",
+              "details": {
+                "limit_value": 1
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

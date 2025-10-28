@@ -1,0 +1,33 @@
+{
+  "operation": "Sort",
+  "details": {
+    "attribute": "hispanic_or_latino",
+    "direction": "ASC"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "count": 5
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "attributes": [
+              "zipcode",
+              "hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

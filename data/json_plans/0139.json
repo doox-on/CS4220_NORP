@@ -1,0 +1,38 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "groupByColumns": [
+      "year"
+    ],
+    "aggregation": {
+      "MIN": "race_total_population"
+    }
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "year",
+              "race_total_population"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "MIN": "race_total_population"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "MIN(one_race)"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Aggregate",
+      "details": {
+        "function": "MIN",
+        "column": "one_race"
+      },
+      "children": [
+        {
+          "operation": "Filter",
+          "details": {
+            "condition": "year = 2016"
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

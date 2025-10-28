@@ -1,0 +1,22 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_type": "MAX",
+    "target": "race_total_population"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "year = 2018"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

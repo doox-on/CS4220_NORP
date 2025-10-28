@@ -1,0 +1,23 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "SUM(one_race)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30060'"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {
+            "table": "demographics"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

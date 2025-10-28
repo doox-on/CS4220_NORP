@@ -1,0 +1,16 @@
+{
+  "operation": "Aggregate",
+  "details": {
+    "aggregation_target": "MAX(hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics",
+        "filter": "year = 2017"
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "zipcode"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "hispanic_or_latino_total < 5047 AND year = 2015"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

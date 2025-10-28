@@ -1,0 +1,20 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "MAX(not_hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "filter_condition": "zipcode = 'ZCTA5 30121'"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {}
+        }
+      ]
+    }
+  ]
+}

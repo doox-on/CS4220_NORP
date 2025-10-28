@@ -1,0 +1,24 @@
+{
+  "operation": "Scan",
+  "details": {
+    "table_name": "demographics",
+    "scan_type": "table_scan"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Distinct",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

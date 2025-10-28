@@ -1,0 +1,37 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "groupingColumn": "zipcode"
+  },
+  "children": [
+    {
+      "operation": "Aggregate",
+      "details": {
+        "aggregationFunctions": [
+          {
+            "function": "MIN",
+            "target": "hispanic_or_latino"
+          }
+        ]
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projectionColumns": [
+              "zipcode",
+              "hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

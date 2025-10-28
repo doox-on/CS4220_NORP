@@ -1,0 +1,39 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 20
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "order": "ASC",
+        "target": "agg_val"
+      },
+      "children": [
+        {
+          "operation": "Aggregate",
+          "details": {
+            "agg_type": "MAX",
+            "target": "hispanic_or_latino"
+          },
+          "children": [
+            {
+              "operation": "GroupBy",
+              "details": {
+                "group_by": "zipcode"
+              },
+              "children": [
+                {
+                  "operation": "TableScan",
+                  "details": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

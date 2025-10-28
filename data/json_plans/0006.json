@@ -1,0 +1,5 @@
+{
+  "error": "Invalid JSON or LLM error",
+  "message": "Extra data: line 16 column 1 (char 239)",
+  "raw_output": "{\n  \"operation\": \"Filter\",\n  \"details\": {\n    \"condition\": \"hispanic_or_latino > 9876\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"TableScan\",\n      \"details\": {\n        \"table\": \"demographics\"\n      },\n      \"children\": []\n    }\n  ]\n}\n```\n\nHowever, the query planner might choose to first filter out rows with `hispanic_or_latino` values less than or equal to 9876, and then scan the remaining rows. In this case, the execution plan would be:\n\n```json\n{\n  \"operation\": \"TableScan\",\n  \"details\": {\n    \"table\": \"demographics\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"Filter\",\n      \"details\": {\n        \"condition\": \"hispanic_or_latino > 9876\"\n      },\n      \"children\": []\n    }\n  ]\n}"
+}

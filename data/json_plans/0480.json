@@ -1,0 +1,27 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "not_hispanic_or_latino",
+    "aggregation_type": "AVG"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year",
+          "not_hispanic_or_latino"
+        ]
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "group_by_column": "year"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

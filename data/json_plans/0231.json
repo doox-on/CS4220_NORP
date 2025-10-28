@@ -1,0 +1,31 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "one_race",
+    "aggregation_function": "AVG"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode"
+        ]
+      },
+      "children": []
+    },
+    {
+      "operation": "GroupBy",
+      "details": {
+        "group_by_column": "zipcode"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

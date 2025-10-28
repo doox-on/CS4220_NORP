@@ -1,0 +1,25 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "limit": 20
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode",
+          "hispanic_or_latino_total"
+        ]
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

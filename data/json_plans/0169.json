@@ -1,0 +1,40 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "GroupBy",
+      "details": {
+        "target": "year"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "target": "year"
+          },
+          "children": []
+        },
+        {
+          "operation": "Aggregate",
+          "details": {
+            "function": "AVG",
+            "target": "race_total_population"
+          },
+          "children": [
+            {
+              "operation": "Projection",
+              "details": {
+                "target": "race_total_population"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

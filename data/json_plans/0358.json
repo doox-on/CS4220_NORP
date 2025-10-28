@@ -1,0 +1,56 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "count": 20
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "agg_val"
+            ]
+          },
+          "children": [
+            {
+              "operation": "GroupBy",
+              "details": {
+                "group_by": [
+                  "zipcode"
+                ]
+              },
+              "children": [
+                {
+                  "operation": "Aggregation",
+                  "details": {
+                    "aggregations": [
+                      {
+                        "target": "race_total_population",
+                        "function": "AVG"
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "operation": "TableScan",
+                      "details": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

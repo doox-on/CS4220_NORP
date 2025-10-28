@@ -1,0 +1,17 @@
+{
+  "operation": "Filter",
+  "details": "race_total_population > 523",
+  "children": [
+    {
+      "operation": "Table Scan",
+      "details": "demographics",
+      "children": [
+        {
+          "operation": "Projection",
+          "details": "zipcode",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "MAX(not_hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Grouping",
+      "details": {
+        "group_by": "zipcode"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projection_columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        },
+        {
+          "operation": "Aggregation",
+          "details": {
+            "aggregation_target": "MAX(not_hispanic_or_latino)"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "one_race"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30082' AND year = 2019"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

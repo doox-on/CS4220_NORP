@@ -1,0 +1,22 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "hispanic_or_latino",
+    "aggregation_type": "SUM"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "filter_condition": "zipcode = 'ZCTA5 30064'"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

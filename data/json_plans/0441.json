@@ -1,0 +1,16 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregationTarget": "hispanic_or_latino",
+    "aggregationType": "AVG"
+  },
+  "children": [
+    {
+      "operation": "Scan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

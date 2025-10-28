@@ -1,0 +1,32 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "MIN(not_hispanic_or_latino)"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Aggregation",
+      "details": {
+        "aggregation_type": "MIN",
+        "target": "not_hispanic_or_latino"
+      },
+      "children": [
+        {
+          "operation": "Filter",
+          "details": {
+            "condition": "year = 2016"
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

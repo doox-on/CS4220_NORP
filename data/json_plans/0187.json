@@ -1,0 +1,22 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_type": "AVG",
+    "aggregation_target": "not_hispanic_or_latino"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "filter_condition": "year = 2017"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

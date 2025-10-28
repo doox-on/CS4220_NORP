@@ -1,0 +1,14 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "not_hispanic_or_latino > 1295"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      }
+    }
+  ]
+}

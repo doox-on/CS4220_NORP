@@ -1,0 +1,33 @@
+{
+  "operation": "Sort",
+  "details": {
+    "sort_order": "DESC",
+    "sort_column": "race_total_population"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "limit_value": 10
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projection_columns": [
+              "zipcode",
+              "race_total_population"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

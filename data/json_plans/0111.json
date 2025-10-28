@@ -1,0 +1,36 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "MIN(hispanic_or_latino_total)",
+    "group_by": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year",
+          "MIN(hispanic_or_latino_total)"
+        ]
+      },
+      "children": []
+    },
+    {
+      "operation": "GroupBy",
+      "details": {
+        "group_by": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

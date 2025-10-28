@@ -1,0 +1,5 @@
+{
+  "error": "Invalid JSON or LLM error",
+  "message": "Extra data: line 14 column 1 (char 224)",
+  "raw_output": "{\n  \"operation\": \"Filter\",\n  \"details\": {\n    \"condition\": \"hispanic_or_latino_total < 8765 AND year = 2019\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"TableScan\",\n      \"details\": null,\n      \"children\": []\n    }\n  ]\n}\n```\n\nHowever, a more accurate representation would be:\n\n```json\n{\n  \"operation\": \"Filter\",\n  \"details\": {\n    \"condition\": \"year = 2019\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"Filter\",\n      \"details\": {\n        \"condition\": \"hispanic_or_latino_total < 8765\"\n      },\n      \"children\": [\n        {\n          \"operation\": \"TableScan\",\n          \"details\": null,\n          \"children\": []\n        }\n      ]\n    }\n  ]\n}"
+}

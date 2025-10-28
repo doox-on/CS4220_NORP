@@ -1,0 +1,36 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "one_race",
+    "aggregation_function": "SUM"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "projection_columns": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Grouping",
+          "details": {
+            "group_by_columns": [
+              "year"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Sort",
+              "details": {
+                "sort_column": "agg_val",
+                "sort_order": "ASC"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

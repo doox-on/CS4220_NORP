@@ -1,0 +1,33 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "SUM(not_hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "group_by_columns": [
+              "year"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

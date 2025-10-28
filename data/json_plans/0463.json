@@ -1,0 +1,41 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "one_race",
+    "group_by": "zipcode"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode",
+          "one_race"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Group By",
+          "details": {
+            "group_by": "zipcode"
+          },
+          "children": [
+            {
+              "operation": "Sort",
+              "details": {
+                "sort_by": "zipcode"
+              },
+              "children": [
+                {
+                  "operation": "Scan",
+                  "details": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

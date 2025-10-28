@@ -1,0 +1,39 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year",
+          "agg_val"
+        ]
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "group_by": [
+              "year"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "aggregation": {
+                  "column": "hispanic_or_latino_total",
+                  "function": "MIN"
+                }
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

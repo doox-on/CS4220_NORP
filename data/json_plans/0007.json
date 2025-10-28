@@ -1,0 +1,46 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 5
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "order": "DESC"
+      },
+      "children": [
+        {
+          "operation": "GroupBy",
+          "details": {
+            "groupBy": [
+              "zipcode"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Aggregate",
+              "details": {
+                "aggregation": {
+                  "race_total_population": "SUM"
+                }
+              },
+              "children": [
+                {
+                  "operation": "Projection",
+                  "details": {
+                    "projection": [
+                      "zipcode",
+                      "race_total_population"
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

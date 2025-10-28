@@ -1,0 +1,46 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "SUM(hispanic_or_latino)",
+    "group_by": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Scan",
+      "details": {
+        "table_name": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "year",
+              "hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "GroupBy",
+              "details": {
+                "group_by": [
+                  "year"
+                ]
+              },
+              "children": [
+                {
+                  "operation": "Aggregation",
+                  "details": {
+                    "aggregation_target": "SUM(hispanic_or_latino)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

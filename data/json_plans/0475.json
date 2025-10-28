@@ -1,0 +1,32 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "MAX(one_race)"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Aggregation",
+      "details": {
+        "aggregation_type": "MAX",
+        "aggregation_target": "one_race"
+      },
+      "children": [
+        {
+          "operation": "Filter",
+          "details": {
+            "condition": "zipcode = 'ZCTA5 30045'"
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

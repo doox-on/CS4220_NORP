@@ -1,0 +1,5 @@
+{
+  "error": "Invalid JSON or LLM error",
+  "message": "Extra data: line 14 column 1 (char 208)",
+  "raw_output": "{\n  \"operation\": \"Filter\",\n  \"details\": {\n    \"condition\": \"hispanic_or_latino_total > 5497\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"TableScan\",\n      \"details\": null,\n      \"children\": []\n    }\n  ]\n}\n```\n\nHowever, the actual execution plan might be more complex, and the database may choose to use an index on `hispanic_or_latino_total` to speed up the query. Here's a more detailed representation:\n\n```json\n{\n  \"operation\": \"Filter\",\n  \"details\": {\n    \"condition\": \"hispanic_or_latino_total > 5497\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"IndexScan\",\n      \"details\": {\n        \"index_name\": \"hispanic_or_latino_total_index\",\n        \"direction\": \"Forward\"\n      },\n      \"children\": [\n        {\n          \"operation\": \"Projection\",\n          \"details\": {\n            \"columns\": [\"zipcode\"]\n          },\n          \"children\": []\n        }\n      ]\n    }\n  ]\n}"
+}

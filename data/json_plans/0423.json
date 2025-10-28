@@ -1,0 +1,23 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "zipcode = 'ZCTA5 30101' AND year = 2019"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": null,
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "some_other_race"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

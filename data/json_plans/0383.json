@@ -1,0 +1,43 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year",
+          "agg_val"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "type": "MAX",
+            "target": "hispanic_or_latino"
+          },
+          "children": [
+            {
+              "operation": "GroupBy",
+              "details": {
+                "by": [
+                  "year"
+                ]
+              },
+              "children": [
+                {
+                  "operation": "TableScan",
+                  "details": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "AVG(hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "filter_condition": "year = 2016"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projection_target": "hispanic_or_latino"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

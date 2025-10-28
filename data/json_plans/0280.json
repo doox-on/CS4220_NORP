@@ -1,0 +1,19 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "grouping_column": "zipcode",
+    "aggregation": {
+      "target": "race_total_population",
+      "function": "SUM"
+    }
+  },
+  "children": [
+    {
+      "operation": "Scan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

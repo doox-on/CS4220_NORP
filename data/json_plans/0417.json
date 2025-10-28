@@ -1,0 +1,40 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 20
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "column": "not_hispanic_or_latino",
+        "order": "ASC"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "not_hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Filter",
+              "details": {
+                "condition": "year = 2017"
+              },
+              "children": [
+                {
+                  "operation": "TableScan",
+                  "details": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

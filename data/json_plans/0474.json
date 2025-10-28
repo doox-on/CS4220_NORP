@@ -1,0 +1,23 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "one_race < 9973 AND year = 2019"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {},
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

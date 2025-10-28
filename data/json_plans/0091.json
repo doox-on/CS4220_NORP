@@ -1,0 +1,40 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 10
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "order": "DESC",
+        "column": "hispanic_or_latino"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Filter",
+              "details": {
+                "condition": "year = 2015"
+              },
+              "children": [
+                {
+                  "operation": "TableScan",
+                  "details": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "race_total_population > 2499"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics",
+        "columns": [
+          "zipcode",
+          "race_total_population"
+        ]
+      },
+      "children": []
+    }
+  ]
+}

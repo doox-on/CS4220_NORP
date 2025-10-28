@@ -1,0 +1,33 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "groupByColumns": [
+      "zipcode"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Aggregate",
+      "details": {
+        "aggregationFunctions": [
+          "MIN"
+        ],
+        "aggregationTargets": [
+          "race_total_population"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projectedColumns": [
+              "zipcode",
+              "race_total_population"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

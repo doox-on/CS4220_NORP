@@ -1,0 +1,30 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "hispanic_or_latino_total > 142 AND year = 2016"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": null,
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "hispanic_or_latino_total",
+              "year"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

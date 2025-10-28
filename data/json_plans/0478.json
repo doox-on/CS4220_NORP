@@ -1,0 +1,48 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "SUM(not_hispanic_or_latino)",
+    "group_by": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "projection_columns": [
+          "year",
+          "agg_val"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Sort",
+          "details": {
+            "sort_column": "agg_val",
+            "sort_order": "DESC"
+          },
+          "children": [
+            {
+              "operation": "Group By",
+              "details": {
+                "group_by": [
+                  "year"
+                ]
+              },
+              "children": [
+                {
+                  "operation": "Aggregation",
+                  "details": {
+                    "aggregation_target": "SUM(not_hispanic_or_latino)"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

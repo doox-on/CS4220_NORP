@@ -1,0 +1,38 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "race_total_population",
+    "group_by": [
+      "zipcode"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode"
+        ]
+      },
+      "children": []
+    },
+    {
+      "operation": "GroupBy",
+      "details": {
+        "group_by": [
+          "zipcode"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "aggregation_target": "race_total_population",
+            "aggregation_type": "SUM"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

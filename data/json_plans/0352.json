@@ -1,0 +1,5 @@
+{
+  "error": "Invalid JSON or LLM error",
+  "message": "Extra data: line 12 column 1 (char 209)",
+  "raw_output": "{\n  \"operation\": \"Filter\",\n  \"details\": \"not_hispanic_or_latino < 2038 AND year = 2018\",\n  \"children\": [\n    {\n      \"operation\": \"TableScan\",\n      \"details\": \"demographics\",\n      \"children\": []\n    }\n  ]\n}\n```\n\nHowever, for a more accurate representation, the query planner might choose to first filter on `year = 2018` and then filter on `not_hispanic_or_latino < 2038`. Here's an alternative JSON representation:\n\n```json\n{\n  \"operation\": \"Filter\",\n  \"details\": \"not_hispanic_or_latino < 2038\",\n  \"children\": [\n    {\n      \"operation\": \"Filter\",\n      \"details\": \"year = 2018\",\n      \"children\": [\n        {\n          \"operation\": \"TableScan\",\n          \"details\": \"demographics\",\n          \"children\": []\n        }\n      ]\n    }\n  ]\n}"
+}

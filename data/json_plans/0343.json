@@ -1,0 +1,25 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "ASC",
+    "limit": 20
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode",
+          "race_total_population"
+        ]
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

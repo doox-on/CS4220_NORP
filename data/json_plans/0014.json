@@ -1,0 +1,25 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "MIN(hispanic_or_latino)"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "year = 2017"
+      },
+      "children": [
+        {
+          "operation": "Aggregation",
+          "details": {
+            "target": "MIN(hispanic_or_latino)"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

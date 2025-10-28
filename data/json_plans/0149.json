@@ -1,0 +1,27 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "race_total_population",
+    "group_by": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "projection_columns": [
+          "year",
+          "race_total_population"
+        ]
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

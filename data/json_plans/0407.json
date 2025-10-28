@@ -1,0 +1,42 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "one_race",
+    "aggregation_type": "AVG"
+  },
+  "children": [
+    {
+      "operation": "Grouping",
+      "details": {
+        "group_by": "year"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projected_columns": [
+              "year"
+            ]
+          },
+          "children": []
+        },
+        {
+          "operation": "Aggregation",
+          "details": {
+            "aggregation_target": "one_race",
+            "aggregation_type": "AVG"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "operation": "Sorting",
+      "details": {
+        "sort_by": "agg_val",
+        "sort_order": "DESC"
+      },
+      "children": []
+    }
+  ]
+}

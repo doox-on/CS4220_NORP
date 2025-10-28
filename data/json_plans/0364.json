@@ -1,0 +1,21 @@
+{
+  "operation": "Projection",
+  "details": {
+    "projection": "COUNT(*)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "one_race > 4897 AND year = 2015"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

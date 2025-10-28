@@ -1,0 +1,23 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "asian"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30070' AND year = 2015"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

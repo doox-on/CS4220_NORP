@@ -1,0 +1,23 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "year = 2019"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "race_total_population > 9739"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "target": "COUNT(*)"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

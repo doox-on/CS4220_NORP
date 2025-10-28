@@ -1,0 +1,36 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "AND (hispanic_or_latino_total < 9427, year = 2018)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "hispanic_or_latino_total < 9427"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode"
+        ]
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

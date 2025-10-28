@@ -1,0 +1,35 @@
+{
+  "operation": "Sort",
+  "details": {
+    "attribute": "one_race",
+    "order": "DESC"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "offset": 0,
+        "fetch": 1
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "attributes": [
+              "zipcode",
+              "one_race"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {
+                "table": "demographics"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

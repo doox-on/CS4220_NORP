@@ -1,0 +1,11 @@
+{
+  "operation": "Filter",
+  "details": "not_hispanic_or_latino < 1709 AND year = 2016",
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": "demographics",
+      "children": []
+    }
+  ]
+}

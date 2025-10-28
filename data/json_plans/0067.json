@@ -1,0 +1,29 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "hispanic_or_latino_total",
+    "aggregation_type": "MIN"
+  },
+  "children": [
+    {
+      "operation": "GroupBy",
+      "details": {
+        "group_by_columns": [
+          "zipcode"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projected_columns": [
+              "zipcode",
+              "hispanic_or_latino_total"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

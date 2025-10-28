@@ -1,0 +1,34 @@
+{
+  "operation": "TableScan",
+  "details": {
+    "table": "demographics",
+    "filter": "zipcode = 'ZCTA5 30113'"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30113'"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "one_race"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "function": "SUM",
+                "target": "one_race"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "count": 1
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "agg_val"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "type": "MIN",
+                "target": "not_hispanic_or_latino"
+              },
+              "children": [
+                {
+                  "operation": "GroupBy",
+                  "details": {
+                    "columns": [
+                      "zipcode"
+                    ]
+                  },
+                  "children": [
+                    {
+                      "operation": "TableScan",
+                      "details": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

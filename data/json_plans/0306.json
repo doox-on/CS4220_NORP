@@ -1,0 +1,16 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_type": "AVG",
+    "target_column": "race_total_population"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table_name": "demographics"
+      },
+      "children": []
+    }
+  ]
+}

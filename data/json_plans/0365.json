@@ -1,0 +1,23 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "hispanic_or_latino < 6095 AND year = 2017"
+  },
+  "children": [
+    {
+      "operation": "Table Scan",
+      "details": null,
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

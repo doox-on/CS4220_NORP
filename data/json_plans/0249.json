@@ -1,0 +1,25 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "race_total_population < 1959 AND year = 2019"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

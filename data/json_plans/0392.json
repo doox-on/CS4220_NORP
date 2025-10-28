@@ -1,0 +1,11 @@
+{
+  "operation": "Filter",
+  "details": "one_race > 9508",
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": "demographics",
+      "children": []
+    }
+  ]
+}

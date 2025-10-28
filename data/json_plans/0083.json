@@ -1,0 +1,5 @@
+{
+  "error": "Invalid JSON or LLM error",
+  "message": "Extra data: line 22 column 1 (char 359)",
+  "raw_output": "{\n  \"operation\": \"Projection\",\n  \"details\": {\n    \"target\": \"COUNT(*)\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"Filter\",\n      \"details\": {\n        \"condition\": \"one_race > 4208 AND year = 2017\"\n      },\n      \"children\": [\n        {\n          \"operation\": \"Table Scan\",\n          \"details\": null,\n          \"children\": []\n        }\n      ]\n    }\n  ]\n}\n```\n\nHowever, a more accurate representation would be:\n\n```json\n{\n  \"operation\": \"Table Scan\",\n  \"details\": null,\n  \"children\": [\n    {\n      \"operation\": \"Filter\",\n      \"details\": {\n        \"condition\": \"one_race > 4208 AND year = 2017\"\n      },\n      \"children\": [\n        {\n          \"operation\": \"Projection\",\n          \"details\": {\n            \"target\": \"COUNT(*)\"\n          },\n          \"children\": []\n        }\n      ]\n    }\n  ]\n}"
+}

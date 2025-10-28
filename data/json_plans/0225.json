@@ -1,0 +1,40 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "MIN(not_hispanic_or_latino)",
+    "group_by": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Group By",
+      "details": {
+        "group_by": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "projection": [
+              "year",
+              "MIN(not_hispanic_or_latino) AS agg_val"
+            ]
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "operation": "Sort",
+      "details": {
+        "sort_by": [
+          "agg_val DESC"
+        ]
+      },
+      "children": []
+    }
+  ]
+}

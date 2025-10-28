@@ -1,0 +1,32 @@
+{
+  "operation": "Projection",
+  "details": {
+    "columns": [
+      "SUM(hispanic_or_latino)"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Aggregate",
+      "details": {
+        "aggregation": "SUM",
+        "target": "hispanic_or_latino"
+      },
+      "children": [
+        {
+          "operation": "Filter",
+          "details": {
+            "condition": "zipcode = 'ZCTA5 30080'"
+          },
+          "children": [
+            {
+              "operation": "Table Scan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

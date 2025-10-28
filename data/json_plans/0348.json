@@ -1,0 +1,5 @@
+{
+  "error": "Invalid JSON or LLM error",
+  "message": "Extra data: line 22 column 1 (char 367)",
+  "raw_output": "{\n  \"operation\": \"Projection\",\n  \"details\": {\n    \"target\": \"SUM(race_total_population)\"\n  },\n  \"children\": [\n    {\n      \"operation\": \"Filter\",\n      \"details\": {\n        \"condition\": \"zipcode = 'ZCTA5 30115'\"\n      },\n      \"children\": [\n        {\n          \"operation\": \"Table Scan\",\n          \"details\": {},\n          \"children\": []\n        }\n      ]\n    }\n  ]\n}\n```\n\nHowever, a more accurate representation, given the query, would be:\n\n```json\n{\n  \"operation\": \"Table Scan\",\n  \"details\": {},\n  \"children\": [\n    {\n      \"operation\": \"Filter\",\n      \"details\": {\n        \"condition\": \"zipcode = 'ZCTA5 30115'\"\n      },\n      \"children\": [\n        {\n          \"operation\": \"Projection\",\n          \"details\": {\n            \"target\": \"SUM(race_total_population)\"\n          },\n          \"children\": []\n        }\n      ]\n    }\n  ]\n}"
+}

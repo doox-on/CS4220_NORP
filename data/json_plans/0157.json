@@ -1,0 +1,22 @@
+{
+  "operation": "Select",
+  "details": {
+    "aggregation": "COUNT",
+    "target": "*"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "one_race > 3292 AND year = 2017"
+      },
+      "children": [
+        {
+          "operation": "TableScan",
+          "details": {},
+          "children": []
+        }
+      ]
+    }
+  ]
+}

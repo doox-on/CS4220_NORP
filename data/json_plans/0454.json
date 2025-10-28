@@ -1,0 +1,25 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "year = 2017"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "not_hispanic_or_latino < 1641"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

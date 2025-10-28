@@ -1,0 +1,25 @@
+{
+  "operation": "Filter",
+  "details": {
+    "filter_condition": "one_race < 4424 AND year = 2015"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table_name": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

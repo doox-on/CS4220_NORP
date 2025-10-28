@@ -1,0 +1,14 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "hispanic_or_latino",
+    "aggregation_type": "MIN"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {},
+      "children": []
+    }
+  ]
+}

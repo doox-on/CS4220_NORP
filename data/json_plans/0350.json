@@ -1,0 +1,8 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "race_total_population",
+    "aggregation_type": "SUM"
+  },
+  "children": []
+}

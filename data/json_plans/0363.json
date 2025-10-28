@@ -1,0 +1,33 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "group_by": "year"
+  },
+  "children": [
+    {
+      "operation": "Aggregate",
+      "details": {
+        "function": "AVG",
+        "target": "hispanic_or_latino"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "year",
+              "hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "TableScan",
+              "details": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

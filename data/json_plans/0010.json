@@ -1,0 +1,43 @@
+{
+  "operation": "GroupBy",
+  "details": {
+    "groupBy": [
+      "year"
+    ],
+    "aggregation": [
+      {
+        "target": "not_hispanic_or_latino",
+        "function": "AVG"
+      }
+    ]
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "year",
+              "not_hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "target": "not_hispanic_or_latino",
+                "function": "AVG"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

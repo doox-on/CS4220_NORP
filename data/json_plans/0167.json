@@ -1,0 +1,28 @@
+{
+  "operation": "Scan",
+  "details": {
+    "table_name": "demographics",
+    "columns": [
+      "year"
+    ]
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Filter",
+          "details": {
+            "condition": "DISTINCT"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

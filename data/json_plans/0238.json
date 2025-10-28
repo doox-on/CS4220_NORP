@@ -1,0 +1,18 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "hispanic_or_latino_total > 9907"
+  },
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": {
+        "table": "demographics",
+        "columns": [
+          "zipcode"
+        ]
+      },
+      "children": []
+    }
+  ]
+}

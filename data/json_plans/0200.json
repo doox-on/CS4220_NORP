@@ -1,0 +1,30 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "AVG(not_hispanic_or_latino)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "zipcode = 'ZCTA5 30022'"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": {},
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "target": "not_hispanic_or_latino",
+                "aggregation": "AVG"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

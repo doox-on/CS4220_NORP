@@ -1,0 +1,30 @@
+{
+  "operation": "Projection",
+  "details": {
+    "target": "COUNT(*)"
+  },
+  "children": [
+    {
+      "operation": "Filter",
+      "details": {
+        "condition": "race_total_population > 8192 AND year = 2015"
+      },
+      "children": [
+        {
+          "operation": "Table Scan",
+          "details": null,
+          "children": [
+            {
+              "operation": "Aggregation",
+              "details": {
+                "target": "race_total_population",
+                "function": "COUNT"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

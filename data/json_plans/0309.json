@@ -1,0 +1,50 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "ASC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "Limit",
+      "details": {
+        "value": 5
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "zipcode",
+              "agg_val"
+            ]
+          },
+          "children": [
+            {
+              "operation": "GroupBy",
+              "details": {
+                "target": "zipcode"
+              },
+              "children": [
+                {
+                  "operation": "Aggregate",
+                  "details": {
+                    "function": "MIN",
+                    "target": "one_race"
+                  },
+                  "children": [
+                    {
+                      "operation": "TableScan",
+                      "details": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

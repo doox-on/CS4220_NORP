@@ -1,0 +1,43 @@
+{
+  "operation": "Sort",
+  "details": {
+    "order": "DESC",
+    "target": "agg_val"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "year",
+          "agg_val"
+        ]
+      },
+      "children": [
+        {
+          "operation": "Aggregate",
+          "details": {
+            "function": "AVG",
+            "target": "hispanic_or_latino_total"
+          },
+          "children": [
+            {
+              "operation": "GroupBy",
+              "details": {
+                "target": "year"
+              },
+              "children": [
+                {
+                  "operation": "Scan",
+                  "details": {
+                    "table": "demographics"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "operation": "Limit",
+  "details": {
+    "limit": 20
+  },
+  "children": [
+    {
+      "operation": "Sort",
+      "details": {
+        "order": "ASC",
+        "field": "hispanic_or_latino"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "fields": [
+              "zipcode",
+              "hispanic_or_latino"
+            ]
+          },
+          "children": [
+            {
+              "operation": "Filter",
+              "details": {
+                "condition": "year = 2016"
+              },
+              "children": [
+                {
+                  "operation": "Table Scan",
+                  "details": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

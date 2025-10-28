@@ -1,0 +1,11 @@
+{
+  "operation": "Filter",
+  "details": "hispanic_or_latino > 5588",
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": "demographics",
+      "children": []
+    }
+  ]
+}

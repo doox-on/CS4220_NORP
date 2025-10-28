@@ -1,0 +1,11 @@
+{
+  "operation": "Filter",
+  "details": "race_total_population > 1072",
+  "children": [
+    {
+      "operation": "TableScan",
+      "details": "demographics",
+      "children": []
+    }
+  ]
+}

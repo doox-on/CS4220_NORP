@@ -1,0 +1,35 @@
+{
+  "operation": "Aggregation",
+  "details": {
+    "aggregation_target": "one_race",
+    "group_by": "zipcode"
+  },
+  "children": [
+    {
+      "operation": "Projection",
+      "details": {
+        "columns": [
+          "zipcode",
+          "MAX(one_race) AS agg_val"
+        ]
+      },
+      "children": []
+    },
+    {
+      "operation": "Sort",
+      "details": {
+        "order_by": "agg_val",
+        "order": "ASC"
+      },
+      "children": [
+        {
+          "operation": "Limit",
+          "details": {
+            "limit": 1
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

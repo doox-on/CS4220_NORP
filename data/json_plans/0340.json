@@ -1,0 +1,38 @@
+{
+  "operation": "Sort",
+  "details": {
+    "target": "agg_val",
+    "order": "DESC"
+  },
+  "children": [
+    {
+      "operation": "Aggregation",
+      "details": {
+        "type": "MAX",
+        "target": "one_race"
+      },
+      "children": [
+        {
+          "operation": "Group By",
+          "details": {
+            "target": "year"
+          },
+          "children": [
+            {
+              "operation": "Projection",
+              "details": {
+                "target": "year"
+              }
+            },
+            {
+              "operation": "Projection",
+              "details": {
+                "target": "one_race"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "operation": "Filter",
+  "details": {
+    "condition": "zipcode = 'ZCTA5 30094' AND year = 2017"
+  },
+  "children": [
+    {
+      "operation": "Table Scan",
+      "details": {
+        "table": "demographics"
+      },
+      "children": [
+        {
+          "operation": "Projection",
+          "details": {
+            "columns": [
+              "id"
+            ]
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}
