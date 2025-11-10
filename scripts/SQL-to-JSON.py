@@ -13,7 +13,7 @@ OUTPUT_JSON_DIR = os.path.join(BASE_DIR, "data", "json_plans")
 os.makedirs(OUTPUT_JSON_DIR, exist_ok=True)
 
 # Initialize Groq client
-client = Groq(api_key="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")
+client = Groq(api_key="")
 
 
 def generate_json_plan(sql_query: str):

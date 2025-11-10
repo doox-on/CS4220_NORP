@@ -1,0 +1,512 @@
+{"nl": "What is the total population for the year 2020?"}
+{"nl": "How many people in the year 2000 identified as being of two or more races?"}
+{"nl": "In what zipcode did the population of black people increase the most between 2000 and 2020?"}
+{"nl": "What is the ratio of the white population to the native hawaiian and other pacific islander population in 2010?"}
+{"nl": "In what year did the population of people who identified as hispanic or latino reach its highest point?"}
+{"nl": "What is the average number of races people identified with in the year 2015?"}
+{"nl": "Which year had the highest number of people who identified as not hispanic or latino?"}
+{"nl": "What is the change in the total population of american indian and alaska native people between 2000 and 2010?"}
+{"nl": "What is the proportion of people who identified as hispanic or latino in the year 2010 compared to the not hispanic or latino population?"}
+{"nl": "In what zipcode did the population of people who identified as some other race increase the most between 2000 and 2010?"}
+{"nl": "What is the average number of people who identified as black in each zipcode in the year 2005?"}
+{"nl": "What is the increase in the population of people who identified as asian between 2000 and 2015?"}
+{"nl": "Which zipcode had the highest population of people who identified as hispanic or latino in the year 2015?"}
+{"nl": "What is the proportion of people who identified as white in 2010 compared to the population of two or more races?"}
+{"nl": "In what year did the population of people who identified as native hawaiian and other pacific islander reach its lowest point?"}
+{"nl": "What is the difference in population between people who identified as hispanic or latino and the not hispanic or latino population in the year 2010?"}
+{"nl": "What was the total population in a given year for a specific zipcode?"}
+{"nl": "How many people lived in a particular zipcode in a given year?"}
+{"nl": "What percentage of the population in a given year identified as Hispanic or Latino?"}
+{"nl": "What was the racial composition of the population in a given year for a specific zipcode?"}
+{"nl": "How many people in a given year identified as being of two or more races in a specific zipcode?"}
+{"nl": "What was the average population in a given year across all zipcodes?"}
+{"nl": "What was the total number of people in a given year who identified as Native Hawaiian and Other Pacific Islander?"}
+{"nl": "Did the percentage of the population identifying as Asian increase or decrease from one year to another?"}
+{"nl": "What was the difference in population size between a specific zipcode and another zipcode in a given year?"}
+{"nl": "What percentage of the people in a given year in a specific zipcode were of the white race?"}
+{"nl": "How many people in a given year lived in a specific zipcode and identified as black?"}
+{"nl": "What was the number of people in a given year who identified as both white and another race in a specific zipcode?"}
+{"nl": "How many people in a given year lived in a specific zipcode and did not identify as Hispanic or Latino?"}
+{"nl": "What was the percentage increase in the Asian population from one year to another in a specific zipcode?"}
+{"nl": "What was the total number of people in a given year who identified as American Indian and Alaska Native?"}
+{"nl": "How many people in a given year in a specific zipcode identified as being of some other race?"}
+{"nl": "What was the total population of a specific zipcode in a particular year?"}
+{"nl": "In what year was the racial population of a certain zipcode predominantly composed of individuals who identified as white?"}
+{"nl": "How many Americans identify as Hispanic or Latino in a given zipcode?"}
+{"nl": "What is the racial makeup of a specific zipcode in a certain year?"}
+{"nl": "In which year was the population of a certain zipcode predominantly composed of people of two or more races?"}
+{"nl": "What is the average number of individuals identifying as Asian in a given zipcode across all years?"}
+{"nl": "How many black individuals lived in a specific zipcode in a particular year?"}
+{"nl": "Is there a significant difference in the population of a certain zipcode by comparing the number of white and black residents in a given year?"}
+{"nl": "What was the population size of individuals who identified as American Indian and Alaska Native in a particular year?"}
+{"nl": "What is the average number of individuals identifying as white in a given zipcode across all years?"}
+{"nl": "In what year was the population of a certain zipcode approximately equal for individuals who identified as Hispanic or Latino and not Hispanic or Latino?"}
+{"nl": "What racial group(s) made up the majority of a specific zipcode's population in a certain year?"}
+{"nl": "Is there a noticeable change in the racial demographics of a certain zipcode from one year to another?"}
+{"nl": "In which year was the population of a certain zipcode predominantly composed of individuals who identified as some other race?"}
+{"nl": "What is the population size of individuals who identified as native Hawaiian and other Pacific Islander in a certain year?"}
+{"nl": "How many individuals lived in a specific zipcode with a certain id in a particular year?"}
+{"nl": "What is the total population of the United States in a given year by race?"}
+{"nl": "How many people in a specific zipcode identify as black in a particular year?"}
+{"nl": "In a given year, what is the percentage of people who identify as Hispanic or Latino?"}
+{"nl": "What is the average number of people who identify as Asian across all zipcodes in a year?"}
+{"nl": "How many people in a certain zipcode live in a household with two or more races?"}
+{"nl": "What is the total population of people who identify as white and Hispanic or Latino combined in a year?"}
+{"nl": "What is the total white population in a specified zipcode in a particular year?"}
+{"nl": "What is the percentage of people who identify as American Indian and Alaska Native in a given year?"}
+{"nl": "What is the number of people who identify as Native Hawaiian and other Pacific Islander in a certain year across all zipcodes?"}
+{"nl": "What is the number of people in a specific zipcode who identify as not Hispanic or Latino in a particular year?"}
+{"nl": "In a certain year, how many people identify as Hispanic or Latino in a specified zipcode?"}
+{"nl": "What is the total population of people who identify as some other race in a given year across all zipcodes?"}
+{"nl": "What is the average number of people who identify as Hispanic or Latino across all zipcodes in a given year?"}
+{"nl": "In a specific year, what is the total American Indian and Alaska Native population in a certain zipcode?"}
+{"nl": "What is the percentage of the total population that is Hispanic or Latino in a given year across all zipcodes?"}
+{"nl": "What is the number of people in a specified zipcode who identify as both white and Hispanic or Latino in a particular year?"}
+{"nl": "What is the total population of a specific zip code in a given year?"}
+{"nl": "How many people identify as black in a particular zip code across multiple years?"}
+{"nl": "What is the difference in the number of people who identify as Hispanic or Latino between two zip codes in the same year?"}
+{"nl": "What percentage of the population in a zip code identifies as white across all years?"}
+{"nl": "How many zip codes have a total population of over 100,000 people in a specific year?"}
+{"nl": "In which year does the population of a specific zip code exceed 50,000 people for the first time?"}
+{"nl": "What is the average number of people who identify as American Indian and Alaska Native across all zip codes?"}
+{"nl": "Which zip code has the highest total population in a given year?"}
+{"nl": "What is the total number of people who identify as Asian across all zip codes in a specific year?"}
+{"nl": "In which zip code does the number of people who identify as Hispanic or Latino increase the most between two consecutive years?"}
+{"nl": "What is the total number of people who identify as Native Hawaiian and Other Pacific Islander in a specific zip code across all years?"}
+{"nl": "How many people identify as some other race in a particular zip code across multiple years?"}
+{"nl": "What is the median number of people who identify as white in a zip code across all years?"}
+{"nl": "Which year does the total population of a specific zip code reach its highest value?"}
+{"nl": "How many zip codes have a total population of less than 10,000 people in a specific year?"}
+{"nl": "What is the total number of people who identify as Hispanic or Latino in a specific zip code across all years?"}
+{"nl": "What was the total population in a given year across all zipcodes?"}
+{"nl": "In which year did the number of people who identified as white exceed 1 million?"}
+{"nl": "What percentage of the total population in a given year was Black?"}
+{"nl": "What was the race distribution in a specific zipcode in a particular year?"}
+{"nl": "Across all years, in which state did the population of the American Indian and Alaska Native group exceed that of the Asian group?"}
+{"nl": "Which year saw the highest total number of people in the 'two or more races' category?"}
+{"nl": "What was the difference between the total population and the population of people identifying as Hispanic or Latino in a given year?"}
+{"nl": "What percentage of people identified as Hispanic or Latino in a specific year across all zipcodes?"}
+{"nl": "In a given year, how many people identified as both white and another race?"}
+{"nl": "In which year did the population of the native Hawaiian and other Pacific Islander group reach a total of at least 50,000 people?"}
+{"nl": "What was the total population in a given year where at least 50% of the residents were not Hispanic or Latino?"}
+{"nl": "Across all years, which year saw the lowest rate of people identifying as some other race?"}
+{"nl": "In a specific year and zipcode, what was the racial distribution of the population?"}
+{"nl": "What was the difference between the number of people who identified as Hispanic or Latino and those who identified as Native Hawaiian and other Pacific Islander in a given year?"}
+{"nl": "In a given year, what percentage of the population in a specific zipcode identified as Asian?"}
+{"nl": "In which year did the total population in a given zipcode reach a number of people that exceeded the 'two or more races' population by at least 50,000?"}
+{"nl": "What is the total population for each year from 2010 onwards?"}
+{"nl": "For the year 2015, what is the average number of people who identify as Asian across different zipcodes?"}
+{"nl": "How many zipcodes have a population of people who identify as Black that exceeds 50% of the total population?"}
+{"nl": "What percentage of the total population identifies as Hispanic or Latino in the year 2010?"}
+{"nl": "What is the difference in the number of people who identify as White between the year 2010 and 2015?"}
+{"nl": "For a given year, how many people identify as American Indian and Alaska Native?"}
+{"nl": "What is the ratio of people who identify as Hispanic or Latino to those who do not, in the year 2015?"}
+{"nl": "What is the total population of people who identify as Native Hawaiian and other Pacific Islander in the year 2018?"}
+{"nl": "Which zipcodes have a higher population of people who identify as White compared to Black in the year 2010?"}
+{"nl": "In the year 2012, what is the average number of people who identify as Asian and Hispanic or Latino?"}
+{"nl": "How many people identify as Some Other Race in the year 2015?"}
+{"nl": "What is the percentage of people who identify as two or more races in the year 2010 compared to those who identify as one race?"}
+{"nl": "What is the difference in the number of people who identify as Native Hawaiian and other Pacific Islander between the year 2010 and 2015?"}
+{"nl": "What is the total population of people who identify as Some Other Race in the year 2018?"}
+{"nl": "For a given year, how many people identify as not Hispanic or Latino?"}
+{"nl": "What is the ratio of people who identify as Black to those who identify as White in the year 2012?"}
+{"nl": "What is the total population by race in a specific zipcode across different years?"}
+{"nl": "How many people identify as American Indian and Alaska Native in a given year?"}
+{"nl": "What percentage of the total population in a city is Hispanic or Latino in a certain year?"}
+{"nl": "In which year did the one-race population exceed the two-or-more-races population?"}
+{"nl": "What is the ratio of white population to black population in a specific zipcode?"}
+{"nl": "How many zipcodes have a higher percentage of Hispanic or Latino people compared to the national average?"}
+{"nl": "What is the total population of people who identify as Asian in the year 2020?"}
+{"nl": "In which year was the Asian population at its highest?"}
+{"nl": "What is the difference in population between people who identify as white and those who identify as black in a given year?"}
+{"nl": "What cities have a higher percentage of Hispanic or Latino people compared to their total population?"}
+{"nl": "How many people identify as some other race in a specific year and city?"}
+{"nl": "What is the total population of people who identify as Hispanic or Latino and some other race in 2015?"}
+{"nl": "What is the percentage of people who identify as not Hispanic or Latino in a given year?"}
+{"nl": "What is the year when the population of people who identify as Hispanic or Latino first exceeded that of people who identify as not Hispanic or Latino?"}
+{"nl": "How many people identified as Native Hawaiian and other Pacific Islander in a certain year in a specific city?"}
+{"nl": "What is the highest total population by race in a given year across all cities?"}
+{"nl": "What is the total population by year for each zipcode?"}
+{"nl": "How many Americans of Native American and Alaska Native descent are there in 2010?"}
+{"nl": "What percentage of people in a given zipcode identify as Hispanic or Latino in 2015?"}
+{"nl": "What is the population of people who identify as white alone in 2010 for a specific zipcode?"}
+{"nl": "What is the year with the highest number of people who identify as Asian in a given zipcode?"}
+{"nl": "What is the number of people who identify as Black or African American and also Hispanic or Latino in a given zipcode?"}
+{"nl": "What is the average population of people who identify as Native Hawaiian and Other Pacific Islander in the demographics table?"}
+{"nl": "What is the total population in a given zipcode that identifies as some other race alone in 2015?"}
+{"nl": "What is the year with the highest number of people who identify as having two or more races in a given zipcode?"}
+{"nl": "What is the population of people who identify as Hispanic or Latino in 2010 for a specific zipcode?"}
+{"nl": "What percentage of the population in a given zipcode identifies as Asian in 2015?"}
+{"nl": "What is the total number of people who identify as American Indian and Alaska Native alone in a given zipcode in 2010?"}
+{"nl": "What is the population of people who identify as white and also identify as Hispanic or Latino in a given zipcode?"}
+{"nl": "What is the year with the highest number of people who identify as some other race alone in a given zipcode?"}
+{"nl": "What is the number of people who identify as Black alone in a given zipcode and also identify as being of Hispanic or Latino ethnicity?"}
+{"nl": "What is the population of people aged 45 and older who identify as Asian in a given zipcode in 2015?"}
+{"nl": "What is the total population of all zipcodes in a given year?"}
+{"nl": "How many people identify as only one race in a particular zipcode?"}
+{"nl": "What percentage of a certain city's population identifies as Asian?"}
+{"nl": "In which year did the total population of a specified zipcode reach its peak?"}
+{"nl": "How many individuals have a Hispanic or Latino background?"}
+{"nl": "What is the average number of racial categories for each person in a given year?"}
+{"nl": "Which racial group has the highest population in a particular county?"}
+{"nl": "In what year did the population of white individuals decline in a given area?"}
+{"nl": "How many people identify as Native Hawaiian and Other Pacific Islander?"}
+{"nl": "What is the median number of racial categories for each person in a certain year?"}
+{"nl": "What was the total population of a specific area in a given year?"}
+{"nl": "How many individuals identify as being of two or more races?"}
+{"nl": "Does the population of a particular area increase or decrease in a specific year?"}
+{"nl": "In which year did the population of a certain area reach its lowest point?"}
+{"nl": "What percentage of the population in a given area identifies as Black or African American?"}
+{"nl": "What is the distribution of racial categories in a specific area's population?"}
+{"nl": "What was the total population by race in 2010?"}
+{"nl": "How many zipcodes reported a significant American Indian and Alaska Native population in 2015?"}
+{"nl": "In what year did the hispanic or latino population first surpass the non-hispanic or latino population?"}
+{"nl": "What percentage of the 2018 population was of Asian descent?"}
+{"nl": "Which year saw the smallest difference between the black and white populations?"}
+{"nl": "What was the racial breakdown of the 2020 population in a specific zipcode?"}
+{"nl": "How many people in the 2012 demographics data identified as Native Hawaiian and other Pacific Islander?"}
+{"nl": "In a given year, how many total people identified as some other race?"}
+{"nl": "What was the total hispanic or latino population in a specific zipcode in 2019?"}
+{"nl": "What percentage of the population in a given year was of two or more races?"}
+{"nl": "In what year did the population of people who identified as white first drop below 50%?"}
+{"nl": "What was the number of people in a specific zipcode who identified as one race in 2016?"}
+{"nl": "What was the racial breakdown of the population in a specific zipcode in 2011?"}
+{"nl": "What year saw the largest increase in hispanic or latino population?"}
+{"nl": "How many people in the 2017 demographics data identified as both black and white?"}
+{"nl": "What was the total population of a specific zipcode in a given year?"}
+{"nl": "What is the total population of the US by year and race?"}
+{"nl": "In which year did the number of people identifying as American Indian and Alaska Native exceed 10,000?"}
+{"nl": "What is the percentage of the population that identifies as Hispanic or Latino in a given year?"}
+{"nl": "How many zip codes have a total population of over 100,000 in the year 2020?"}
+{"nl": "What is the racial breakdown of the population in a specific zip code in a given year?"}
+{"nl": "In which year did the population of people identifying as Asian decrease by more than 5%?"}
+{"nl": "How many people in a given year identify as both white and black?"}
+{"nl": "What is the average percentage of the population that identifies as Hispanic or Latino across all years?"}
+{"nl": "Which year saw the highest total population of people identifying as black?"}
+{"nl": "What is the racial demographic distribution of a specific city based on the provided data?"}
+{"nl": "In which year did the number of people identifying as Native Hawaiian and other Pacific Islander increase by more than 2%?"}
+{"nl": "How many individuals in a specific year identify as white alone, not Hispanic or Latino?"}
+{"nl": "What is the total population of people identifying as Hispanic or Latino in a given year, by state?"}
+{"nl": "In which year did the number of people identifying as some other race increase by more than 10%?"}
+{"nl": "What is the racial breakdown of the population in a specific city in the year 2020?"}
+{"nl": "What is the percentage of the population in 2020 that identifies as two or more races?"}
+{"nl": "What is the total population of individuals in American Indian and Alaska Native race in a given year?"}
+{"nl": "Which zipcodes have a white population greater than the total population of native Hawaiian and other Pacific Islander in the same year?"}
+{"nl": "What percentage of the total population identifies as Hispanic or Latino by race and year?"}
+{"nl": "In what year did the population of individuals with two or more races surpass the population with one race?"}
+{"nl": "What is the difference between the population of individuals of some other race and the population of individuals of American Indian and Alaska Native in a given year?"}
+{"nl": "Which year had the most significant increase in the population of people who are not Hispanic or Latino?"}
+{"nl": "What percentage of the population in a given year is comprised of individuals who identify as Asian?"}
+{"nl": "What is the average number of races individuals identify with by year?"}
+{"nl": "Which zipcodes have the highest percentage of Hispanic or Latino population in a given year?"}
+{"nl": "What is the median number of races individuals identify with across the entire table?"}
+{"nl": "Which year saw the largest decline in the population of individuals who are both white and Hispanic or Latino?"}
+{"nl": "How does the population of individuals with some other race change over the years?"}
+{"nl": "What is the total population of individuals who identify as black in a given year and zip code?"}
+{"nl": "In what year was the population of individuals with two or more races the largest in proportion to the total population?"}
+{"nl": "What is the mode number of races individuals identify with by year?"}
+{"nl": "How does the number of individuals identifying with American Indian and Alaska Native race vary between zip codes?"}
+{"nl": "What is the total population of a given zipcode in a specific year?"}
+{"nl": "How many people identify as Hispanic or Latino in a particular year and zipcode?"}
+{"nl": "In what years did the population of a certain race exceed 10,000 individuals?"}
+{"nl": "What is the average number of people identifying as two or more races across all zipcodes?"}
+{"nl": "How many people identify as Asian in a specific year?"}
+{"nl": "What percentage of the total population in a particular year identify as Hispanic or Latino?"}
+{"nl": "Which zipcode has the highest percentage of people identifying as black in a given year?"}
+{"nl": "In what year did the population of a certain zipcode reach 50,000 individuals?"}
+{"nl": "What is the total population of people identifying as Native Hawaiian and Other Pacific Islander across all zipcodes?"}
+{"nl": "What is the median number of people identifying as American Indian and Alaska Native in a specific year?"}
+{"nl": "What percentage of the total population in a particular year identify as people of two or more races?"}
+{"nl": "In which year did the population of a specific race decrease to less than 5,000 individuals?"}
+{"nl": "How many zipcodes have a population of over 20,000 individuals identifying as Hispanic or Latino in a given year?"}
+{"nl": "What is the highest percentage of people identifying as some other race in a specific year across all zipcodes?"}
+{"nl": "What is the lowest percentage of people identifying as white in a specific year across all zipcodes?"}
+{"nl": "In what year did the total population of a specific zipcode first exceed 10,000 individuals?"}
+{"nl": "What is the total white population in a specific zipcode during the year 2010?"}
+{"nl": "How many people in the year 2015 identify as American Indian and Alaska Native?"}
+{"nl": "What is the percentage of the total population that identifies as Hispanic or Latino in a particular zipcode?"}
+{"nl": "How many people in a certain zipcode identify as having two or more races in 2010?"}
+{"nl": "In which year did the black population reach its highest count in the entire table?"}
+{"nl": "What is the difference between the total population and the population that identifies as one race in a given zipcode?"}
+{"nl": "What is the average number of people per zipcode that identify as Asian across all years?"}
+{"nl": "What is the total population that identifies as Native Hawaiian and Other Pacific Islander in 2018?"}
+{"nl": "In the year 2012, how many people in a particular zipcode identify as Hispanic or Latino?"}
+{"nl": "What is the ratio of the Hispanic or Latino population to the not hispanic or Latino population in 2019?"}
+{"nl": "In which zipcode does the population that identifies as two or more races reach its highest count in 2016?"}
+{"nl": "What is the difference between the population that identifies as one race and the population that identifies as two or more races in a given year?"}
+{"nl": "What is the percentage of the population that identifies as Asian in a particular zipcode in 2014?"}
+{"nl": "What is the total population in a given zipcode for every year from 2010 to 2019?"}
+{"nl": "How many people in a certain zipcode identify as black in 2017?"}
+{"nl": "What is the percentage of people that identify as Hispanic or Latino and also one race in the year 2013?"}
+{"nl": "What is the total population of a given zipcode in a particular year?"}
+{"nl": "In what year did the white population surpass the non-Hispanic or Latino population in a certain zipcode?"}
+{"nl": "How many people in a given zipcode identified as American Indian and Alaska Native in a specific year?"}
+{"nl": "What percentage of the population in a certain zipcode is Hispanic or Latino in a particular year?"}
+{"nl": "What is the difference between the one-race population and the two-or-more-races population in a particular zipcode?"}
+{"nl": "In what year did the black population increase by more than 10% in a given zipcode?"}
+{"nl": "What is the ratio of the Asian population to the Native Hawaiian and other Pacific Islander population in a specific zipcode?"}
+{"nl": "In which year did the total population of a given zipcode reach its highest level?"}
+{"nl": "What is the difference between the total population and the non-Hispanic or Latino population in a particular zipcode?"}
+{"nl": "How many people in a certain zipcode identified as some other race in a specific year?"}
+{"nl": "In what year did the American Indian and Alaska Native population surpass the Asian population in a particular zipcode?"}
+{"nl": "What is the total population of a given zipcode that identifies as Hispanic or Latino in a particular year?"}
+{"nl": "What is the percentage of the population in a given zipcode that identifies as Native Hawaiian and other Pacific Islander in a specific year?"}
+{"nl": "In what year did the white population decrease by more than 5% in a given zipcode?"}
+{"nl": "How many people in a particular zipcode identified as two or more races in a specific year?"}
+{"nl": "What is the difference between the Hispanic or Latino population and the Hispanic or Latino total population in a particular zipcode?"}
+{"nl": "What is the total population of a specific zipcode in a given year?"}
+{"nl": "How many residents of a certain race live in a particular zipcode in a given year?"}
+{"nl": "What percentage of the population in a given year consists of multiple racial groups?"}
+{"nl": "What is the total population of the US in a given year, broken down by race?"}
+{"nl": "Which zipcodes have a high concentration of American Indian and Alaska Native residents in a given year?"}
+{"nl": "How many people identify as Hispanic or Latino in a particular year and zipcode?"}
+{"nl": "What is the racial makeup of the population in a given year, sorted by highest population?"}
+{"nl": "In a given year, what is the difference between the total population and the not Hispanic or Latino population in a particular zipcode?"}
+{"nl": "What is the average percentage of white residents across all zipcodes in a given year?"}
+{"nl": "What is the racial composition of residents in a given year who live in a specific city or area?"}
+{"nl": "What is the number of residents who identify as Asian in a particular year and zipcode?"}
+{"nl": "In what year did the population in a particular zipcode consist of more than 50% non-Hispanic residents?"}
+{"nl": "How many people identify as Black or African American in a particular year and zipcode?"}
+{"nl": "What is the racial distribution of the population in a given year, for people who live in areas with a high cost of living?"}
+{"nl": "What is the total population of residents who identify as Native Hawaiian or Other Pacific Islander in a given year?"}
+{"nl": "In a given year, what is the racial composition of the Hispanic or Latino population in a particular city or area?"}
+{"nl": "What is the total population of each zipcode in the year 2010?"}
+{"nl": "How many zipcodes have a white population above 80% in 2015?"}
+{"nl": "What is the average racial distribution in zipcodes with a population of over 100,000?"}
+{"nl": "Which year saw the highest number of people of two or more races in the demographic data?"}
+{"nl": "What percentage of the total population in 2018 is made up of people of American Indian and Alaska Native descent?"}
+{"nl": "What is the median population of black people in each zipcode?"}
+{"nl": "In what year did the number of people identifying as Hispanic or Latino first exceed the number of people not identifying as Hispanic or Latino?"}
+{"nl": "What is the highest recorded number of people with a native Hawaiian and other Pacific Islander background in any given year?"}
+{"nl": "How many zipcodes have a majority of people identifying as Asian in 2020?"}
+{"nl": "What is the total population of people who identify as both Asian and Hispanic or Latino?"}
+{"nl": "Which racial group experiences the largest percentage decrease from 2010 to 2015?"}
+{"nl": "What percentage of the population in 2012 identifies as some other race?"}
+{"nl": "What is the total population of zipcodes with a population of over 50,000 in 2019?"}
+{"nl": "What year did the percentage of the population identifying as white drop below 50% for the first time?"}
+{"nl": "How many people in zipcodes have a two-or-more-races population above 10% in 2018?"}
+{"nl": "What is the average population of people who identify as Hispanic or Latino in each zipcode by year?"}
+{"nl": "What is the total population of each year from 2000 onwards in this dataset?"}
+{"nl": "What percentage of the population identifies as Hispanic or Latino in a given year and zip code?"}
+{"nl": "In which year did the Asian population surpass the White population in a specific zip code?"}
+{"nl": "What are the demographics of a specific zip code by year?"}
+{"nl": "How does the percentage of Native Hawaiian and Other Pacific Islander population change over the years?"}
+{"nl": "What is the difference in the number of individuals identifying as Black and White from a specified year to the next?"}
+{"nl": "What is the average number of people per zip code that self-identify as Hispanic or Latino in a given year?"}
+{"nl": "What percentage of the population in a specific year and zip code is two or more races?"}
+{"nl": "In which year did the total population of Asian and White individuals combined exceed 100,000 in a specific zip code?"}
+{"nl": "What are the yearly demographic changes for a specific zip code?"}
+{"nl": "How does the number of individuals identifying as American Indian and Alaska Native compare to other races in a given year?"}
+{"nl": "What is the total Hispanic or Latino population for a specific year across all zip codes?"}
+{"nl": "What are the racial demographics for the entire population in a given year?"}
+{"nl": "In which year did the population with a race of two or more races surpass the population with no recorded racial category in a specific zip code?"}
+{"nl": "How does the population of individuals who identify as Hispanic or Latino change compared to those who do not in a given year and zip code?"}
+{"nl": "What is the difference in the population of one race and two or more races individuals in a specific year across all zip codes?"}
+{"nl": "What is the total population of each zipcode in the year 2010?"}
+{"nl": "How many people in zipcode 90210 identify as black in 2020?"}
+{"nl": "What percentage of the total population in zipcode 12345 are Hispanic or Latino in 2015?"}
+{"nl": "What is the most populous race in the entire dataset?"}
+{"nl": "Which zipcode has the highest percentage of the population identifying as Asian in 2010?"}
+{"nl": "How many people in zipcode 67890 identify as American Indian and Alaska Native in 2020?"}
+{"nl": "What is the average number of people identifying as White in each zipcode in 2015?"}
+{"nl": "What is the total number of people identifying as Hispanic or Latino in zipcode 11111 in 2010?"}
+{"nl": "What are the top 3 zipcodes with the most people identifying as White in 2015?"}
+{"nl": "How many people in the dataset identify as Native Hawaiian and Other Pacific Islander in 2010?"}
+{"nl": "What percentage of the population in zipcode 33333 identifies as not Hispanic or Latino in 2015?"}
+{"nl": "Which zipcode has the highest number of people identifying as Some Other Race in 2010?"}
+{"nl": "What is the sum of people identifying as Asian and White in zipcode 22222 in 2015?"}
+{"nl": "What is the median number of people identifying as Black in each zipcode in 2010?"}
+{"nl": "What is the difference in the number of people identifying as Hispanic or Latino between 2010 and 2020 in zipcode 44444?"}
+{"nl": "What is the total number of people in the dataset who identify as Two or More Races in 2015?"}
+{"nl": "What was the total population in zipcodes where the American Indian and Alaska Native population was higher than the Asian population in the year 2010?"}
+{"nl": "What was the year when the number of people who identified as native Hawaiian and other Pacific Islander was the highest?"}
+{"nl": "What percentage of total Hispanic or Latino population did not identify as Hispanic or Latino in the year 2015?"}
+{"nl": "What was the highest number of people who identified as white in a single zipcode across all years?"}
+{"nl": "What was the average number of people who identified as black across all zipcodes in the year 2010?"}
+{"nl": "What was the number of zipcodes where the population of people who identified as Asian was less than 1% in the year 2015?"}
+{"nl": "What was the year when the number of people who identified as two or more races was the highest?"}
+{"nl": "What was the total population in a specific zipcode if the population of people who identified as American Indian and Alaska Native was 10%?"}
+{"nl": "In the year 2010, what was the number of people who identified as native Hawaiian and other Pacific Islander in a single zipcode?"}
+{"nl": "What was the median number of people who identified as Hispanic or Latino in a single zipcode across all years?"}
+{"nl": "What percentage of total American Indian and Alaska Native population identified as American Indian and Alaska Native alone in the year 2015?"}
+{"nl": "What was the highest total Hispanic or Latino population in a single zipcode across all years?"}
+{"nl": "What was the number of people who identified as some other race in a single zipcode where the total population was 1,000 in the year 2015?"}
+{"nl": "What was the year when the number of people who identified as not Hispanic or Latino was the highest?"}
+{"nl": "What was the total population in all zipcodes combined if the number of people who identified as white was 50%?"}
+{"nl": "In the year 2010, what was the number of zipcodes where the population of people who identified as black was greater than the population of people who identified as Asian?"}
+{"nl": "What is the total population for each year from 2000 to 2010?"}
+{"nl": "In which zipcodes is the American Indian and Alaska Native population less than 100?"}
+{"nl": "What percentage of the total population is Hispanic or Latino in the year 2005?"}
+{"nl": "How many zipcodes have a black population greater than 5000 in the year 2008?"}
+{"nl": "What is the average white population per zipcode in the year 2010?"}
+{"nl": "In which years does the total population have at least one person who identifies as Asian?"}
+{"nl": "What is the difference in total population between the years 2000 and 2010 in each zipcode?"}
+{"nl": "What is the maximum number of people who identify as Hispanic or Latino in each year?"}
+{"nl": "Which race has the highest population in the zipcode 10001 in the year 2005?"}
+{"nl": "What is the median number of people who identify as American Indian and Alaska Native?"}
+{"nl": "In what year is the total population of people who identify as Native Hawaiian and other Pacific Islander highest?"}
+{"nl": "How many zipcodes have a population greater than 100,000 in the year 2010?"}
+{"nl": "What is the average number of people who identify as Some other race in each zipcode?"}
+{"nl": "What is the difference in hispanic population between the years 2000 and 2010 in the zipcode 10011?"}
+{"nl": "What percentage of the population in the year 2008 identifies as Not Hispanic or Latino?"}
+{"nl": "In which year is the population of people who identify as Black highest?"}
+{"nl": "What is the total population of a given zipcode in a particular year?"}
+{"nl": "In which year did the total white population surpass the total black population?"}
+{"nl": "Which race has the highest population in a specific zipcode across all years?"}
+{"nl": "What percentage of the total population in a given year identifies as Asian?"}
+{"nl": "What was the average change in the Hispanic or Latino population between two consecutive years?"}
+{"nl": "What is the difference in population between the American Indian and Alaska Native and the Native Hawaiian and Other Pacific Islander?"}
+{"nl": "In which year did the total population in a given zipcode reach its minimum value?"}
+{"nl": "How many zipcodes have a total population of over 100,000 in a specific year?"}
+{"nl": "What is the total population of a particular race in all zipcodes for a given year?"}
+{"nl": "What is the range of the two or more races population across all years?"}
+{"nl": "In which year did the not Hispanic or Latino population exceed the Hispanic or Latino population?"}
+{"nl": "What is the median change in the one race population between two consecutive years?"}
+{"nl": "What is the sum of the total population of all races in a given year for a specific zipcode?"}
+{"nl": "What is the mode of the total population across all years and all zipcodes?"}
+{"nl": "How many zipcodes have a change in population of more than 10% between two consecutive years?"}
+{"nl": "What is the standard deviation of the black population across all years for a specific zipcode?"}
+{"nl": "What is the total population of each year from 2020 onwards?"}
+{"nl": "Which zipcodes have populations that are mostly Native Hawaiian and Other Pacific Islander?"}
+{"nl": "How many people identify as being of two or more races in 2015?"}
+{"nl": "Are there more people who identify as Asian or White in the year 2010?"}
+{"nl": "What percent of the population in zipcodes 10001 and 10002 is Hispanic or Latino?"}
+{"nl": "In which year did the total black population surpass the total Asian population?"}
+{"nl": "What is the total population for American Indian and Alaska Native across all zipcodes?"}
+{"nl": "Which zipcodes have a significant portion of the population that identifies as Some Other Race?"}
+{"nl": "What is the ratio of Hispanic or Latino population to Not Hispanic or Latino population in 2010?"}
+{"nl": "What is the total population for each type of race in a specific zipcode?"}
+{"nl": "How many zipcodes have a total population of above 100,000 people in 2020?"}
+{"nl": "Did the total population of White people decrease in the year 2015 compared to 2010?"}
+{"nl": "What is the average number of people who identify as Native Hawaiian and Other Pacific Islander across all zipcodes?"}
+{"nl": "In which year did the population of Black people surpass that of White people for the first time?"}
+{"nl": "What is the total population for people who identify as two or more races in a specific year?"}
+{"nl": "What percent of the population in zipcodes with a majority of Hispanic or Latino people also identifies as Hispanic or Latino?"}
+{"nl": "What is the total population of a given zipcode in the year 2010?"}
+{"nl": "How many people in this dataset identify as Black or American Indian and Alaska Native?"}
+{"nl": "What is the average number of people who identify as Hispanic or Latino in each zipcode?"}
+{"nl": "Which year has the highest total population in the demographics data?"}
+{"nl": "What is the difference in population between White and Black people in a given zipcode?"}
+{"nl": "How many zipcodes have a total population of over 10,000 people in the year 2020?"}
+{"nl": "What percentage of people in this dataset identify as Asian or Native Hawaiian and other Pacific Islander?"}
+{"nl": "What is the median number of people who identify as Hispanic or Latino in each zipcode?"}
+{"nl": "In which year is the population of people who identify as White the highest?"}
+{"nl": "What is the difference in population between people who identify as Hispanic or Latino and those who do not?"}
+{"nl": "What is the total population of a given race or ethnicity in a particular zipcode in the year 2015?"}
+{"nl": "How many people in this dataset identify as two or more races?"}
+{"nl": "What is the mode of the total population in each zipcode?"}
+{"nl": "In which year do people who identify as Black have the highest number of people?"}
+{"nl": "What is the standard deviation of the population of people who identify as Asian in each zipcode?"}
+{"nl": "In which year is the population of people who identify as Hispanic or Latino not more than 10% of the total population?"}
+{"nl": "What is the total population of the United States by year?"}
+{"nl": "How many people live in areas with a total population of white individuals above 70%?"}
+{"nl": "What was the total number of people who identified as Native Hawaiian and Other Pacific Islander in 2019?"}
+{"nl": "What percentage of people in a given zip code reported being of two or more races in a specific year?"}
+{"nl": "How many residents of a particular zip code had American Indian and Alaska Native ancestry in 2020?"}
+{"nl": "In what year did the number of people who identified as Hispanic or Latino surpass 15 million?"}
+{"nl": "Which zip codes had an absolute increase of at least 10,000 people between 2018 and 2020?"}
+{"nl": "What is the average percentage of people who identified as Asian across different zip codes in 2017?"}
+{"nl": "How many people in a given area reported being of some other race in 2019?"}
+{"nl": "In which year was the population of people who identified as Black the highest?"}
+{"nl": "What was the total population of people who identified as not Hispanic or Latino in a specific year?"}
+{"nl": "What is the total number of people with at least one race in a particular zip code?"}
+{"nl": "Which year had a total population of people who identified as Hispanic or Latino above 50 million?"}
+{"nl": "What were the top three most common zip codes for people of Native Hawaiian and Other Pacific Islander ancestry in 2020?"}
+{"nl": "How many people who identified as Hispanic or Latino also reported being of some other race?"}
+{"nl": "What is the highest percentage of people who identified as White in any given zip code in a specific year?"}
+{"nl": "What is the total population of a given zipcode in the year 2010?"}
+{"nl": "Which race groups have the highest and lowest numbers of individuals in 2015?"}
+{"nl": "What percentage of the population in a specific zipcode is of two or more races in 2018?"}
+{"nl": "In which year did the total population of a certain zipcode begin to decline?"}
+{"nl": "How many people from the American Indian and Alaska Native group lived in a particular zipcode in 2012?"}
+{"nl": "What is the difference in population between individuals of Hispanic or Latino and Not Hispanic or Latino races in 2020?"}
+{"nl": "What is the racial composition of a specific zipcode in 2014?"}
+{"nl": "Which race group experienced the most significant increase in population from 2010 to 2015 in a given zipcode?"}
+{"nl": "What is the average number of individuals in two or more races in a specific year across all zipcodes?"}
+{"nl": "In a certain zipcode, what is the percentage of the population that identifies as Asian in 2016?"}
+{"nl": "In which year did the percentage of the population with a Hispanic or Latino background surpass 20% in a given zipcode?"}
+{"nl": "Among individuals with two or more races, what percentage of the population in a given zipcode identifies as Hispanic or Latino in 2017?"}
+{"nl": "In a specific year, what is the number of individuals from the Native Hawaiian and Other Pacific Islander group in a particular zipcode?"}
+{"nl": "What is the increase in the population of the White group from 2010 to 2014 in a given zipcode?"}
+{"nl": "In a certain year, what percentage of the population in a given zipcode identifies as Black or African American?"}
+{"nl": "What is the racial composition of the total Hispanic or Latino population in a specific zipcode in 2019?"}
+{"nl": "What is the total white population in the US for each year?"}
+{"nl": "What percentage of the population identifies as Hispanic or Latino in a specific zipcode?"}
+{"nl": "How does the total population in the US change from one year to the next?"}
+{"nl": "What is the average two-or-more races population in the demographics data?"}
+{"nl": "What is the total population of individuals who identify as some other race in the US for a given year?"}
+{"nl": "In what year does American Indian and Alaska Native population exceed the Native Hawaiian and other Pacific Islander population?"}
+{"nl": "What is the count of zipcodes with a population of more than 50,000 people who identify as Asian?"}
+{"nl": "How many years show an increase in the Hispanic or Latino population compared to the total population?"}
+{"nl": "What is the total population of individuals who identify as Black in the US for a specific year?"}
+{"nl": "What percentage of the total population identifies as American Indian and Alaska Native in a given state?"}
+{"nl": "What is the total population of individuals who identify as White and Black in combination for a specific year?"}
+{"nl": "In what year does the total population of individuals who identify as White exceed 300 million?"}
+{"nl": "What is the average population of individuals who identify as Hispanic or Latino in the demographics data?"}
+{"nl": "What is the total count of zipcodes where the population of individuals who identify as Asian is more than 20%?"}
+{"nl": "What is the change in the population of Black individuals from one year to the next?"}
+{"nl": "What is the total count of individuals who identify as Hispanic or Latino in a specific year?"}
+{"nl": "What is the total population of each zipcode in 2020?"}
+{"nl": "How many people identified as American Indian and Alaska Native in a particular zipcode?"}
+{"nl": "What percentage of the population in a certain year is Hispanic or Latino?"}
+{"nl": "How many people identified as Asian and white in a specific zipcode and year?"}
+{"nl": "What is the total number of people who identified as two or more races in all zipcodes?"}
+{"nl": "What is the average number of people who identified as black in a particular year?"}
+{"nl": "How many people in a certain year did not identify as Hispanic or Latino?"}
+{"nl": "What is the ratio of the population that identified as white to those who identified as black?"}
+{"nl": "What is the total population of people who identified as native Hawaiian and other Pacific Islander in a particular year?"}
+{"nl": "What is the average number of people who identified as some other race in a particular zipcode?"}
+{"nl": "How many people in a certain zipcode and year identified as Hispanic or Latino and white?"}
+{"nl": "What is the percentage increase in the population that identified as Asian from 2019 to 2020?"}
+{"nl": "What is the total population of people who identified as one race in a particular year?"}
+{"nl": "How many people in a certain year identified as hispanic or Latino and some other race?"}
+{"nl": "What is the total number of people who identified as two or more races and some other race in a certain year?"}
+{"nl": "What is the average population of people who identified as native Hawaiian and other Pacific Islander in a particular zipcode?"}
+{"nl": "What is the total population of individuals who classified themselves as American Indian and Alaska Native?"}
+{"nl": "In which year did the population of individuals who identified as Hispanic or Latino reach the highest count?"}
+{"nl": "What percentage of the total population consists of individuals who identified as some other race?"}
+{"nl": "What is the average percentage of the total population that is not Hispanic or Latino?"}
+{"nl": "What is the year with the highest population of individuals who identified as black?"}
+{"nl": "What is the total population of individuals who identified themselves as white and black?"}
+{"nl": "In what year did the total population of individuals who identified as Hispanic or Latino and white exceed 10,000 people?"}
+{"nl": "What is the total number of individuals who identified as Asian in the year 2000?"}
+{"nl": "What is the percentage of individuals who identified as hispanic or latino in a particular year?"}
+{"nl": "What is the total population of individuals who identified as two or more races?"}
+{"nl": "What is the total number of individuals who identified as Native Hawaiian and Other Pacific Islander?"}
+{"nl": "In which year did the population of individuals who identified as white exceed that of individuals who identified as black?"}
+{"nl": "What is the total population of individuals who identified as hispanic or latino in a particular year?"}
+{"nl": "What is the year with the highest population of individuals who identified as two or more races?"}
+{"nl": "What is the total number of individuals who did not classify themselves as white or hispanic or latino?"}
+{"nl": "In what year did the population of individuals who identified as some other race reach the highest count?"}
+{"nl": "What is the total population of each zipcode in the year 2000?"}
+{"nl": "Which zipcodes have a majority of residents who identify as black?"}
+{"nl": "How many zipcodes had a total population increase from 2010 to 2015?"}
+{"nl": "What percentage of the population in Los Angeles identifies as Hispanic?"}
+{"nl": "What is the racial distribution of people who identify as American Indian and Alaska Native?"}
+{"nl": "In the year 2000, how many zipcodes had a majority of residents who identify as White?"}
+{"nl": "What is the average number of people who identify as Asian in a zipcode?"}
+{"nl": "How many people in zipcodes with a total population of over 100,000 identify as Hispanic or Latino?"}
+{"nl": "Which year saw the largest increase in the Asian population across all zipcodes?"}
+{"nl": "In the year 2000, which zipcodes had a total population of less than 5000 people?"}
+{"nl": "What is the total number of people in a zipcode who identify as Native Hawaiian and Other Pacific Islander?"}
+{"nl": "What percentage of the population in the year 2010 identifies as Two or More Races?"}
+{"nl": "How many zipcodes had a majority of residents who identify as Some Other Race in 2015?"}
+{"nl": "What is the racial distribution of residents in the top 5 most populous zipcodes?"}
+{"nl": "What is the percentage of the population in the year 2010 that identifies as Not Hispanic or Latino?"}
+{"nl": "How many people in a zipcode with a total population of 5000-10,000 identify as Black?"}
+{"nl": "What is the total population by year in zipcodes where the Hispanic or Latino population is zero?"}
+{"nl": "How many American Indian and Alaska Native people lived in a particular zipcode in 2010?"}
+{"nl": "What is the population change of the two or more races group between 2000 and 2010?"}
+{"nl": "Which zipcodes have the highest percentage of Asian people in their population in 2010?"}
+{"nl": "What is the total number of people who identify as Hispanic or Latino in a specific year?"}
+{"nl": "What is the ratio of the white population to the black population in a particular year?"}
+{"nl": "In what year did the Native Hawaiian and Other Pacific Islander population start to decline?"}
+{"nl": "What is the average population size of zipcodes with a high American Indian and Alaska Native population in 2010?"}
+{"nl": "What is the number of zipcodes where the black population exceeds the white population in a specific year?"}
+{"nl": "What is the total number of people who identify as Native Hawaiian and Other Pacific Islander in a particular year?"}
+{"nl": "In which year was the total population of a particular zipcode at its highest?"}
+{"nl": "What is the difference in population between zipcodes that have a high and low percentage of Hispanic or Latino residents in 2010?"}
+{"nl": "What is the number of zipcodes where the Native Hawaiian and Other Pacific Islander population is at least half the Asian population?"}
+{"nl": "What is the total percentage of the population that identifies as Asian in a specific year?"}
+{"nl": "What is the highest percentage of Native Hawaiian and Other Pacific Islander people in the population of a particular zipcode?"}
+{"nl": "What is the lowest percentage of white people in a particular year's population across all zipcodes?"}

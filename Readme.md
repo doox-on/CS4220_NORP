@@ -18,6 +18,12 @@ cd CS4220_NORP
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate        # (Mac/Linux)
+
+source /storage/ice1/9/8/jmoon318/venvs/norp_env/bin/activate
+
+huggingface-cli login
+
+
 # or on Windows:
 # .venv\\Scripts\\activate
 ```
@@ -67,7 +73,7 @@ NORP/
 
 ---
 
-## ⚙️ 4. How to Run Each Step
+## 4. How to Run Each Step
 
 ### 4.1 Generate Random SQL Queries
 Run the following script to create 500 SQL queries from your CSV dataset:

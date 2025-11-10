@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_SQL_FILE = os.path.join(BASE_DIR, "data", "raw_sql", "random_sql_queries.txt")
 OUTPUT_FILE = os.path.join(BASE_DIR, "data", "nl_plans", "nl_generated.txt")
 
-client = Groq(api_key="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")
+client = Groq(api_key="")
 
 SCHEMA_FOR_PROMPT = """
 You are a data analyst converting SQL to natural language.
