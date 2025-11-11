@@ -26,13 +26,4 @@ Thumbs.db
 *.zip
 
 # Model checkpoints
-finetune/**/*.safetensors
-finetune/**/*.bin
-finetune/**/*.pt
-finetune/**/*.ckpt
-
-# Hugging Face trainer logs
-finetune/**/checkpoint*/
-finetune/**/runs/
-finetune/**/outputs/
-finetune/**/logs/
+finetune/
