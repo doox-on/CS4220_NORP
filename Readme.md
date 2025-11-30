@@ -1,8 +1,13 @@
 ## CS 4220 Jungwoo Moon
 ## Project: NORP
 
-This project implements a complete pipeline for generating **SQL–JSON–NL triplets** from a demographic dataset.  
-It uses automated SQL generation, LLM-based interpretation (via Groq API), and dataset merging for NL2SQL model training.
+This project implements and evaluates a complete pipeline for generating SQL–JSON–NL triplets. It serves as a research artifact to compare two Text-to-SQL methodologies:
+
+Direct SQL Generation (Baseline): Mapping Natural Language directly to SQL.
+
+IR-based Generation (Experimental): Mapping Natural Language to an Intermediate Representation (JSON Execution Plan) before converting to SQL.
+
+Inspired by the concept of Weld, this project utilizes automated SQL generation, LLM-based interpretation (via Groq API), and a custom dataset merging pipeline to investigate the trade-offs of structured intermediate representations..
 
 ---
 
@@ -17,12 +22,7 @@ cd CS4220_NORP
 ### 1.2 Create and Activate Virtual Environment
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate        # (Mac/Linux)
-
-source /storage/ice1/9/8/jmoon318/venvs/norp_env/bin/activate
-
-huggingface-cli login
-
+source .venv/bin/activate   
 
 # or on Windows:
 # .venv\\Scripts\\activate
@@ -40,113 +40,151 @@ pip freeze > requirements.txt
 
 ---
 
-## 2. Environment Variables
 
-Create a `.env` file in the project root directory (`NORP/`) to store your API key safely:
+## 2. How to Run Each Step
+
+Run this prompt on Chat GPT or other high performance LLM 
+
 ```
-GROQ_API_KEY=your_groq_api_key_here
+### 1. Database Schema
+Table: demographics
+Columns:
+- year (INTEGER): The census year (e.g., 2010, 2020)
+- id (TEXT): Unique record identifier
+- zipcode (TEXT): 5-digit zip code (treat as string)
+- race_total_population (INTEGER): Total population count
+- one_race (INTEGER): Population of one race
+- two_or_more_races (INTEGER): Population of two or more races
+- white (INTEGER)
+- black (INTEGER)
+- american_indian_and_alaska_native (INTEGER)
+- asian (INTEGER)
+- native_hawaiian_and_other_pacific_islander (INTEGER)
+- some_other_race (INTEGER)
+- hispanic_or_latino_total (INTEGER)
+- hispanic_or_latino (INTEGER)
+- not_hispanic_or_latino (INTEGER)
+
+### 2. Constraints & Rules
+1. **Valid SQLite Only:** Use standard SQLite syntax.
+2. **Standard Analytics Only:**
+   - Use: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT.
+   - Use Aggregates: SUM(), AVG(), MIN(), MAX(), COUNT().
+   - **Avoid:** Complex arithmetic (e.g., percentages, ratios), nested subqueries, or joins. Keep the logic focused on retrieval and aggregation to ensure easy evaluation.
+3. **Column Validity:** Use ONLY the columns listed above. Do not hallucinate new columns (e.g., do not use gender, state, city).
+4. **Diversity is Critical:**
+   - Mix simple lookups (e.g., "Find population of zipcode 90210").
+   - Mix aggregations (e.g., "Total Asian population in 2022").
+   - Mix groupings (e.g., "Average White population per year").
+   - Mix filters (e.g., "Zipcodes where Black population > 1000").
+   - Mix ordering (e.g., "Top 3 zipcodes with highest Hispanic population").
+5. **Format:** Output strictly in **JSONL (JSON Lines)** format. One valid JSON object per line.
+
+### 3. Output Format
+{"id": <integer>, "nl": "<natural language question>", "sql": "<sqlite query>"}
+
+### 4. Task
+Generate **50** unique, diverse, and high-quality pairs starting from ID **1** (or continue from the last ID provided).
+Ensure the Natural Language (nl) is varied (use synonyms like "Find", "Show", "List", "What is", "Count").
 ```
 
-This ensures your key is **not pushed to GitHub** and remains secure.
+Save generated jsonl data into data/nl_sql.jsonl
+
 
 ---
-
-## 3. Folder Structure
-
-```
-NORP/
-│
-├── data/
-│   ├── raw_sql/           # Auto-generated SQL queries
-│   ├── json_plans/        # SQL → JSON execution plans
-│   ├── nl_plans/          # SQL → Natural language questions
-│   └── merged_dataset.jsonl  # Final combined triplet dataset
-│
-├── scripts/
-│   ├── random_query.py    # Generate 500 random SQL queries
-│   ├── SQL-to-JSON.py     # Convert SQL → JSON (execution plan)
-│   ├── SQL-to-NL.py       # Convert SQL → Natural Language
-│   └── make_triplets.py   # Merge SQL, JSON, and NL into triplets
-│
-└── .env                   # (not pushed to GitHub)
-```
-
----
-
-## 4. How to Run Each Step
-
-### 4.1 Generate Random SQL Queries
-Run the following script to create 500 SQL queries from your CSV dataset:
+### 2.2 Validate Generated SQL set
+validated generated SQL
 ```bash
-python scripts/random_query.py
+python scripts/validate.py
 ```
-This will scan your dataset in `data/tables/`, infer column types automatically,  
-and save queries to:
-```
-data/raw_sql/random_sql_queries.txt
-```
+will check basic examination of SQL syntax. 
 
 ---
 
-### 4.2 Convert SQL → JSON Execution Plans
-Use the Groq LLM to convert SQL queries into structured execution plans:
+### 2.3 make 
+Use the sqlglot to convert SQL queries into structured execution plans:
+
 ```bash
-python scripts/SQL-to-JSON.py
+python scripts/generate_json.py
 ```
 Each SQL file will be processed and saved as:
 ```
-data/json_plans/query_xxx.json
+data/json_plans/nl_json_sql.json
 ```
 
 ---
 
-### 4.3 Convert SQL → Natural Language (NL)
-Next, translate SQL queries into plain English questions:
+### 2.4 Fintune Local models 
+You need to login to hugging face and get access to Llama 3.1 before to do this
+
+
 ```bash
-python scripts/SQL-to-NL.py
+python finetune_nl_to_json.py
+python finetune_nl_to_sql.py
+
+```
+will generate finetuned models 
+
+---
+
+### 2.5 Convert NL → SQL
+```bash
+python scripts/new_NL_to_SQL.py
 ```
 Outputs will be saved to:
 ```
-data/nl_plans/nl_generated.txt
-```
-
-Example output format:
-```
-SELECT AVG(hispanic_or_latino) FROM demographics;
-→ What is the average percentage of people who identify as Hispanic or Latino?
+data/eval_ready/nl_to_sql_v3.jsonl
 ```
 
 ---
 
-### 4.4 Merge All Triplets (NL + SQL + JSON)
-Finally, merge all valid files into a single dataset:
+### 2.5 Convert NL → JSON
 ```bash
-python scripts/make_triplets.py
+python scripts/new_NL_to_JSON.py
 ```
+Outputs will be saved to:
+```
+data/eval_ready/nl_to_sql_v3.jsonl
+```
+---
 
-This script automatically skips invalid or empty JSON files.  
-Result will be stored as:
+### 2.6 Convert JSON → SQL
+```bash
+python scripts/JSON_to_SQL.py
 ```
-data/merged_dataset.jsonl
+Outputs will be saved to:
+```
+data/eval_ready/nl_to_sql_to_sql_converted.jsonl
 ```
 
 ---
 
-## 5. Example of a Valid Triplet
-Each line in `merged_dataset.jsonl` contains one structured triplet:
-```json
-{
-  "id": 3,
-  "nl": "What is the average percentage of people who identify as Hispanic or Latino?",
-  "sql": "SELECT AVG(hispanic_or_latino) FROM demographics;",
-  "json_plan": {
-    "operation": "Aggregation",
-    "details": { "aggregation_target": "hispanic_or_latino", "function": "AVG" },
-    "children": [
-      { "operation": "TableScan", "details": { "table_name": "demographics" }, "children": [] }
-    ]
-  }
-}
+### 2.7 Evaluation
+```bash
+python eval/evaluation.py
+```
+Outputs will be saved to:
+```
+eval/results/logs.txt
+```
+---
+
+## 5. Example of results 
+```txt
+==================================================
+FINAL EVALUATION SUMMARY
+==================================================
+Total Test Cases: 500
+Passed:           376
+Failed:           124
+Errors (Syntax):  55
+Execution Acc:    75.20%
+==================================================
+
 ```
 
 ---
+
+source /storage/ice1/9/8/jmoon318/venvs/norp_env/bin/activate
+
+huggingface-cli login
