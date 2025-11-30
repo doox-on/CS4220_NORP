@@ -1,0 +1,100 @@
+{"id": 1, "sql": "SELECT COUNT(id) FROM demographics WHERE year = 2020;", "nl": ""}
+{"id": 2, "sql": "SELECT COUNT(zipcode) AS zip_count FROM demographics;", "nl": ""}
+{"id": 3, "sql": "SELECT SUM(one_race) FROM demographics WHERE two_or_more_races = 0;", "nl": ""}
+{"id": 4, "sql": "SELECT AVG(hispanic_or_latino_total) FROM demographics;", "nl": ""}
+{"id": 5, "sql": "SELECT MAX(year) FROM demographics;", "nl": ""}
+{"id": 6, "sql": "SELECT COUNT(DISTINCT id) FROM demographics WHERE race_total_population > 50000;", "nl": ""}
+{"id": 7, "sql": "SELECT white + black + american_indian_and_alaska_native AS sum_of_colored FROM demographics WHERE hispanic_or_latino_total = 0;", "nl": ""}
+{"id": 8, "sql": "SELECT SUM(asian) FROM demographics WHERE native_hawaiian_and_other_pacific_islander = 0;", "nl": ""}
+{"id": 9, "sql": "SELECT COUNT(zipcode) FROM demographics WHERE hispanic_or_latino_total > 0;", "nl": ""}
+{"id": 10, "sql": "SELECT SUM(hispanic_or_latino) FROM demographics;", "nl": ""}
+{"id": 11, "sql": "SELECT SUM(american_indian_and_alaska_native) FROM demographics WHERE race_total_population > 70000;", "nl": ""}
+{"id": 12, "sql": "SELECT COUNT(id) FROM demographics WHERE american_indian_and_alaska_native = 0;", "nl": ""}
+{"id": 13, "sql": "SELECT COUNT(zipcode) FROM demographics WHERE white + black > american_indian_and_alaskanative;", "nl": ""}
+{"id": 14, "sql": "SELECT SUM(white + black) FROM demographics;", "nl": ""}
+{"id": 15, "sql": "SELECT COUNT(DISTINCT id) FROM demographics WHERE two_or_more_races = 0 AND year < 2018;", "nl": ""}
+{"id": 16, "sql": "SELECT SUM(hispanic_or_latino) FROM demographics WHERE white + black > 0 AND two_or_more_races = 0;", "nl": ""}
+{"id": 17, "sql": "SELECT SUM(hispanic_or_latino_total) FROM demographics WHERE hispanic_or_latino_total = 0;", "nl": ""}
+{"id": 18, "sql": "SELECT COUNT(id) FROM demographics WHERE american_indian_and_alaska_native = 0 AND native_hawaiian_and_other_pacific_islander = 0 AND white + black > 0;", "nl": ""}
+{"id": 19, "sql": "SELECT COUNT(DISTINCT id) FROM demographics WHERE american_indian_and_alaska_native + white + black < 10000 AND two_or_more_races = 0;", "nl": ""}
+{"id": 20, "sql": "SELECT id, zipcode FROM demographics WHERE year > 2010 AND one_race > two_or_more_races", "nl": ""}
+{"id": 21, "sql": "SELECT AVG(one_race) FROM demographics WHERE race_total_population > 10000", "nl": ""}
+{"id": 22, "sql": "SELECT COUNT(id) FROM demographics WHERE american_indian_and_alaska_native = 0", "nl": ""}
+{"id": 23, "sql": "SELECT SUM(hispanic_or_latino) FROM demographics WHERE year = 2010 AND not_hispanic_or_latino > 0", "nl": ""}
+{"id": 24, "sql": "SELECT COUNT(id) FROM demographics WHERE two_or_more_races > 0 AND hispanic_or_latino_total > 0", "nl": ""}
+{"id": 25, "sql": "SELECT MAX(one_race) FROM demographics WHERE black = 0 AND white > asian", "nl": ""}
+{"id": 26, "sql": "SELECT AVG(two_or_more_races) FROM demographics WHERE native_hawaiian_and_other_pacific_islander > 0", "nl": ""}
+{"id": 27, "sql": "SELECT COUNT(id) FROM demographics WHERE year > 2015 AND black > 0", "nl": ""}
+{"id": 28, "sql": "SELECT SUM(asian) FROM demographics WHERE american_indian_and_alaska_native = 0 AND some_other_race = 0", "nl": ""}
+{"id": 29, "sql": "SELECT COUNT(id) FROM demographics WHERE native_hawaiian_and_other_pacific_islander > 0 AND hispanic_or_latino = 0", "nl": ""}
+{"id": 30, "sql": "SELECT SUM(hispanic_or_latino_total) FROM demographics WHERE year = 2015 AND white > 0", "nl": ""}
+{"id": 31, "sql": "SELECT AVG(not_hispanic_or_latino) FROM demographics WHERE two_or_more_races > 0", "nl": ""}
+{"id": 32, "sql": "SELECT COUNT(id) FROM demographics WHERE hispanic_or_latino_total = 0 AND white > 0", "nl": ""}
+{"id": 33, "sql": "SELECT MAX(hispanic_or_latino_total) FROM demographics WHERE american_indian_and_alaska_native = 0 AND hispanic_or_latino = 0", "nl": ""}
+{"id": 34, "sql": "SELECT AVG(white) FROM demographics WHERE year < 2015 AND hispanic_or_latino_or_latino > 0", "nl": ""}
+{"id": 35, "sql": "SELECT COUNT(id) FROM demographics WHERE native_hawaiian_and_other_pacific_islander > 0 AND one_race > 0", "nl": ""}
+{"id": 36, "sql": "SELECT COUNT(id) FROM demographics WHERE year = 2010 AND black = 0 AND hispanic_or_latino_total > 0", "nl": ""}
+{"id": 37, "sql": "SELECT COUNT(id) FROM demographics WHERE race_total_population > 100000 AND hispanic_or_latino_total > 0", "nl": ""}
+{"id": 38, "sql": "SELECT COUNT(*) FROM demographics WHERE year = 2020", "nl": ""}
+{"id": 39, "sql": "SELECT white + black + american_indian_and_alaska_native + asian + native_hawaiian_and_other_pacific_islander + some_other_race FROM demographics", "nl": ""}
+{"id": 40, "sql": "SELECT AVG(hispanic_or_latino) FROM demographics WHERE race_total_population > 100000", "nl": ""}
+{"id": 41, "sql": "SELECT COUNT(*) FROM demographics WHERE year = 2010 AND zipcode LIKE '%12%' ORDER BY id", "nl": ""}
+{"id": 42, "sql": "SELECT SUM(one_race) FROM demographics WHERE two_or_more_races = 0", "nl": ""}
+{"id": 43, "sql": "SELECT COUNT(DISTINCT id) FROM demographics WHERE asian = 0 AND hispanic_or_latino_total > 5000", "nl": ""}
+{"id": 44, "sql": "SELECT AVG(race_total_population) FROM demographics WHERE white + black > 100000", "nl": ""}
+{"id": 45, "sql": "SELECT COUNT(*) FROM demographics WHERE year = 2010 AND id IN (SELECT id FROM demographics WHERE year = 2020)", "nl": ""}
+{"id": 46, "sql": "SELECT AVG(asian) FROM demographics WHERE hispanic_or_latino_total > 100000", "nl": ""}
+{"id": 47, "sql": "SELECT COUNT(*) FROM demographics WHERE american_indian_and_alaska_native = 0", "nl": ""}
+{"id": 48, "sql": "SELECT SUM(hispanic_or_latino_total) FROM demographics WHERE year = 2020 AND id LIKE '%ID_1%'", "nl": ""}
+{"id": 49, "sql": "SELECT AVG(one_race) FROM demographics WHERE two_or_more_races = 0 AND hispanic_or_latino_total > 5000", "nl": ""}
+{"id": 50, "sql": "SELECT COUNT(*) FROM demographics WHERE year = 2010 AND zipcode = '12345' ORDER BY id", "nl": ""}
+{"id": 51, "sql": "SELECT COUNT(DISTINCT zipcode) FROM demographics WHERE year = 2020 AND hispanic_or_latino = 0", "nl": ""}
+{"id": 52, "sql": "SELECT AVG(native_hawaiian_and_other_pacific_islander) FROM demographics WHERE some_other_race = 0", "nl": ""}
+{"id": 53, "sql": "SELECT COUNT(*) FROM demographics WHERE year = 2020 AND hispanic_or_latino_total = 0", "nl": ""}
+{"id": 54, "sql": "SELECT AVG(some_other_race) FROM demographics WHERE race_total_population > 100000", "nl": ""}
+{"id": 55, "sql": "SELECT COUNT(DISTINCT id) FROM demographics WHERE two_or_more_races = 0 AND hispanic_or_latino_total > 5000", "nl": ""}
+{"id": 56, "sql": "SELECT COUNT(*) FROM demographics WHERE year = 2010 AND id IN (SELECT id FROM demographics WHERE year = 2010)", "nl": ""}
+{"id": 57, "sql": "SELECT id, zipcode FROM demographics WHERE one_race > 5000 GROUP BY id, zipcode HAVING AVG(one_race) > 5000", "nl": ""}
+{"id": 58, "sql": "SELECT SUM(asian) FROM demographics WHERE year = 2020 AND hispanic_or_latino_total < 20000", "nl": ""}
+{"id": 59, "sql": "SELECT zipcode FROM demographics WHERE two_or_more_races > 10000 ORDER BY two_or_more_races DESC LIMIT 10", "nl": ""}
+{"id": 60, "sql": "SELECT SUM(white) FROM demographics WHERE american_indian_and_alaska_native > 1000 AND year = 2010", "nl": ""}
+{"id": 61, "sql": "SELECT AVG(native_hawaiian_and_other_pacific_islander) FROM demographics WHERE race_total_population > 100000", "nl": ""}
+{"id": 62, "sql": "SELECT id, COUNT(*) FROM demographics WHERE race_total_population > 100000 GROUP BY id HAVING COUNT(*) > 5", "nl": ""}
+{"id": 63, "sql": "SELECT COUNT(*) FROM demographics WHERE race_total_population > 200000 AND year = 2020", "nl": ""}
+{"id": 64, "sql": "SELECT SUM(not_hispanic_or_latino) FROM demographics WHERE asian > 5000 AND native_hawaiian_and_other_pacific_islander = 0", "nl": ""}
+{"id": 65, "sql": "SELECT id FROM demographics WHERE two_or_more_races > 5000 AND one_race > 2500", "nl": ""}
+{"id": 66, "sql": "SELECT MAX(some_other_race) FROM demographics WHERE black > 10000", "nl": ""}
+{"id": 67, "sql": "SELECT SUM(black) FROM demographics WHERE hispanic_or_latino = 0 AND year = 2010", "nl": ""}
+{"id": 68, "sql": "SELECT AVG(hispanic_or_latino) FROM demographics WHERE american_indian_and_alaska_native > 2000 AND asian = 0", "nl": ""}
+{"id": 69, "sql": "SELECT COUNT(*) FROM demographics WHERE race_total_population > 500000 AND year = 2020", "nl": ""}
+{"id": 70, "sql": "SELECT id, AVG(asian) FROM demographics WHERE one_race > 2500 AND american_indian_and_alaska_native = 0 GROUP BY id", "nl": ""}
+{"id": 71, "sql": "SELECT SUM(white) FROM demographics WHERE hispanic_or_latino_total < 50000 AND two_or_more_races = 0", "nl": ""}
+{"id": 72, "sql": "SELECT zipcode FROM demographics WHERE native_hawaiian_and_other_pacific_islander > 1000 ORDER BY native_hawaiian_and_other_pacific_islander ASC", "nl": ""}
+{"id": 73, "sql": "SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE some_other_race > 2000 AND black = 0", "nl": ""}
+{"id": 74, "sql": "SELECT * FROM demographics WHERE year = 2020 ORDER BY race_total_population DESC LIMIT 10;", "nl": ""}
+{"id": 75, "sql": "SELECT SUM(one_race) FROM demographics WHERE year = 2019;", "nl": ""}
+{"id": 76, "sql": "SELECT COUNT(id) FROM demographics WHERE zipcode LIKE '%200%' AND year = 2018;", "nl": ""}
+{"id": 77, "sql": "SELECT white / american_indian_and_alaska_native FROM demographics WHERE year = 2020;", "nl": ""}
+{"id": 78, "sql": "SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE year IN (2018, 2019);", "nl": ""}
+{"id": 79, "sql": "SELECT COUNT(DISTINCT zipcode) FROM demographics WHERE native_hawaiian_and_other_pacific_islander > 100 AND year = 2018;", "nl": ""}
+{"id": 80, "sql": "SELECT race_total_population FROM demographics WHERE two_or_more_races = 1 AND year = 2019;", "nl": ""}
+{"id": 81, "sql": "SELECT COUNT(id) FROM demographics WHERE year IN (2018, 2020) AND hispanic_or_latino > 5000;", "nl": ""}
+{"id": 82, "sql": "SELECT MAX(white) FROM demographics WHERE year = 2020;", "nl": ""}
+{"id": 83, "sql": "SELECT COUNT(id) FROM demographics WHERE american_indian_and_alaska_native = 0 AND not_hispanic_or_latino = 0 AND year = 2019;", "nl": ""}
+{"id": 84, "sql": "SELECT native_hawaiian_and_other_pacific_islander + some_other_race AS other_groups FROM demographics WHERE two_or_more_races = 1 AND year = 2020;", "nl": ""}
+{"id": 85, "sql": "SELECT SUM(asian) / SUM(black) FROM demographics WHERE year IN (2018, 2020);", "nl": ""}
+{"id": 86, "sql": "SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE year = 2018 AND hispanic_or_latino_total < 10000;", "nl": ""}
+{"id": 87, "sql": "SELECT COUNT(id) FROM demographics WHERE year = 2019 AND american_indian_and_alaska_native < 100 AND black < 100;", "nl": ""}
+{"id": 88, "sql": "SELECT SUM(white + black + american_indian_and_alaska_native + asian + native_hawaiian_and_other_pacific_islander + some_other_race) FROM demographics WHERE year = 2020;", "nl": ""}
+{"id": 89, "sql": "SELECT AVG(hispanic_or_latino) FROM demographics WHERE year IN (2018, 2019, 2020);", "nl": ""}
+{"id": 90, "sql": "SELECT SUM(one_race + two_or_more_races) FROM demographics WHERE year IN (2018, 2019, 2020);", "nl": ""}
+{"id": 91, "sql": "SELECT MAX(two_or_more_races) FROM demographics WHERE year = 2019;", "nl": ""}
+{"id": 92, "sql": "SELECT SUM(hispanic_or_latino_total) FROM demographics WHERE year IN (2018, 2019, 2020) AND hispanic_or_latino_total < 50000;", "nl": ""}
+{"id": 93, "sql": "SELECT COUNT(*) FROM demographics WHERE year = 2020 AND hispanic_or_latino = 1", "nl": ""}
+{"id": 94, "sql": "SELECT MAX(race_total_population) * 2 AS doubled_max FROM demographics WHERE year = 2019", "nl": ""}
+{"id": 95, "sql": "SELECT SUM(american_indian_and_alaska_native) AS sum_american FROM demographics WHERE zipcode LIKE '100%'", "nl": ""}
+{"id": 96, "sql": "SELECT white / asian AS ratio FROM demographics WHERE year = 2020 AND id = 'id-123'", "nl": ""}
+{"id": 97, "sql": "SELECT MIN(one_race) - MAX(two_or_more_races) FROM demographics WHERE year > 2019", "nl": ""}
+{"id": 98, "sql": "SELECT SUM(hispanic_or_latino) FROM demographics WHERE year < 2020 AND id LIKE 'id-%'", "nl": ""}
+{"id": 99, "sql": "SELECT COUNT(*) FROM demographics WHERE year IN (2018,2019) AND hispanic_or_latino = 1", "nl": ""}
+{"id": 100, "sql": "SELECT AVG(race_total_population) - SUM(one_race) FROM demographics WHERE year = 2020", "nl": ""}

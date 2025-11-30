@@ -64,16 +64,16 @@ zipcodes = list(zipcodes)
 if "year" in numeric_cols:
     numeric_cols.remove("year")
 
-print("📊 Detected column types (100-row scan):")
+print("Detected column types (100-row scan):")
 for c, t in types.items():
     print(f"  - {c}: {t}")
 
 if not numeric_cols:
-    print("\n⚠️ ERROR: there's no num value in CSV")
+    print("\nERROR: there's no num value in CSV")
     exit()
     
 if not zipcodes:
-    print("\n⚠️ ERROR: there's no Zipcode in CSV")
+    print("\nERROR: there's no Zipcode in CSV")
 
 
 

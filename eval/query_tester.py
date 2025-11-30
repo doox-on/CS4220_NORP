@@ -92,7 +92,6 @@ def main():
     parser.add_argument("--save_dir", type=str, default="eval/results", help="Directory to save text logs")
     args = parser.parse_args()
 
-    # 저장 디렉토리와 파일 이름 설정
     os.makedirs(args.save_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_path = os.path.join(args.save_dir, f"query_eval_log_{timestamp}.txt")
@@ -104,7 +103,6 @@ def main():
 
     tester.load_jsonl_data()
 
-    # 결과 파일 열기
     with open(log_path, "w", encoding="utf-8") as log_f:
         tester.comparator.connect()
         total_tests = len(tester.test_data)
@@ -118,7 +116,6 @@ def main():
             metrics = tester.comparator.compare_queries(pred_sql, gt_sql)
             all_metrics.append(metrics)
 
-            # 콘솔 + 파일에 동일하게 출력
             output_lines = [
                 f"Test {i}:",
                 f"  NLQ: {nlq}",
@@ -138,7 +135,6 @@ def main():
 
         tester.comparator.disconnect()
 
-        # 평균 결과 계산
         total = len(all_metrics)
         summary = {
             "exact_match": sum(m['exact_match'] for m in all_metrics) / total,
@@ -162,7 +158,7 @@ def main():
             print(line)
             log_f.write(line + "\n")
 
-    print(f"\n💾 Detailed log saved to: {log_path}")
+    print(f"\nDetailed log saved to: {log_path}")
 
 
 if __name__ == "__main__":

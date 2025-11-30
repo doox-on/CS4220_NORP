@@ -7,10 +7,10 @@ import transformers
 transformers.logging.set_verbosity_error()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE = os.path.join(BASE_DIR, "..", "data", "triplets.jsonl")
+DATA_FILE = os.path.join(BASE_DIR, "..", "data", "triplets_groq.jsonl")
 NL2JSON_MODEL_PATH = os.path.join(BASE_DIR, "..", "finetune", "finetuned_nl2json_model")
 JSON2SQL_MODEL_PATH = os.path.join(BASE_DIR, "..", "finetune", "finetuned_json2sql_model")
-OUTPUT_FILE = os.path.join(BASE_DIR, "..", "data", "eval_ready", "nl_from_schema_ready.jsonl")
+OUTPUT_FILE = os.path.join(BASE_DIR, "..", "data", "eval_ready", "nl_from_schema_ready2.jsonl")
 
 
 print("Loading NL→JSON model...")

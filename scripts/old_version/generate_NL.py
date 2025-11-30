@@ -92,7 +92,6 @@ for batch_id in tqdm(range(1, (TARGET_COUNT // BATCH_SIZE) + 2), desc="Generatin
     new_qs = generate_nl_batch(batch_id, batch_size=BATCH_SIZE)
     all_questions.extend(new_qs)
 
-    # 중간 저장
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         for q in all_questions:
             f.write(json.dumps({"nl": q}, ensure_ascii=False) + "\n")

@@ -49,7 +49,7 @@ def main():
     sql_nl_pairs = load_sql_nl_pairs(NL_FILE)
     json_files = sorted(glob.glob(os.path.join(JSON_DIR, "*.json")))
 
-    print(f"SQL–NL pairs: {len(sql_nl_pairs)} | JSON files: {len(json_files)}")
+    print(f"SQL-NL pairs: {len(sql_nl_pairs)} | JSON files: {len(json_files)}")
 
     merged = []
     skipped = 0

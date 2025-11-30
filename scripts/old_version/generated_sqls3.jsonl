@@ -1,0 +1,100 @@
+{"id": 1, "sql": "SELECT *", "nl": ""}
+{"id": 2, "sql": "SELECT id, zipcode", "nl": ""}
+{"id": 3, "sql": "SELECT AVG(white), AVG(black)", "nl": ""}
+{"id": 4, "sql": "SELECT COUNT(id)", "nl": ""}
+{"id": 5, "sql": "SELECT MAX(hispanic_or_latino_total), MAX(hispanic_or_latino)", "nl": ""}
+{"id": 6, "sql": "SELECT SUM(one_race + two_or_more_races) AS total", "nl": ""}
+{"id": 7, "sql": "SELECT zipcode, AVG(asian)", "nl": ""}
+{"id": 8, "sql": "SELECT zipcode", "nl": ""}
+{"id": 9, "sql": "SELECT AVG(hispanic_or_latino), AVG(hispanic_or_latino_total)", "nl": ""}
+{"id": 10, "sql": "WITH subquery AS (SELECT id, zipcode FROM demographics WHERE year = 2010)", "nl": ""}
+{"id": 11, "sql": "SELECT * FROM demographics WHERE year = 2020", "nl": ""}
+{"id": 12, "sql": "SELECT * FROM demographics WHERE one_race > 1000 AND race_total_population < 10000", "nl": ""}
+{"id": 13, "sql": "SELECT SUM(white) FROM demographics WHERE year = 2020", "nl": ""}
+{"id": 14, "sql": "SELECT * FROM demographics WHERE year = 2020 GROUP BY id", "nl": ""}
+{"id": 15, "sql": "SELECT race_total_population FROM demographics WHERE race_total_population BETWEEN 1000 AND 5000", "nl": ""}
+{"id": 16, "sql": "SELECT AVG(one_race) FROM demographics WHERE zipcode LIKE '3%'", "nl": ""}
+{"id": 17, "sql": "SELECT MAX(asian) FROM demographics WHERE year = 2020 AND race_total_population > 10000", "nl": ""}
+{"id": 18, "sql": "SELECT MIN(hispanic_or_latino) FROM demographics WHERE year = 2020", "nl": ""}
+{"id": 19, "sql": "SELECT COUNT(*) FROM demographics WHERE hispanic_or_latino = 0", "nl": ""}
+{"id": 20, "sql": "SELECT * FROM demographics WHERE white > 1000 ORDER BY black ASC", "nl": ""}
+{"id": 21, "sql": "SELECT hispanic_or_latino FROM demographics WHERE hispanic_or_latino BETWEEN 1000 AND 5000 ORDER BY hispanic_or_latino DESC LIMIT 1", "nl": ""}
+{"id": 22, "sql": "SELECT * FROM demographics WHERE year = 2020 AND id LIKE '%300%' AND race_total_population > 10000", "nl": ""}
+{"id": 23, "sql": "SELECT * FROM demographics WHERE (white + black) > 5000", "nl": ""}
+{"id": 24, "sql": "SELECT * FROM demographics WHERE white > 1000 AND black < 5000", "nl": ""}
+{"id": 25, "sql": "SELECT * FROM demographics WHERE two_or_more_races = 100 AND race_total_population > 10000", "nl": ""}
+{"id": 26, "sql": "SELECT * FROM demographics WHERE year = 2020 AND id NOT IN (SELECT id FROM demographics WHERE race_total_population < 5000)", "nl": ""}
+{"id": 27, "sql": "SELECT * FROM demographics WHERE year = 2020 AND id IN (SELECT id FROM demographics WHERE hispanic_or_latino > 0) AND race_total_population < 10000", "nl": ""}
+{"id": 28, "sql": "WITH cte AS (SELECT year, SUM(one_race) AS sum_one_race FROM demographics WHERE year = 2020 GROUP BY year) SELECT * FROM cte WHERE sum_one_race > 10000", "nl": ""}
+{"id": 29, "sql": "WITH cte AS (SELECT id, COUNT(*) AS count FROM demographics WHERE year = 2020 GROUP BY id) SELECT * FROM demographics WHERE id IN (SELECT id FROM cte WHERE count > 5)", "nl": ""}
+{"id": 30, "sql": "SELECT SUM(white + black) FROM demographics WHERE year = 2020 AND race_total_population > 10000", "nl": ""}
+{"id": 31, "sql": "SELECT * FROM demographics WHERE one_race > 5000 AND two_or_more_races = 100", "nl": ""}
+{"id": 32, "sql": "SELECT * FROM demographics WHERE race_total_population < 10000 AND NOT hispanic_or_latino = 100", "nl": ""}
+{"id": 33, "sql": "SELECT * FROM demographics WHERE year > 2010 AND one_race > 10000;", "nl": ""}
+{"id": 34, "sql": "SELECT hispanic_or_latino_total FROM demographics WHERE hispanic_or_latino > 1000 AND race_total_population > 20000;", "nl": ""}
+{"id": 35, "sql": "WITH total_hispanic AS (SELECT SUM(hispanic_or_latino) FROM demographics) SELECT * FROM demographics WHERE hispanic_or_latino_total > (SELECT SUM(hispanic_or_latino) FROM demographics) * 0.5;", "nl": ""}
+{"id": 36, "sql": "SELECT AVG(white) FROM demographics WHERE year = 2015 AND zip_code BETWEEN '10000' AND '99999';", "nl": ""}
+{"id": 37, "sql": "SELECT COUNT(id) FROM demographics WHERE one_race > 10000 AND two_or_more_races > 1000 AND not_hispanic_or_latino > 1000 LIMIT 1;", "nl": ""}
+{"id": 38, "sql": "SELECT MIN(two_or_more_races) FROM demographics WHERE hispanic_or_latino > 5000 AND asian < 5000;", "nl": ""}
+{"id": 39, "sql": "SELECT SUM(white + black) FROM demographics WHERE zip_code LIKE '3%' AND race_total_population > 30000;", "nl": ""}
+{"id": 40, "sql": "SELECT * FROM demographics WHERE (white > 1000 AND black < 5000) OR one_race > 5000;", "nl": ""}
+{"id": 41, "sql": "WITH max_zip AS (SELECT MAX(zipcode) FROM demographics) SELECT AVG(asian) FROM demographics WHERE asian > 500 AND zipcode = (SELECT MAX(zipcode) FROM demographics);", "nl": ""}
+{"id": 42, "sql": "SELECT SUM(one_race) FROM demographics WHERE hispanic_or_latino_total > 0 AND year < 2010;", "nl": ""}
+{"id": 43, "sql": "SELECT MIN(hispanic_or_latino_total) FROM demographics WHERE zip_code > 70000 AND black > 10000;", "nl": ""}
+{"id": 44, "sql": "SELECT COUNT(id) FROM demographics WHERE race_total_population BETWEEN 1000 AND 15000 AND hispanic_or_latino > 2000;", "nl": ""}
+{"id": 45, "sql": "SELECT COUNT(id) FROM demographics WHERE two_or_more_races = 2000 AND hispanic_or_latino <= 1000 IN (SELECT MIN(hispanic_or_latino) FROM demographics);", "nl": ""}
+{"id": 46, "sql": "SELECT MAX(one_race) FROM demographics WHERE american_indian_and_alaska_native + native_hawaiian_and_other_pacific_islander > 1000;", "nl": ""}
+{"id": 47, "sql": "SELECT AVG(not_hispanic_or_latino) FROM demographics WHERE zip_code = '60000' AND some_other_race < 2000;", "nl": ""}
+{"id": 48, "sql": "SELECT SUM(asian + native_hawaiian_and_other_pacific_islander) FROM demographics WHERE black < 10000 AND year > 2015;", "nl": ""}
+{"id": 49, "sql": "SELECT COUNT(id) FROM demographics WHERE zip_code = '90000' AND black > 1000 AND two_or_more_races > 500 IN (SELECT COUNT(id) FROM demographics WHERE american_indian_and_alaska_native > 1000);", "nl": ""}
+{"id": 50, "sql": "SELECT * FROM demographics WHERE race_total_population BETWEEN 0 AND 60000", "nl": ""}
+{"id": 51, "sql": "SELECT * FROM demographics WHERE one_race BETWEEN 0 AND 50000 AND race_total_population BETWEEN 0 AND 60000", "nl": ""}
+{"id": 52, "sql": "SELECT SUM(one_race) FROM demographics WHERE one_race BETWEEN 0 AND 50000", "nl": ""}
+{"id": 53, "sql": "SELECT hispanic_or_latino, hispanic_or_latino_total FROM demographics WHERE hispanic_or_latino_total BETWEEN 0 AND 50000", "nl": ""}
+{"id": 54, "sql": "SELECT * FROM demographics WHERE year = 1", "nl": ""}
+{"id": 55, "sql": "SELECT id, zipcode FROM demographics WHERE zipcode LIKE '3%'", "nl": ""}
+{"id": 56, "sql": "SELECT AVG(hispanic_or_latino) FROM demographics", "nl": ""}
+{"id": 57, "sql": "SELECT * FROM demographics WHERE year = 1 AND hispanic_or_latino BETWEEN 0 AND 50000", "nl": ""}
+{"id": 58, "sql": "SELECT MAX(one_race) FROM demographics", "nl": ""}
+{"id": 59, "sql": "SELECT SUM(white + black), id FROM demographics GROUP BY id HAVING SUM(white + black) > 10000", "nl": ""}
+{"id": 60, "sql": "SELECT * FROM demographics WHERE (white > 1000 AND black < 5000) AND two_or_more_races BETWEEN 0 AND 7000", "nl": ""}
+{"id": 61, "sql": "SELECT * FROM demographics WHERE zipcode > 30000", "nl": ""}
+{"id": 62, "sql": "SELECT SUM(hispanic_or_latino_total) FROM demographics WHERE hispanic_or_latino_total BETWEEN 0 AND 50000", "nl": ""}
+{"id": 63, "sql": "SELECT * FROM demographics WHERE not_hispanic_or_latino BETWEEN 0 AND 10000 AND two_or_more_races BETWEEN 0 AND 7000", "nl": ""}
+{"id": 64, "sql": "SELECT COUNT(id), zipcode FROM demographics WHERE zipcode LIKE '3%' GROUP BY zipcode", "nl": ""}
+{"id": 65, "sql": "SELECT hispanic_or_latino, hispanic_or_latino_total FROM demographics WHERE zipcode > 30000", "nl": ""}
+{"id": 66, "sql": "SELECT SUM(asian + black + white), id FROM demographics GROUP BY id HAVING SUM(asian + black + white) BETWEEN 0 AND 60000", "nl": ""}
+{"id": 67, "sql": "SELECT * FROM demographics WHERE one_race BETWEEN 0 AND 50000 AND hispanic_or_latino BETWEEN 0 AND 50000", "nl": ""}
+{"id": 68, "sql": "SELECT zipcode, AVG(hispanic_or_latino) FROM demographics WHERE zipcode LIKE '3%' GROUP BY zipcode ORDER BY AVG(hispanic_or_latino) DESC", "nl": ""}
+{"id": 69, "sql": "SELECT * FROM demographics WHERE zipcode LIKE '3%' AND one_race BETWEEN 0 AND 50000 LIMIT 10", "nl": ""}
+{"id": 70, "sql": "WITH filtered_demographics AS (SELECT * FROM demographics WHERE zipcode > 30000)", "nl": ""}
+{"id": 71, "sql": "SELECT AVG(hispanic_or_latino) FROM filtered_demographics", "nl": ""}
+{"id": 72, "sql": "SELECT SUM(asian + black + white), id FROM demographics WHERE one_race BETWEEN 0 AND 50000 GROUP BY id HAVING SUM(asian + black + white) BETWEEN 0 AND 60000", "nl": ""}
+{"id": 73, "sql": "WITH filtered_demographics AS (SELECT * FROM demographics WHERE id LIKE '%300%')", "nl": ""}
+{"id": 74, "sql": "SELECT COUNT(id), zipcode FROM filtered_demographics WHERE zipcode LIKE '3%' GROUP BY zipcode", "nl": ""}
+{"id": 75, "sql": "SELECT * FROM demographics WHERE two_or_more_races BETWEEN 0 AND 7000 AND black BETWEEN 0 AND 50000", "nl": ""}
+{"id": 76, "sql": "SELECT COUNT(id), AVG(hispanic_or_latino_total) FROM demographics GROUP BY AVG(hispanic_or_latino_total)", "nl": ""}
+{"id": 77, "sql": "SELECT AVG(hispanic_or_latino), zipcode FROM demographics WHERE not_hispanic_or_latino BETWEEN 0 AND 10000 GROUP BY zipcode ORDER BY AVG(hispanic_or_latino) DESC", "nl": ""}
+{"id": 78, "sql": "SELECT * FROM demographics WHERE not_hispanic_or_latino BETWEEN 0 AND 10000 AND id LIKE '%300%' LIMIT 10", "nl": ""}
+{"id": 79, "sql": "SELECT AVG(hispanic_or_latino_total) FROM demographics WHERE one_race BETWEEN 0 AND 50000", "nl": ""}
+{"id": 80, "sql": "WITH filtered_demographics AS (SELECT * FROM demographics WHERE zipcode LIKE '3%')", "nl": ""}
+{"id": 81, "sql": "SELECT SUM(one_race) FROM filtered_demographics", "nl": ""}
+{"id": 82, "sql": "SELECT AVG(white + black), id FROM demographics WHERE hispanic_or_latino BETWEEN 0 AND 50000 GROUP BY id ORDER BY AVG(white + black) DESC", "nl": ""}
+{"id": 83, "sql": "SELECT SUM(one_race), AVG(hispanic_or_latino_total) FROM demographics WHERE zipcode LIKE '3%' GROUP BY AVG(hispanic_or_latino_total)", "nl": ""}
+{"id": 84, "sql": "WITH filtered_demographics AS (SELECT * FROM demographics WHERE id LIKE '3%')", "nl": ""}
+{"id": 85, "sql": "SELECT AVG(hispanic_or_latino_total), zipcode FROM filtered_demographics GROUP BY zipcode ORDER BY AVG(hispanic_or_latino_total) DESC", "nl": ""}
+{"id": 86, "sql": "SELECT AVG(hispanic_or_latino_total), AVG(hispanic_or_latino) FROM demographics WHERE zipcode > 30000 GROUP BY AVG(hispanic_or_latino)", "nl": ""}
+{"id": 87, "sql": "WITH filtered_demographics AS (SELECT * FROM demographics WHERE zipcoode > 30000)", "nl": ""}
+{"id": 88, "sql": "SELECT AVG(hispanic_or_latino), AVG(hispanic_or_latino_total) FROM filtered_demographics", "nl": ""}
+{"id": 89, "sql": "SELECT * FROM demographics WHERE year = 2020;", "nl": ""}
+{"id": 90, "sql": "SELECT id, zipcode FROM demographics WHERE hispanic_or_latino = 0 AND race_total_population > 30000;", "nl": ""}
+{"id": 91, "sql": "SELECT AVG(white) FROM demographics WHERE year = 2019;", "nl": ""}
+{"id": 92, "sql": "SELECT zipcode, AVG(asian) FROM demographics GROUP BY zipcode;", "nl": ""}
+{"id": 93, "sql": "SELECT * FROM demographics WHERE one_race > 2000 AND zipcode LIKE '3%';", "nl": ""}
+{"id": 94, "sql": "WITH hispanic AS (", "nl": ""}
+{"id": 95, "sql": "SELECT zipcode, hispanic_or_latino_total AS hispanic_total", "nl": ""}
+{"id": 96, "sql": "SELECT zipcode, SUM(hispanic_total) FROM hispanic GROUP BY zipcode HAVING SUM(hispanic_total) > 10000;", "nl": ""}
+{"id": 97, "sql": "SELECT AVG(hispanic_or_latino) FROM demographics WHERE race_total_population BETWEEN 10000 AND 30000;", "nl": ""}
+{"id": 98, "sql": "SELECT zipcode, MAX(white) FROM demographics GROUP BY zipcode ORDER BY MAX(white) DESC LIMIT 10;", "nl": ""}
+{"id": 99, "sql": "SELECT zipcode FROM demographics WHERE (white + black) > 10000;", "nl": ""}
+{"id": 100, "sql": "SELECT id, COUNT(*) FROM demographics WHERE one_race = 0 AND two_or_more_races = 0 GROUP BY id HAVING COUNT(*) > 1;", "nl": ""}
